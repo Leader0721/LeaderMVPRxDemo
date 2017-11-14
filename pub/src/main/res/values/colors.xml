@@ -3,4 +3,34 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 通用颜色 -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- 状态栏颜色 -->
+    <color name="statusBar_color">#343b44</color>
+
+    <!--红色-->
+    <color name="red">#ff0000</color>
+    <!--橙色-->
+    <color name="orange">#FF8C00</color>
+    <!--橙色深-->
+    <color name="orange_deep">#be6c08</color>
+    <!--橙红色-->
+    <color name="orange_red">#ec6945</color>
+
+    <color name="tvc3">#333333</color>
+    <color name="tvc5">#545454</color>
+    <color name="tvc6">#666666</color>
+    <color name="tvc8">#8899A6</color>
+    <color name="tvc9">#999999</color>
+    <color name="tvcc">#cccccc</color>
+    <!--时间选择器-->
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+    <!-- 分割线颜色 -->
+    <color name="linecolor">#ffe9e9e9</color>
+
 </resources>

@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
 
     defaultConfig {
-        applicationId "com.example.pub"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -23,10 +22,71 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+    //design包下面很多扁平设计的控件  cardview是其中之一
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    //recyclerview相对使用比较方便
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    //沉浸式状态栏的设定  http://blog.csdn.net/huiguiziwo/article/details/51454456
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //黄油刀
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //Retrofit+OKHttp 构建网络请求通道
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //RxJava 构建MVP设计模式
+    compile 'io.reactivex:rxjava:1.1.8'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //Glide 网络图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    // 打印调试利器
+    compile 'com.orhanobut:logger:2.1.1'
+
+    // WebView 的封装 ，webView较为常用，原来的XWebView不够健壮 使用方法https://github.com/Justson/AgentWeb
+    compile 'com.just.agentweb:agentweb:1.2.5'
+    //权限请求的第三方工具类
+    compile 'pub.devrel:easypermissions:0.4.2'
+    //数据库处理第三方库
+    compile 'org.greenrobot:greendao:3.1.1'
+    compile 'org.greenrobot:greendao-generator:3.1.0'
+    // 适配5.x及以下系统超过65535方法的问题
+    compile 'com.android.support:multidex:1.0.1'
+    //jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容,用的时候可以深究
+    compile 'org.jsoup:jsoup:1.5.2'
+    //一个选择按钮，动画效果比较好
+    compile 'com.zcw:togglebutton-library:1.0.0'
+    //圆形头像设置，用图片处理框架可能有时候不行
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //https://github.com/dmytrodanylyk/circular-progress-button  让button实现进度条
+    compile 'com.github.dmytrodanylyk.circular-progress-button:library:1.1.3'
+    //banner滚动效果
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    //NineOldAndroids是github上的一个开源项目，其作用是为了在低版本android上（API11以下）使用属性动画。它的原理其实也很简单，主要就是判断当前sdk版本，如果大于API11，那么就调用官方的API，否则自己实现动画效果
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    //时间总线的第三方解决方案   由谷歌的进行封装而来
+    compile files('libs/androideventbus-1.0.4.jar')
+    //第三方视频解决方案
+    compile files('libs/CCSDK.jar')
+    //Android 6.0之后不再提供HttpClient的包
+    compile files('libs/org.apache.http.legacy.jar')
+    //图片使用框架，比较稳定
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    //mpush推送客户端调用的方法
+    compile files('libs/mpush-client-java-0.0.6.jar')
+    //pinyin4j是一个支持将简体和繁体中文转换到成拼音的Java开源类库
+    compile files('libs/pinyin4j-2.5.0.jar')
 }
