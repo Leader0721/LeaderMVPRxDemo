@@ -3,6 +3,7 @@
     package="com.example.pub">
 
     <!-- 读取内存卡信息 数据缓存需要 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 录制音频权限 极光推送需要 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
