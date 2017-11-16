@@ -8,18 +8,18 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/20 18:04
- * @本类描述	  检测是否在模拟器运行  工具类
- * @内容说明   这个类主要用于防止程序在模拟器上操作
- *
- *
- * ---------------------------------------------     
- * @更新时间   2016/10/20 
- * @更新说明
+/**
+ * @Description:这个类主要用于防止程序在模拟器上操作
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:23
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
+
 public class EmulatorUtils {
     private static String[] known_pipes = {
             "/dev/socket/qemud",

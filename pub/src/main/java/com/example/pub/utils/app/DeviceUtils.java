@@ -23,16 +23,19 @@ import java.util.List;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/5 16:19
- * @本类描述	  获取设备相关信息
- * @内容说明   1.获取Mac地址
- *            2.调用TelePhoneManger的如果没有通话功能的设备可能返回null
- *            3.使用按需求,如唯一识别码(MD5加密(MAC+IMEI))
- *            4.获取手机状态建议用 getPhoneStatue
- *            5.得到CPU核心数
+/**
+ * @Description: 1.获取Mac地址
+ * 2.调用TelePhoneManger的如果没有通话功能的设备可能返回null
+ * 3.使用按需求,如唯一识别码(MD5加密(MAC+IMEI))
+ * 4.获取手机状态建议用 getPhoneStatue
+ * 5.得到CPU核心数
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:21
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class DeviceUtils {
     protected static final String TAG = DeviceUtils.class.getSimpleName();

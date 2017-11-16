@@ -6,22 +6,22 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/21 4:17
- * @本类描述	  转换时间工具类
- * @内容说明   一般用于什么几天前发帖/历史记录
- * ---------------------------------------------     
- * @更新时间   2016/10/21 
- * @更新说明
+/**
+ * @Description:转换时间工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.function
+ * @author: Leader
+ * @date: 2017/11/16   15:51
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class TransitionTimeUtils {
     private Date endDate;
 
     private static SimpleDateFormat formatBuilder;
-    public static final int      WEEKDAYS = 7;
-    public static       String[] WEEK     = {"周日", "周一", "周二", "周三", "周四", "周五", "周六"};
+    public static final int WEEKDAYS = 7;
+    public static String[] WEEK = {"周日", "周一", "周二", "周三", "周四", "周五", "周六"};
 
     public TransitionTimeUtils(long endTime) {
         endDate = new Date(endTime);

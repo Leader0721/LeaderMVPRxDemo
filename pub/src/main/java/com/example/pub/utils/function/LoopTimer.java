@@ -5,12 +5,19 @@ package com.example.pub.utils.function;
 import android.os.Handler;
 
 /**
- * 循环定时器
+ * @Description:循环定时器
+ * @Prject:
+ * @Package: com.example.pub.utils.function
+ * @author: Leader
+ * @date: 2017/11/16   15:50
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class LoopTimer {
-    private int             intervalMillis;    //间隔时间
-    private boolean         running;    //运行状态
-    private Handler         handler;    //消息处理器
+    private int intervalMillis;    //间隔时间
+    private boolean running;    //运行状态
+    private Handler handler;    //消息处理器
     private ExecuteRunnable executeRunnable;    //执行Runnable
 
     /**

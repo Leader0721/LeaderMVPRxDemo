@@ -22,42 +22,41 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/15 1:50
- * @本类描述	  崩溃处理_相关工具类
- * @内容说明   1.设置崩溃时Toast 的提示文本
- *            2.初始化实例
- *            3.收集并保存错误信息
- *
- *  使用:
- *         在Application 类使用,或者onCreat()
- *
- *         CrashHandlerUtil crashHandlerUtil = CrashHandlerUtil.getInstance();
- *         crashHandlerUtil.init(this);
- *         crashHandlerUtil.setCrashTip("很抱歉，程序出现异常，即将退出！");
- *
- * ---------------------------------------------     
- * @更新时间   2016/10/15 
- * @更新说明   ${TODO} 加一个Dialog 提示是否退出程序,体验更好
+/**
+ * @Description:1.设置崩溃时Toast 的提示文本
+ * 2.初始化实例
+ * 3.收集并保存错误信息
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:17
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * ${TODO} 加一个Dialog 提示是否退出程序,体验更好
+ * 使用:
+ * 在Application 类使用,或者onCreat()
+ * CrashHandlerUtil crashHandlerUtil = CrashHandlerUtil.getInstance();
+ * crashHandlerUtil.init(this);
+ * crashHandlerUtil.setCrashTip("很抱歉，程序出现异常，即将退出！");
  */
+
 public class CrashUtils implements Thread.UncaughtExceptionHandler {
 
     public static final String TAG = "CrashUtils";
 
     //系统默认的UncaughtException处理类
-    private        Thread.UncaughtExceptionHandler mDefaultHandler;
+    private Thread.UncaughtExceptionHandler mDefaultHandler;
     //CrashHandler实例
-    private static CrashUtils                      mInstance;
+    private static CrashUtils mInstance;
     //程序的Context对象
-    private        Context                         mContext;
+    private Context mContext;
     //用来存储设备信息和异常信息
     private Map<String, String> infos = new HashMap<>();
 
     //用于格式化日期,作为日志文件名的一部分
     private DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss", Locale.CHINA);
-    private String     crashTip  = "很抱歉，程序出现异常，即将退出！";
+    private String crashTip = "很抱歉，程序出现异常，即将退出！";
     private boolean mInitialized;
 
     public String getCrashTip() {

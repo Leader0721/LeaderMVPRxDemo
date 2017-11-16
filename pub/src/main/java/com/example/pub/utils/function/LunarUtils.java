@@ -1,13 +1,14 @@
 package com.example.pub.utils.function;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/2/6 10:41
- * @本类描述	   阴历相关工具类
- * @内容说明
- *
- *
+/**
+ * @Description:阴历相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.function
+ * @author: Leader
+ * @date: 2017/11/16   15:51
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class LunarUtils {
 
@@ -191,9 +192,9 @@ public class LunarUtils {
 
     public static class Lunar {
         public boolean isLeap;
-        public int     lunarDay;
-        public int     lunarMonth;
-        public int     lunarYear;
+        public int lunarDay;
+        public int lunarMonth;
+        public int lunarYear;
     }
 
     public static class Solar {

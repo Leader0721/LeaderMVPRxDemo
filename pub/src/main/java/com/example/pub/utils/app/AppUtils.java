@@ -35,29 +35,29 @@ import java.util.UUID;
 
 import static com.example.pub.utils.function.StringUtils.isSpace;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/11 15:41
- * @本类描述	  App 相关工具类
- * @内容说明   1.获取App信息/所有已安装App信息
- *            2.清除App数据
- *            3.判断App是否处于前台(必须是系统应用)
- *            4.判断是否为系统App/APP是否安装
- *            5.获取App版本号/版本名称/版本码/Icon/包名/路径/签名/32位签名/SHA1值
- *            6.安装/卸载/打开 app
- *            7.静默安装/卸载 app (需要权限)
- *            8.gc 清除进程,服务
- *            9.得到最大内存
- *            10.Service 是否运行
- *            11.停止Service
- *            12.是否包含当前进程
- *            13.是否Dalvik模式/ART模式
- * ---------------------------------------------     
- * @更新时间   2016/10/11 
- * @更新说明
+/**
+ * @Description:1.获取App信息/所有已安装App信息 2.清除App数据
+ * 3.判断App是否处于前台(必须是系统应用)
+ * 4.判断是否为系统App/APP是否安装
+ * 5.获取App版本号/版本名称/版本码/Icon/包名/路径/签名/32位签名/SHA1值
+ * 6.安装/卸载/打开 app
+ * 7.静默安装/卸载 app (需要权限)
+ * 8.gc 清除进程,服务
+ * 9.得到最大内存
+ * 10.Service 是否运行
+ * 11.停止Service
+ * 12.是否包含当前进程
+ * 13.是否Dalvik模式/ART模式
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:16
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
+
 public class AppUtils {
 
     /**
@@ -218,7 +218,7 @@ public class AppUtils {
     public static void launchApp(Context context, String packageName) {
         if (isSpace(packageName))
             return;
-        context.startActivity(IntentUtils.getLaunchAppIntent( packageName));
+        context.startActivity(IntentUtils.getLaunchAppIntent(packageName));
     }
 
     /**

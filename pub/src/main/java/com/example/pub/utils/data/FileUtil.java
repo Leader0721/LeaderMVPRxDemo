@@ -12,6 +12,8 @@ import android.os.StatFs;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
+import com.example.pub.utils.data.coder.BASE64Decoder;
+import com.example.pub.utils.data.coder.BASE64Encoder;
 import com.example.pub.utils.function.LogUtils;
 
 import java.io.BufferedInputStream;
@@ -36,15 +38,12 @@ import java.net.URLConnection;
 import java.util.Date;
 
 
-
 /**
- * TODO
- *
  * @Description:文件相关的处理类，有待优化
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.data
  * @author: Leader
- * @date: 2017/11/14   20:03
+ * @date: 2017/11/16   15:35
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0

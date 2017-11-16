@@ -5,17 +5,16 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/17 20:20
- * @本类描述	  动画_工具类
- * @内容说明   1.放大/缩小动画
- *            2.旋转动画(根据中心点/视图中心点)
- *            3.透明度渐变动画(完全显示到不可见/不可见到完全显示)
- * ---------------------------------------------     
- * @更新时间   2016/10/17 
- * @更新说明   ${TODO} 后期加位移动画
+/**
+ * @Description:1.放大/缩小动画 2.旋转动画(根据中心点/视图中心点)
+ * 3.透明度渐变动画(完全显示到不可见/不可见到完全显示)
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:52
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class AnimationUtils {
 

@@ -17,7 +17,6 @@ import android.widget.ImageView;
  * @version: 1.0.0
  */
 
-
 public class ToolAnimation {
     /**
      * 给视图添加点击效果,让背景变深

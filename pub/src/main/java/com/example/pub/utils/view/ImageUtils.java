@@ -48,12 +48,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/12
- *     desc  : 图片相关工具类
- * </pre>
+ * @Description:图片相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:54
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class ImageUtils {
 

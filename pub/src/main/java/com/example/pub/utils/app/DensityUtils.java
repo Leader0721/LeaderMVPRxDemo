@@ -24,7 +24,6 @@ public class DensityUtils {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-
     /**
      * 根据dip值转化成px值
      *

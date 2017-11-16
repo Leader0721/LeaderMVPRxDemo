@@ -5,21 +5,20 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 
-import com.example.pub.utils.data.CloseUtils;
-import com.example.pub.utils.data.ConvertUtils1;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/11
- *     desc  : SD卡相关工具类
- * </pre>
+ * @Description:SD卡相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:46
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class SDCardUtils {
 
@@ -118,13 +117,13 @@ public final class SDCardUtils {
 
     public static class SDCardInfo {
         boolean isExist;
-        long    totalBlocks;
-        long    freeBlocks;
-        long    availableBlocks;
-        long    blockByteSize;
-        long    totalBytes;
-        long    freeBytes;
-        long    availableBytes;
+        long totalBlocks;
+        long freeBlocks;
+        long availableBlocks;
+        long blockByteSize;
+        long totalBytes;
+        long freeBytes;
+        long availableBytes;
 
         @Override
         public String toString() {

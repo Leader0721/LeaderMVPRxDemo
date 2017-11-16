@@ -8,17 +8,18 @@ import android.graphics.Paint;
 
 import java.util.Random;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/9 1:45
- * @本类描述	  验证码生成  工具类
- * @内容说明   1.可设置随机数的个数
- *            2.字体大小
- *            3.默认线条的条数
- *            4.验证码显示的宽高
- *
- *      
+/**
+ * @Description:验证码生成工具类 1.可设置随机数的个数
+ * 2.字体大小
+ * 3.默认线条的条数
+ * 4.验证码显示的宽高
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:56
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 //TODO 后期增加:1.干扰元素多点(背景噪点,文字扭曲度更大,颜色更杂)
 public class SecurityCodeUtils {
@@ -43,12 +44,12 @@ public class SecurityCodeUtils {
     //验证码默认随机数的个数
     private static final int DEFAULT_CODE_LENGTH = 4;
     //默认字体大小
-    private static final int DEFAULT_FONT_SIZE   = 25;
+    private static final int DEFAULT_FONT_SIZE = 25;
     //默认线条的条数
     private static final int DEFAULT_LINE_NUMBER = 5;
     //padding值
-    private static final int BASE_PADDING_LEFT   = 10, RANGE_PADDING_LEFT = 15, BASE_PADDING_TOP = 15,
-            RANGE_PADDING_TOP                    = 20;
+    private static final int BASE_PADDING_LEFT = 10, RANGE_PADDING_LEFT = 15, BASE_PADDING_TOP = 15,
+            RANGE_PADDING_TOP = 20;
     //验证码的默认宽高
     private static final int DEFAULT_WIDTH = 100, DEFAULT_HEIGHT = 40;
 
@@ -58,14 +59,14 @@ public class SecurityCodeUtils {
 
     //random word space and pading_top
     private int base_padding_left = BASE_PADDING_LEFT, range_padding_left = RANGE_PADDING_LEFT,
-            base_padding_top      = BASE_PADDING_TOP, range_padding_top = RANGE_PADDING_TOP;
+            base_padding_top = BASE_PADDING_TOP, range_padding_top = RANGE_PADDING_TOP;
 
     //number of chars, lines; font size
     private int codeLength = DEFAULT_CODE_LENGTH, line_number = DEFAULT_LINE_NUMBER, font_size = DEFAULT_FONT_SIZE;
 
     //variables
     private String code;
-    private int    padding_left, padding_top;
+    private int padding_left, padding_top;
     private Random random = new Random();
 
     /**

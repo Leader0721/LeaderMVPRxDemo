@@ -16,17 +16,21 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/25
- *     desc  : 线程池相关工具类
- * </pre>
+ * @Description:线程池相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:28
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public final class ThreadPoolUtils {
 
-    public static final int FixedThread  = 0;
+    public static final int FixedThread = 0;
     public static final int CachedThread = 1;
     public static final int SingleThread = 2;
 
@@ -35,7 +39,7 @@ public final class ThreadPoolUtils {
     public @interface Type {
     }
 
-    private ExecutorService          exec;
+    private ExecutorService exec;
     private ScheduledExecutorService scheduleExec;
 
     private ThreadPoolUtils() {

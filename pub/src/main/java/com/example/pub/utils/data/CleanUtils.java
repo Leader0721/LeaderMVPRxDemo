@@ -6,22 +6,21 @@ import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/1 15:54
- * @本类描述	  清除内容_相关工具类
- * @内容说明   1.清除手机内部缓存
- *            2.清除手机内部文件
- *            3.清除手机内部数据库
- *            4.根据数据库名,删除数据库
- *            5.清除SP
- *            6.清除SDK缓存
- *            7.清楚自定义目录下的文件(根据文件/文件路径)
- *            8.关闭IO流
- * ---------------------------------------------     
- * @更新时间   2016/10/1 
- * @更新说明
+/**
+ * @Description:1.清除手机内部缓存 2.清除手机内部文件
+ * 3.清除手机内部数据库
+ * 4.根据数据库名,删除数据库
+ * 5.清除SP
+ * 6.清除SDK缓存
+ * 7.清楚自定义目录下的文件(根据文件/文件路径)
+ * 8.关闭IO流
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:32
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class CleanUtils {
 

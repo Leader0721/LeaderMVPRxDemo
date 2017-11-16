@@ -20,17 +20,16 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 
 /**
- * @Description:Google推荐的图片加载库，专注于流畅的滚动 Glide 比Picasso  加载快 但需要更大的内存来缓存
+ * @Description:@Description:Google推荐的图片加载库，专注于流畅的滚动 Glide 比Picasso  加载快 但需要更大的内存来缓存
  * 支持GIF格式图片加载   Glide 不光接受Context，还接受Activity 和 Fragment ,图片加载会和Activity/Fragment的生命周期保持一致 在onPause（）暂停加载，onResume（）恢复加载
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.view
  * @author: Leader
- * @date: 2017/11/14   20:02
+ * @date: 2017/11/16   15:53
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0
  */
-
 public class GlideUtils {
     private static GlideUtils instance;
 

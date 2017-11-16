@@ -27,7 +27,6 @@ import java.lang.reflect.Method;
  * @version: 1.0.0
  */
 
-
 public class AppSystemBarMgr {
     private AppSystemBarMgr() {
         throw new UnsupportedOperationException("u can't instantiate me...");

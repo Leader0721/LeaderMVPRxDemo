@@ -19,24 +19,26 @@ package com.example.pub.utils.function;
 import android.os.Handler;
 import android.widget.TextView;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/2/6 17:19
- * @本类描述	  CountDownTimer 倒计时工具类
- * @内容说明   Android 自带的倒计时 类
- *
+/**
+ * @Description:Android 自带的倒计时 类
+ * @Prject:
+ * @Package: com.example.pub.utils.function
+ * @author: Leader
+ * @date: 2017/11/16   15:51
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class TimeCount implements Runnable {
-    private int                 remainingSeconds;
-    private int                 currentRemainingSeconds;
-    private boolean             running;
-    private String              defaultText;
-    private String              countdownText;
-    private TextView            showTextView;
-    private Handler             handler;
-    private CountdownListener   countdownListener;
+    private int remainingSeconds;
+    private int currentRemainingSeconds;
+    private boolean running;
+    private String defaultText;
+    private String countdownText;
+    private TextView showTextView;
+    private Handler handler;
+    private CountdownListener countdownListener;
     private TextViewGetListener textViewGetListener;
 
     /**

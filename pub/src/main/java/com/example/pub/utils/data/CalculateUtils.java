@@ -2,15 +2,15 @@ package com.example.pub.utils.data;
 
 import java.math.BigDecimal;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/15 2:16
- * @本类描述	  精确的运算_工具类
- * @内容说明   1.加减乘除/4舍5入
- * ---------------------------------------------     
- * @更新时间   2016/10/15 
- * @更新说明
+/**
+ * @Description:精确的运算_工具类 1.加减乘除/4舍5入
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:32
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class CalculateUtils {
     // 默认除法运算精度

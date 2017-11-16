@@ -5,7 +5,16 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
-
+/**
+ * @Description:View动画工具类
+ * @Prject: 
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:58
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ */
 /*
  * @创建者     默小铭
  * @博客       http://blog.csdn.net/u012792686

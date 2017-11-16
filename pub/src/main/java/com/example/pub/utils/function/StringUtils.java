@@ -25,9 +25,9 @@ import java.util.regex.Pattern;
 /**
  * @Description:一些对于字符串的处理和校验
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.function
  * @author: Leader
- * @date: 2017/11/14   19:59
+ * @date: 2017/11/16   15:51
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0

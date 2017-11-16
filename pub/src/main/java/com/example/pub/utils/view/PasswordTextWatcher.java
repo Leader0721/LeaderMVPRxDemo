@@ -17,9 +17,9 @@ import java.util.regex.Pattern;
 /**
  * @Description:密码的验证类
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.view
  * @author: Leader
- * @date: 2017/11/14   20:00
+ * @date: 2017/11/16   15:54
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0

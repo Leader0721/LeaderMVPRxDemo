@@ -1,13 +1,16 @@
 package com.example.pub.utils.constant;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/2 10:44
- * @本类描述	  正则相关_常量类
- * @内容说明   import static zs.xmx.constant.RegularContants.*; 直接使用
- *      
+/**
+ * @Description:正则相关_常量类
+ * @Prject:
+ * @Package: com.example.pub.utils.constant
+ * @author: Leader
+ * @date: 2017/11/16   15:30
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class RegularContants {
 
     /**
@@ -30,28 +33,28 @@ public class RegularContants {
     /**
      * 正则：身份证号码15位
      */
-    public static final String REGEX_IDCARD15  = "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$";
+    public static final String REGEX_IDCARD15 = "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$";
     /**
      * 正则：身份证号码18位
      */
-    public static final String REGEX_IDCARD18  = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}" +
+    public static final String REGEX_IDCARD18 = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}" +
             "([0-9Xx])$";
     /**
      * 正则：邮箱
      */
-    public static final String REGEX_EMAIL     = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
+    public static final String REGEX_EMAIL = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
     /**
      * 正则：URL
      */
-    public static final String REGEX_URL       = "http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?";
+    public static final String REGEX_URL = "http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?";
     /**
      * 正则：汉字
      */
-    public static final String REGEX_CHZ       = "^[\\u4e00-\\u9fa5]+$";
+    public static final String REGEX_CHZ = "^[\\u4e00-\\u9fa5]+$";
     /**
      * 正则：用户名，取值范围为a-z,A-Z,0-9,"_",汉字，不能以"_"结尾,用户名必须是6-20位
      */
-    public static final String REGEX_USERNAME  = "^[\\w\\u4e00-\\u9fa5]{6,20}(?<!_)$";
+    public static final String REGEX_USERNAME = "^[\\w\\u4e00-\\u9fa5]{6,20}(?<!_)$";
 
     /**
      * 正则：用户名1(中文、英文、数字包括下划线)
@@ -73,7 +76,7 @@ public class RegularContants {
     /**
      * 正则：IP地址
      */
-    public static final String REGEX_IP   = "((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}" +
+    public static final String REGEX_IP = "((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}" +
             "(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)";
 
     /**

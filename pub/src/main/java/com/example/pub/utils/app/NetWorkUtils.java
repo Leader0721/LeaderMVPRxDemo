@@ -35,15 +35,13 @@ import static android.content.Context.CONNECTIVITY_SERVICE;
 /**
  * @Description:主要功能:App网络管理
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.app
  * @author: Leader
- * @date: 2017/11/14   20:01
+ * @date: 2017/11/16   15:24
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0
  */
-
-
 public class NetWorkUtils {
 
     private NetWorkUtils() {
@@ -330,7 +328,6 @@ public class NetWorkUtils {
     }
 
 
-
     /**
      * 检测当前打开的网络类型是否3G
      *
@@ -391,7 +388,6 @@ public class NetWorkUtils {
     }
 
 
-
     /**
      * 判断Wifi是否打开，需要ACCESS_WIFI_STATE权限
      *
@@ -432,7 +428,6 @@ public class NetWorkUtils {
             throw new Exception("wifi device not found!");
         }
     }
-
 
 
     /**
@@ -539,8 +534,6 @@ public class NetWorkUtils {
         }
         return netType;
     }
-
-
 
 
     /**

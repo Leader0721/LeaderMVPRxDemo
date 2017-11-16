@@ -22,12 +22,14 @@ import java.util.Locale;
 import static android.content.Context.LOCATION_SERVICE;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 16/11/13
- *     desc  : 定位相关工具类
- * </pre>
+ * @Description:定位相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:24
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class LocationUtils {
 
@@ -105,7 +107,6 @@ public final class LocationUtils {
 //
 //        return location;
 //    }
-
 
 
     /**

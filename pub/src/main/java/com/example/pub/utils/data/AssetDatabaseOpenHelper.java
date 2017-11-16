@@ -8,27 +8,24 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/18 19:52
- * @本类描述	  将Assert中的database复制到 /data/data/package_name/databases
- * @内容说明   1.复制可读写的数据库
- *             2.复制只能读的数据库
- *             3.获取数据库名
- *
+/**
+ * @Description:1.复制可读写的数据库 2.复制只能读的数据库
+ * 3.获取数据库名
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:31
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  * 使用:
- *           AssetDatabaseOpenHelper ad=new AssetDatabaseOpenHelper(context,dbName);
- *           ad.getWritableDatabase();
- *
- * ---------------------------------------------     
- * @更新时间   2016/10/18 
- * @更新说明
+ * AssetDatabaseOpenHelper ad=new AssetDatabaseOpenHelper(context,dbName);
+ * ad.getWritableDatabase();
  */
+
 public class AssetDatabaseOpenHelper {
     private Context context;
-    private String  databaseName;
+    private String databaseName;
 
     public AssetDatabaseOpenHelper(Context context, String databaseNme) {
         this.context = context;

@@ -6,12 +6,14 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2017/03/13
- *     desc  : 时间相关常量
- * </pre>
+ * @Description:时间相关常量
+ * @Prject:
+ * @Package: com.example.pub.utils.constant
+ * @author: Leader
+ * @date: 2017/11/16   15:30
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class TimeConstants {
 
@@ -22,11 +24,11 @@ public final class TimeConstants {
     /**
      * 秒与毫秒的倍数
      */
-    public static final int SEC  = 1000;
+    public static final int SEC = 1000;
     /**
      * 分与毫秒的倍数
      */
-    public static final int MIN  = 60000;
+    public static final int MIN = 60000;
     /**
      * 时与毫秒的倍数
      */
@@ -34,7 +36,7 @@ public final class TimeConstants {
     /**
      * 天与毫秒的倍数
      */
-    public static final int DAY  = 86400000;
+    public static final int DAY = 86400000;
 
     @IntDef({MSEC, SEC, MIN, HOUR, DAY})
     @Retention(RetentionPolicy.SOURCE)

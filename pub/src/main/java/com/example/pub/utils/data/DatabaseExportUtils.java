@@ -6,21 +6,20 @@ import android.text.TextUtils;
 
 import com.example.pub.utils.function.LogUtils;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/19 0:10
- * @本类描述	  数据库_导出工具类
- * @内容说明   1.DEBUG 属性决定是否导出
- *             2.启动导出数据库方法
- * ---------------------------------------------     
- * @更新时间   2016/10/19 
- * @更新说明
+/**
+ * @Description:1.DEBUG 属性决定是否导出
+ * 2.启动导出数据库方法
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:34
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class DatabaseExportUtils {
     private static final boolean DEBUG = true;
-    private static final String  TAG   = "DatabaseExportUtils";
+    private static final String TAG = "DatabaseExportUtils";
 
     /**
      * Don't let anyone instantiate this class.

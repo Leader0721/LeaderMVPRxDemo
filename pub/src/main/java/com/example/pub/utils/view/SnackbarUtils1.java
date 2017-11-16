@@ -19,12 +19,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/10/16
- *     desc  : Snackbar相关工具类
- * </pre>
+ * @Description:Snackbar相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:57
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class SnackbarUtils1 {
 
@@ -43,22 +45,22 @@ public final class SnackbarUtils1 {
 
     private static final int SUCCESS = 0xFF2BB600;
     private static final int WARNING = 0xFFFFC100;
-    private static final int ERROR   = 0xFFFF0000;
+    private static final int ERROR = 0xFFFF0000;
     private static final int MESSAGE = 0xFFFFFFFF;
 
     private static WeakReference<Snackbar> snackbarWeakReference;
 
     private WeakReference<View> parent;
 
-    private CharSequence         message;
-    private int                  messageColor;
-    private int                  bgColor;
-    private int                  bgResource;
-    private int                  duration;
-    private CharSequence         actionText;
-    private int                  actionTextColor;
+    private CharSequence message;
+    private int messageColor;
+    private int bgColor;
+    private int bgResource;
+    private int duration;
+    private CharSequence actionText;
+    private int actionTextColor;
     private View.OnClickListener actionListener;
-    private int                  bottomMargin;
+    private int bottomMargin;
 
     private SnackbarUtils1(final View parent) {
         setDefault();

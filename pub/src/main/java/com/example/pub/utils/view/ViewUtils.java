@@ -1,16 +1,14 @@
 package com.example.pub.utils.view;
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/2/7 20:19
- * @本类描述	  View视图工具类
- * @内容说明   ${TODO}
- * @补充内容
- *
- * ---------------------------------     
- * @更新时间   $Date$
- * @新增内容   ${TODO}
- *
+
+/**
+ * @Description:View视图工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:59
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 
 import android.annotation.TargetApi;

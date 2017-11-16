@@ -24,7 +24,6 @@ import java.util.regex.Pattern;
  * @version: 1.0.0
  */
 
-
 @SuppressLint("SimpleDateFormat")
 @SuppressWarnings("rawtypes")
 public class ValidationUtil {

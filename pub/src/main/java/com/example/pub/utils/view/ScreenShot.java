@@ -11,20 +11,20 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/23 16:54
- * @本类描述	  截图工具类
- * @内容说明   1.是否包含状态栏
- *            2.指定保存路径
- *
+/**
+ * @Description: 截图工具类
+ * 1.是否包含状态栏
+ * 2.指定保存路径
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:55
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  * 注意:
- *    1.不能直接使用,要View完全显示才能实现,即最好通过"按钮"控件调用方法
- *    2.截取状态栏方法,不能截取时间,电量部分
- *      
+ * 1.不能直接使用,要View完全显示才能实现,即最好通过"按钮"控件调用方法
+ * 2.截取状态栏方法,不能截取时间,电量部分
  */
 public class ScreenShot {
     //TODO 1.长截图实现 2.自定义区域截图 3.加一个Handler 输出执行状态(成功/失败) 3.建议调用系统自带截图

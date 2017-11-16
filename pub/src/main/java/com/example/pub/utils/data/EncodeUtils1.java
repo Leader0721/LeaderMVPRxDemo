@@ -9,12 +9,14 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/07
- *     desc  : 编码解码相关工具类
- * </pre>
+ * @Description:编码解码相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:35
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class EncodeUtils1 {
 

@@ -14,25 +14,21 @@ import android.widget.LinearLayout;
 
 import java.lang.ref.WeakReference;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/12/10 11:46
- * @本类描述	  Snackbar 工具类
- * @内容说明   1.短时的Snackbar
- *            2.长时的SnackBar
- *            3.自定义时长的SnackBar
- *            4.设置SnackBar文字和背景颜色
- *            5.为SnackBar添加布局,在show..SnachBar之后调用
- *            6.取消SnackBar显示
- *
- * @补充内容
- *            注意:
- *             1.该类使用前要先添加 android.support.design 库
- *
- * ---------------------------------     
- * @新增内容
- *
+/**
+ * @Description:1.短时的Snackbar 2.长时的SnackBar
+ * 3.自定义时长的SnackBar
+ * 4.设置SnackBar文字和背景颜色
+ * 5.为SnackBar添加布局,在show..SnachBar之后调用
+ * 6.取消SnackBar显示
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:57
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * 注意:
+ * 1.该类使用前要先添加 android.support.design 库
  */
 public class SnackbarUtils {
 

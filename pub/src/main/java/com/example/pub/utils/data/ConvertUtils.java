@@ -21,19 +21,17 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/27 2:31
- * @本类描述	  转换数据类型_工具类
- * @内容说明   1.字节数组 与 16进制字符串 相互转换
- *            2.单个字节转int
- *            3.字符数组 转 字节数组 相互转换
- *            4.
- * ---------------------------------------------     
- * @更新时间   2016/9/27 
- * @更新说明
+/**
+ * @Description:1.字节数组 与 16进制字符串 相互转换
+ * 2.单个字节转int
+ * 3.字符数组 转 字节数组 相互转换
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:33
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class ConvertUtils {
     private ConvertUtils() {

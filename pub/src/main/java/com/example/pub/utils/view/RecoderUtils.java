@@ -9,32 +9,30 @@ import android.util.Log;
 import java.io.File;
 import java.io.IOException;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/13 13:13
- * @本类描述	  录音/播放_相关工具类
- * @内容说明   1.开始录音
- *            2.停止录音
- *            3.获取音量大小
- *            4.开始/停止播放
- *            5.播放完成
- *
+/**
+ * @Description: 1.开始录音
+ * 2.停止录音
+ * 3.获取音量大小
+ * 4.开始/停止播放
+ * 5.播放完成
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:54
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  * 注意:
- *      构造方法调用,传路径调用
- *
- * ---------------------------------------------     
- * @更新时间   2016/10/13 
- * @更新说明
+ * 构造方法调用,传路径调用
  */
 public class RecoderUtils {
     private MediaRecorder recorde = null;
     private String path;
     //采样率
-    private static int         SAMPLE_RATE_IN_HZ = 8000;
+    private static int SAMPLE_RATE_IN_HZ = 8000;
     //播放录音
-    private        MediaPlayer mPlayer           = null;
-    private        boolean     playState         = false; // 录音的播放状态
+    private MediaPlayer mPlayer = null;
+    private boolean playState = false; // 录音的播放状态
 
     public RecoderUtils() {
 

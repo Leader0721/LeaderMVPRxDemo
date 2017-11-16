@@ -26,13 +26,13 @@ import okio.Buffer;
 import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.Okio;
+
 /**
- * TODO
  * @Description:文件相关的处理类，有待优化
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.data
  * @author: Leader
- * @date: 2017/11/14   20:03
+ * @date: 2017/11/16   15:35
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0

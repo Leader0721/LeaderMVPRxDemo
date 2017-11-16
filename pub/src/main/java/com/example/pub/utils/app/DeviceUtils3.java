@@ -15,12 +15,14 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/1
- *     desc  : 设备相关工具类
- * </pre>
+ * @Description:设备相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:21
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class DeviceUtils3 {
 
@@ -198,7 +200,6 @@ public final class DeviceUtils3 {
     /**
      * 重启
      * <p>需要root权限或者系统权限 {@code <android:sharedUserId="android.uid.system"/>}</p>
-     *
      */
     public static void reboot() {
         ShellUtils.execCmd("reboot", true);
@@ -213,7 +214,7 @@ public final class DeviceUtils3 {
      * 重启
      * <p>需系统权限 {@code <android:sharedUserId="android.uid.system"/>}</p>
      *
-     * @param reason  传递给内核来请求特殊的引导模式，如"recovery"
+     * @param reason 传递给内核来请求特殊的引导模式，如"recovery"
      */
     public static void reboot(final String reason) {
         PowerManager mPowerManager = (PowerManager) Utils.getApp().getSystemService(Context.POWER_SERVICE);

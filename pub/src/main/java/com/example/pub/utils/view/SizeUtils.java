@@ -8,12 +8,14 @@ import android.view.ViewGroup;
 import com.example.pub.utils.app.Utils;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : 尺寸相关工具类
- * </pre>
+ * @Description:尺寸相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:56
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class SizeUtils {
 

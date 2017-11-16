@@ -21,12 +21,14 @@ import com.example.pub.utils.app.Utils;
 import java.lang.reflect.Method;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/09/23
- *     desc  : 栏相关工具类
- * </pre>
+ * @Description:栏相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:52
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class BarUtils {
 
@@ -34,10 +36,10 @@ public final class BarUtils {
     // status bar
     ///////////////////////////////////////////////////////////////////////////
 
-    private static final int    DEFAULT_ALPHA = 112;
-    private static final String TAG_COLOR     = "TAG_COLOR";
-    private static final String TAG_ALPHA     = "TAG_ALPHA";
-    private static final int    TAG_OFFSET    = -123;
+    private static final int DEFAULT_ALPHA = 112;
+    private static final String TAG_COLOR = "TAG_COLOR";
+    private static final String TAG_ALPHA = "TAG_ALPHA";
+    private static final int TAG_OFFSET = -123;
 
     private BarUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");

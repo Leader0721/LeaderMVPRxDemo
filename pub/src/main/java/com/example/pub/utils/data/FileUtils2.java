@@ -16,12 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/05/03
- *     desc  : 文件相关工具类
- * </pre>
+ * @Description:文件相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:36
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class FileUtils2 {
 
@@ -524,7 +526,7 @@ public final class FileUtils2 {
 
     /**
      * 获取目录下所有文件
-     *  <p>不递归进子目录</p>
+     * <p>不递归进子目录</p>
      *
      * @param dirPath 目录路径
      * @return 文件链表
@@ -535,7 +537,7 @@ public final class FileUtils2 {
 
     /**
      * 获取目录下所有文件
-     *  <p>不递归进子目录</p>
+     * <p>不递归进子目录</p>
      *
      * @param dir 目录
      * @return 文件链表

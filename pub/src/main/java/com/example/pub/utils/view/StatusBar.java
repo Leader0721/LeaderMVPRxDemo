@@ -9,25 +9,25 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/31 16:07
- * @本类描述	  状态栏_工具类
- * @内容说明   1.设置状态栏为透明
- *            2.获取状态栏高度
- *            3.判断状态栏是否存在
- *            4.设置状态栏颜色
- *            5.添加状态栏view
- *
- * @补充内容  注意:
- *              1.设置状态栏颜色要写在setContentView(..)后面
- *              2.两个重要属性要写在状态栏要跟随颜色的控件上
- *
- * ---------------------------------
- * @新增内容
- *
+/**
+ * @Description: 状态栏_工具类
+ * 1.设置状态栏为透明
+ * 2.获取状态栏高度
+ * 3.判断状态栏是否存在
+ * 4.设置状态栏颜色
+ * 5.添加状态栏view
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:57
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * 注意:
+ * 1.设置状态栏颜色要写在setContentView(..)后面
+ * 2.两个重要属性要写在状态栏要跟随颜色的控件上
  */
+
 public class StatusBar {
     /**
      * 设置透明状态栏(相当于隐藏状态栏)

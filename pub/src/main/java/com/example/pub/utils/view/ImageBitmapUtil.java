@@ -29,7 +29,7 @@ import java.io.OutputStream;
 
 /**
  * @Description:图片和Bitmap处理类，这个有待优化
- * @Prject: 
+ * @Prject:
  * @Package: com.example.pub.utils
  * @author: Leader
  * @date: 2017/11/14   20:02
@@ -37,7 +37,6 @@ import java.io.OutputStream;
  * @Company:bc
  * @version: 1.0.0
  */
-
 public class ImageBitmapUtil {
 
     private static String FILE_PATH = "";//这个等到调用的时候一定要定义

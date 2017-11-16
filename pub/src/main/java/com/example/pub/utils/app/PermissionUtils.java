@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @Description:权限相关的工具类
- * @Prject: 
+ * @Prject:
  * @Package: com.example.pub.utils
  * @author: Leader
  * @date: 2017/11/15   9:37
@@ -21,6 +21,7 @@ import java.util.List;
  * @Company:bc
  * @version: 1.0.0
  */
+
 public final class PermissionUtils {
 
     private static int mRequestCode = -1;

@@ -1,15 +1,16 @@
 package com.example.pub.utils.data;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/16 2:19
- * @本类描述	  经纬度_相关工具类
- * @内容说明   获取地球任意两点(经纬度)距离
- * ---------------------------------------------     
- * @更新时间   2016/10/16 
- * @更新说明
+/**
+ * @Description:获取地球任意两点(经纬度)距离
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:33
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class CoordinateUtils {
     /**
      * 计算地球上任意两点(经纬度)距离

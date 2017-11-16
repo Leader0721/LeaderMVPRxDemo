@@ -16,33 +16,32 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/12/15 1:21
- * @本类描述	  闪光灯相关工具类
- * @内容说明   ${TODO}  这里是API>23的,要再写一个低版本兼容的
- * @补充内容
- *
- * ---------------------------------     
- * @新增内容
- *
+/**
+ * @Description:闪光灯相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:23
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * ${TODO}  这里是API>23的,要再写一个低版本兼容的
  */
 @TargetApi(Build.VERSION_CODES.M)
 public class FlashlightUtils {
 
-    private static final String  TAG   = "FlashlightController";
+    private static final String TAG = "FlashlightController";
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
-    private static final int DISPATCH_ERROR                = 0;
-    private static final int DISPATCH_CHANGED              = 1;
+    private static final int DISPATCH_ERROR = 0;
+    private static final int DISPATCH_CHANGED = 1;
     private static final int DISPATCH_AVAILABILITY_CHANGED = 2;
 
     private final CameraManager mCameraManager;
     /**
      * Call {@link #ensureHandler()} before using
      */
-    private       Handler       mHandler;
+    private Handler mHandler;
 
     /**
      * Lock on mListeners when accessing
@@ -54,8 +53,8 @@ public class FlashlightUtils {
      */
     private boolean mFlashlightEnabled;
 
-    private final String  mCameraId;
-    private       boolean mTorchAvailable;
+    private final String mCameraId;
+    private boolean mTorchAvailable;
 
     public FlashlightUtils(Context mContext) {
         mCameraManager = (CameraManager) mContext.getSystemService(Context.CAMERA_SERVICE);

@@ -6,13 +6,16 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2017/03/13
- *     desc  : 存储相关常量
- * </pre>
+ * @Description:存储相关常量
+ * @Prject:
+ * @Package: com.example.pub.utils.constant
+ * @author: Leader
+ * @date: 2017/11/16   15:29
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public final class MemoryConstants {
 
     /**
@@ -22,15 +25,15 @@ public final class MemoryConstants {
     /**
      * KB与Byte的倍数
      */
-    public static final int KB   = 1024;
+    public static final int KB = 1024;
     /**
      * MB与Byte的倍数
      */
-    public static final int MB   = 1048576;
+    public static final int MB = 1048576;
     /**
      * GB与Byte的倍数
      */
-    public static final int GB   = 1073741824;
+    public static final int GB = 1073741824;
 
     @IntDef({BYTE, KB, MB, GB})
     @Retention(RetentionPolicy.SOURCE)

@@ -1,16 +1,13 @@
 package com.example.pub.utils.data;
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/5/10
- * @本类描述	  缓存相关工具类
- * @内容说明   ${TODO} 补充注释
- * @补充内容
- *
- * ---------------------------------     
- * @更新时间   
- * @新增内容   
- *
+/**
+ * @Description:缓存相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:31
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 
 import android.content.Context;
@@ -46,11 +43,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class CacheUtils {
 
-    public static final  int                     TIME_HOUR    = 60 * 60;
-    public static final  int                     TIME_DAY     = TIME_HOUR * 24;
-    private static final int                     MAX_SIZE     = 1000 * 1000 * 50; // 50 mb
-    private static final int                     MAX_COUNT    = Integer.MAX_VALUE; // 不限制存放数据的数量
-    private static       Map<String, CacheUtils> mInstanceMap = new HashMap<>();
+    public static final int TIME_HOUR = 60 * 60;
+    public static final int TIME_DAY = TIME_HOUR * 24;
+    private static final int MAX_SIZE = 1000 * 1000 * 50; // 50 mb
+    private static final int MAX_COUNT = Integer.MAX_VALUE; // 不限制存放数据的数量
+    private static Map<String, CacheUtils> mInstanceMap = new HashMap<>();
     private CacheManager mCacheManager;
 
     public static CacheUtils get(Context ctx) {
@@ -528,10 +525,10 @@ public class CacheUtils {
     }
 
     public class CacheManager {
-        private final AtomicLong    cacheSize;
+        private final AtomicLong cacheSize;
         private final AtomicInteger cacheCount;
-        private final long          sizeLimit;
-        private final int           countLimit;
+        private final long sizeLimit;
+        private final int countLimit;
         private final Map<File, Long> lastUsageDates = Collections
                 .synchronizedMap(new HashMap<File, Long>());
         protected File cacheDir;

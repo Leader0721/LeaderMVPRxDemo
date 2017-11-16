@@ -19,18 +19,19 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/27
- *     desc  :  1.批量压缩文件
- *             2.压缩文件
- *             3.批量解压文件
- *             4.解压文件
- *             5.获取压缩文件里的文件对象
- *             6.获取压缩文件中的文件路径链表
- *             7.获取压缩文件中的文件注释链表
- * </pre>
+ * @Description:1.批量压缩文件 2.压缩文件
+ * 3.批量解压文件
+ * 4.解压文件
+ * 5.获取压缩文件里的文件对象
+ * 6.获取压缩文件中的文件路径链表
+ * 7.获取压缩文件中的文件注释链表
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:47
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class ZipUtils {
 

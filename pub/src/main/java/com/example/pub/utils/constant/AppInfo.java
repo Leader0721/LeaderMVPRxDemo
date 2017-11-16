@@ -2,25 +2,25 @@ package com.example.pub.utils.constant;
 
 import android.graphics.drawable.Drawable;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/11 16:21
- * @本类描述	  封装App信息的Bean类
- * @内容说明   AppUtils 获取App信息
- * ---------------------------------------------
- * @更新时间   2016/10/11
- * @更新说明
+/**
+ * @Description:封装App信息的Bean类
+ * @Prject:
+ * @Package: com.example.pub.utils.constant
+ * @author: Leader
+ * @date: 2017/11/16   15:29
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class AppInfo {
 
-    private String   name;
+    private String name;
     private Drawable icon;
-    private String   packageName;
-    private String   packagePath;
-    private String   versionName;
-    private int      versionCode;
-    private boolean  isSystem;
+    private String packageName;
+    private String packagePath;
+    private String versionName;
+    private int versionCode;
+    private boolean isSystem;
 
     public Drawable getIcon() {
         return icon;

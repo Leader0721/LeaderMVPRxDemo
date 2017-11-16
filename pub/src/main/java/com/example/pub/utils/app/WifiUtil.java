@@ -10,14 +10,13 @@ import android.net.wifi.WifiManager.WifiLock;
 import java.util.List;
 
 /**
- * 主要功能:Wifi管理工具类
- *
- * @Prject: CommonUtilLibrary
- * @Package: com.jingewenku.abrahamcaijin.commonutil
- * @author: AbrahamCaiJin
- * @date: 2017年05月03日 16:20
+ * @Description:Wifi管理工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:29
  * @Copyright: 个人版权所有
- * @Company:
+ * @Company:bc
  * @version: 1.0.0
  */
 
@@ -30,9 +29,10 @@ public class WifiUtil {
 
     /**
      * 构造函数
+     *
      * @param context
      */
-    public WifiUtil(Context context){
+    public WifiUtil(Context context) {
         this.wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);// 获取Wifi服务
         // 得到Wifi信息
         this.wifiInfo = wifiManager.getConnectionInfo();// 得到连接信息
@@ -40,17 +40,19 @@ public class WifiUtil {
 
     /**
      * Wifi状态.
+     *
      * @return
      */
-    public boolean isWifiEnabled(){
+    public boolean isWifiEnabled() {
         return wifiManager.isWifiEnabled();
     }
 
     /**
      * 打开 wifi
+     *
      * @return
      */
-    public boolean openWifi(){
+    public boolean openWifi() {
         if (!isWifiEnabled()) {
             return wifiManager.setWifiEnabled(true);
         } else {
@@ -60,9 +62,10 @@ public class WifiUtil {
 
     /**
      * 关闭Wifi
+     *
      * @return
      */
-    public boolean closeWifi(){
+    public boolean closeWifi() {
         if (!isWifiEnabled()) {
             return true;
         } else {
@@ -71,8 +74,8 @@ public class WifiUtil {
     }
 
     /**
-     *  锁定wifi
-     *  锁定WiFI就是判断wifi是否建立成功，在这里使用的是held(握手) acquire
+     * 锁定wifi
+     * 锁定WiFI就是判断wifi是否建立成功，在这里使用的是held(握手) acquire
      */
     public void lockWifi() {
         wifiLock.acquire();
@@ -114,11 +117,12 @@ public class WifiUtil {
 
     /**
      * 获取扫描WIFI列表的信息
+     *
      * @return
      */
     public String lookupScanInfo() {
         StringBuilder scanBuilder = new StringBuilder();
-        if(scanResultList == null){
+        if (scanResultList == null) {
             return "";
         }
         for (int i = 0; i < scanResultList.size(); i++) {
@@ -129,7 +133,7 @@ public class WifiUtil {
             scanBuilder.append("\n");
         }
         scanBuilder.append("--------------华丽分割线--------------------");
-        for(int i=0;i<wifiConfigList.size();i++){
+        for (int i = 0; i < wifiConfigList.size(); i++) {
             scanBuilder.append(wifiConfigList.get(i).toString());
             scanBuilder.append("\n");
         }
@@ -138,54 +142,58 @@ public class WifiUtil {
 
     /**
      * 获取指定Wifi的ssid名称
+     *
      * @param NetId
      * @return
      */
-    public String getSSID(int NetId){
+    public String getSSID(int NetId) {
         return scanResultList.get(NetId).SSID;
     }
 
     /**
      * 获取指定Wifi的物理地址
+     *
      * @param NetId
      * @return
      */
-    public String getBSSID(int NetId){
+    public String getBSSID(int NetId) {
         return scanResultList.get(NetId).BSSID;
     }
 
     /**
      * 获取指定Wifi的频率
+     *
      * @param NetId
      * @return
      */
-    public int getFrequency(int NetId){
+    public int getFrequency(int NetId) {
         return scanResultList.get(NetId).frequency;
     }
 
     /**
      * 获取指定Wifi的功能
+     *
      * @param NetId
      * @return
      */
-    public String getCapabilities(int NetId){
+    public String getCapabilities(int NetId) {
         return scanResultList.get(NetId).capabilities;
     }
+
     /**
      * 获取指定Wifi的信号强度
+     *
      * @param NetId
      * @return
      */
-    public int getLevel(int NetId){
+    public int getLevel(int NetId) {
         return scanResultList.get(NetId).level;
     }
 
 
-
-
-
     /**
      * 获取本机Mac地址
+     *
      * @return
      */
     public String getMac() {
@@ -202,6 +210,7 @@ public class WifiUtil {
 
     /**
      * 返回当前连接的网络的ID
+     *
      * @return
      */
     public int getCurrentNetId() {
@@ -210,6 +219,7 @@ public class WifiUtil {
 
     /**
      * 返回所有信息
+     *
      * @return
      */
     public String getWifiInfo() {
@@ -218,6 +228,7 @@ public class WifiUtil {
 
     /**
      * 获取IP地址
+     *
      * @return
      */
     public int getIP() {
@@ -226,6 +237,7 @@ public class WifiUtil {
 
     /**
      * 添加一个连接
+     *
      * @param config
      * @return
      */
@@ -236,6 +248,7 @@ public class WifiUtil {
 
     /**
      * 禁用一个链接
+     *
      * @param NetId
      * @return
      */
@@ -244,7 +257,8 @@ public class WifiUtil {
         return wifiManager.disconnect();
     }
 
-    /**移除一个链接
+    /**
+     * 移除一个链接
      *
      * @param NetId
      * @return
@@ -255,17 +269,19 @@ public class WifiUtil {
 
     /**
      * 不显示SSID
+     *
      * @param NetId
      */
-    public void hiddenSSID(int NetId){
-        wifiConfigList.get(NetId).hiddenSSID=true;
+    public void hiddenSSID(int NetId) {
+        wifiConfigList.get(NetId).hiddenSSID = true;
     }
 
     /**
      * 显示SSID
+     *
      * @param NetId
      */
-    public void displaySSID(int NetId){
-        wifiConfigList.get(NetId).hiddenSSID=false;
+    public void displaySSID(int NetId) {
+        wifiConfigList.get(NetId).hiddenSSID = false;
     }
 }

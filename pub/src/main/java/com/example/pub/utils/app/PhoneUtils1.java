@@ -24,13 +24,16 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : 手机相关工具类
- * </pre>
+ * @Description:手机相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:25
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public final class PhoneUtils1 {
 
     private PhoneUtils1() {

@@ -18,12 +18,14 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : 加密解密相关的工具类
- * </pre>
+ * @Description:加密解密相关的工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.function
+ * @author: Leader
+ * @date: 2017/11/16   15:50
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class EncryptUtils {
 

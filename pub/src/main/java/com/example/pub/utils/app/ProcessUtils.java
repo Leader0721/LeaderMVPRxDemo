@@ -28,13 +28,16 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/10/18
- *     desc  : 进程相关工具类
- * </pre>
+ * @Description:进程相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:25
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public final class ProcessUtils {
 
     private ProcessUtils() {
@@ -165,7 +168,7 @@ public final class ProcessUtils {
 
 
     private static UsageStats recentStats;
-    private static String     result;
+    private static String result;
 
     /**
      * 判断应用是否处于前台

@@ -14,14 +14,13 @@ import java.util.regex.Pattern;
 /**
  * @Description:该工具用于App时间管理通用类
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.function
  * @author: Leader
- * @date: 2017/11/15   8:47
+ * @date: 2017/11/16   15:48
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0
  */
-
 
 @SuppressLint("SimpleDateFormat")
 public class DateTranUtil {

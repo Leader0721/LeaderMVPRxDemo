@@ -9,18 +9,16 @@ import android.view.inputmethod.InputMethodManager;
 import com.example.pub.utils.app.Utils;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/02
- *     desc  : 键盘相关工具类
- *
- *      1.动态隐藏软键盘
- *            2.动态显示软键盘
- *            3.切换键盘显示与否状态(EditText 切换软键盘显示)
- *            4.点击屏幕空白区域隐藏软键盘 (需要拷这个类里面的方法进去)
- *
- * </pre>
+ * @Description:1.动态隐藏软键盘 2.动态显示软键盘
+ * 3.切换键盘显示与否状态(EditText 切换软键盘显示)
+ * 4.点击屏幕空白区域隐藏软键盘 (需要拷这个类里面的方法进去)
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:54
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class KeyboardUtils {
     /**
@@ -65,7 +63,6 @@ public final class KeyboardUtils {
      * 参数:
      * windowToken 由窗口请求View.getWindowToken() 返回得到的令牌(token)
      * flags 提供额外的操作标志.(0 ; HIDE_IMPLICIT_ONLY )
-     *
      */
 
     private KeyboardUtils() {

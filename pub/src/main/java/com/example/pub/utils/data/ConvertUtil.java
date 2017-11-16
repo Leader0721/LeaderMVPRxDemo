@@ -11,7 +11,6 @@ package com.example.pub.utils.data;
  * @version: 1.0.0
  */
 
-
 public class ConvertUtil {
 
     private ConvertUtil() {

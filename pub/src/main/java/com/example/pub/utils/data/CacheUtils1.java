@@ -37,23 +37,26 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
+
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2017/05/24
- *     desc  : 缓存相关工具类
- * </pre>
+ * @Description:缓存相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:32
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class CacheUtils1 {
 
-    private static final long DEFAULT_MAX_SIZE  = Long.MAX_VALUE;
-    private static final int  DEFAULT_MAX_COUNT = Integer.MAX_VALUE;
+    private static final long DEFAULT_MAX_SIZE = Long.MAX_VALUE;
+    private static final int DEFAULT_MAX_COUNT = Integer.MAX_VALUE;
 
-    public static final int SEC  = 1;
-    public static final int MIN  = 60;
+    public static final int SEC = 1;
+    public static final int MIN = 60;
     public static final int HOUR = 3600;
-    public static final int DAY  = 86400;
+    public static final int DAY = 86400;
 
     private static final SimpleArrayMap<String, CacheUtils1> CACHE_MAP = new SimpleArrayMap<>();
     private CacheManager mCacheManager;
@@ -590,12 +593,12 @@ public class CacheUtils1 {
     }
 
     private class CacheManager {
-        private final AtomicLong    cacheSize;
+        private final AtomicLong cacheSize;
         private final AtomicInteger cacheCount;
-        private final long          sizeLimit;
-        private final int           countLimit;
+        private final long sizeLimit;
+        private final int countLimit;
         private final Map<File, Long> lastUsageDates = Collections.synchronizedMap(new HashMap<File, Long>());
-        private final File   cacheDir;
+        private final File cacheDir;
         private final Thread mThread;
 
         private CacheManager(final File cacheDir, final long sizeLimit, final int countLimit) {

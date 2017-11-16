@@ -9,28 +9,19 @@ import java.io.File;
 
 import static com.example.pub.utils.data.ConvertUtils1.byte2FitMemorySize;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/24 21:54
- * @本类描述	  SD卡_相关工具类
- * @内容说明   1.判断SD卡是否可用
- *             2.获取SD卡路径
- *             3.获取SD卡下载缓存路径
- *             4.获取SD卡剩余空间/总空间/已用空间
- *
- *
- * 需要添加以下权限:
- *     <------SD卡读取/写入权限:-------->
- *     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-       <------SD卡创建与删除文件权限:-------->
-       <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
- * ---------------------------------------------     
- * @更新时间   2016/9/24 
- * @更新说明
+/**
+ * @Description:1.判断SD卡是否可用 2.获取SD卡路径
+ * 3.获取SD卡下载缓存路径
+ * 4.获取SD卡剩余空间/总空间/已用空间
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:26
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class SDCardUtils {
     /**
      * 判断SD卡是否可用

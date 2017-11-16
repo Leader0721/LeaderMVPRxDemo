@@ -1,29 +1,27 @@
 package com.example.pub.utils.app;
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/2/7 17:32
- * @本类描述	  双击退出识别器
- * @内容说明   1.重写这个构造函数调用即可
- * @补充内容
- *
- * ---------------------------------     
- * @更新时间   $Date$
- * @新增内容   ${TODO}
- *
+/**
+ * @Description:双击退出程序
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:21
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 
 import android.content.Context;
 import android.widget.Toast;
 
 import java.util.Locale;
 
-public class DoubleClickExitDetector {
+public class DoubleClickExitUtils {
     public static String DEFAULT_HINT_MESSAGE_CHINA = "再按一次退出程序";
     public static String DEFAULT_HINT_MESSAGE_OTHER = "Press again to exit the program";
-    private int     effectiveIntervalTime;    // 有效的间隔时间，单位毫秒
-    private long    lastClickTime;    // 上次点击时间
-    private String  hintMessage;    // 提示消息
+    private int effectiveIntervalTime;    // 有效的间隔时间，单位毫秒
+    private long lastClickTime;    // 上次点击时间
+    private String hintMessage;    // 提示消息
     private Context context;
 
     /**
@@ -33,7 +31,7 @@ public class DoubleClickExitDetector {
      * @param hintMessage           提示消息
      * @param effectiveIntervalTime 有效间隔时间
      */
-    public DoubleClickExitDetector(Context context, String hintMessage, int effectiveIntervalTime) {
+    public DoubleClickExitUtils(Context context, String hintMessage, int effectiveIntervalTime) {
         this.context = context;
         this.hintMessage = hintMessage;
         this.effectiveIntervalTime = effectiveIntervalTime;
@@ -45,7 +43,7 @@ public class DoubleClickExitDetector {
      * @param context     Androdi上下文
      * @param hintMessage 提示消息
      */
-    public DoubleClickExitDetector(Context context, String hintMessage) {
+    public DoubleClickExitUtils(Context context, String hintMessage) {
         this(context, hintMessage, 2000);
     }
 
@@ -54,7 +52,7 @@ public class DoubleClickExitDetector {
      *
      * @param context Androdi上下文
      */
-    public DoubleClickExitDetector(Context context) {
+    public DoubleClickExitUtils(Context context) {
         this(context, Locale.CHINA.equals(Locale.getDefault()) ? DEFAULT_HINT_MESSAGE_CHINA : DEFAULT_HINT_MESSAGE_OTHER, 2000);
     }
 

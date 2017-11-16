@@ -17,17 +17,17 @@ import android.widget.Toast;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/20 18:27
- * @本类描述	  Badge 工具类(app显示未读消息icon)
- * @内容说明   1.设置Badge数量
- *            2.重置Badge数量
- * ---------------------------------------------     
- * @更新时间   2016/10/20 
- * @更新说明
+/**
+ * @Description:1.设置Badge数量 2.重置Badge数量
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:17
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class BadgeUtils {
     /**
      * 设置Badge 图标显示未读消息

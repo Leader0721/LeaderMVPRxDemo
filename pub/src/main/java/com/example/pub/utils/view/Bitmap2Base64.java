@@ -4,8 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
-import com.example.pub.utils.data.BASE64Decoder;
-import com.example.pub.utils.data.BASE64Encoder;
+import com.example.pub.utils.data.coder.BASE64Decoder;
+import com.example.pub.utils.data.coder.BASE64Encoder;
 import com.example.pub.utils.function.LogUtils;
 
 import java.io.ByteArrayOutputStream;

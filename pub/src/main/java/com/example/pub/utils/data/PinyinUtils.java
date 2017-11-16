@@ -2,18 +2,17 @@ package com.example.pub.utils.data;
 
 import android.support.v4.util.SimpleArrayMap;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/12/14 21:51
- * @本类描述	  拼音相关工具类
- * @内容说明
- * @补充内容
- *
- * ---------------------------------     
- * @新增内容
- *
+/**
+ * @Description:拼音相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:46
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
+
 public class PinyinUtils {
     private PinyinUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");

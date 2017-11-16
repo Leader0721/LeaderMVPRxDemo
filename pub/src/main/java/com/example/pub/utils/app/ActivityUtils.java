@@ -23,6 +23,7 @@ import java.util.List;
  * @Company:bc
  * @version: 1.0.0
  */
+
 public final class ActivityUtils {
 
     private ActivityUtils() {

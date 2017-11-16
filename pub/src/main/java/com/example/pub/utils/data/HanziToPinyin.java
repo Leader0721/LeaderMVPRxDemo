@@ -7,21 +7,21 @@ import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Locale;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/21 16:32
- * @本类描述	  汉字/拼音转换类
- * @内容说明
- * ---------------------------------------------     
- * @更新时间   2016/10/21 
- * @更新说明
+/**
+ * @Description:汉字/拼音转换类
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:36
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class HanziToPinyin {
     private static final boolean DEBUG = true;
-    private static final String  TAG   = "HanziToPinyin";
+    private static final String TAG = "HanziToPinyin";
 
-    private static final char[]   UNIHANS = {
+    private static final char[] UNIHANS = {
             '\u5416', '\u54ce', '\u5b89', '\u80ae', '\u51f9', '\u516b', '\u63b0', '\u6273',
             '\u90a6', '\u52f9', '\u9642', '\u5954', '\u4f3b', '\u7680', '\u782d', '\u706c',
             '\u618b', '\u6c43', '\u51ab', '\u7676', '\u5cec', '\u5693', '\u5072', '\u53c2',
@@ -284,16 +284,16 @@ public class HanziToPinyin {
     /**
      * First and last Chinese character with known Pinyin according to zh collation
      */
-    private static final String   FIRST_PINYIN_UNIHAN = "\u5416";
-    private static final String   LAST_PINYIN_UNIHAN  = "\u5497";
+    private static final String FIRST_PINYIN_UNIHAN = "\u5416";
+    private static final String LAST_PINYIN_UNIHAN = "\u5497";
     /**
      * The first Chinese character in Unicode block
      */
-    private static final char     FIRST_UNIHAN        = '\u3400';
-    private static final Collator COLLATOR            = Collator.getInstance(Locale.CHINA);
+    private static final char FIRST_UNIHAN = '\u3400';
+    private static final Collator COLLATOR = Collator.getInstance(Locale.CHINA);
 
     private static HanziToPinyin sInstance;
-    private final  boolean       mHasChinaCollator;
+    private final boolean mHasChinaCollator;
 
     public static class Token {
         /**
@@ -301,8 +301,8 @@ public class HanziToPinyin {
          */
         public static final String SEPARATOR = " ";
 
-        public static final int LATIN   = 1;
-        public static final int PINYIN  = 2;
+        public static final int LATIN = 1;
+        public static final int PINYIN = 2;
         public static final int UNKNOWN = 3;
 
         public Token() {
@@ -317,7 +317,7 @@ public class HanziToPinyin {
         /**
          * Type of this token, ASCII, PINYIN or UNKNOWN.
          */
-        public int    type;
+        public int type;
         /**
          * Original string before translation.
          */

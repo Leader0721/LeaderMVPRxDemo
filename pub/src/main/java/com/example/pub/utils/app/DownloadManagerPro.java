@@ -7,31 +7,26 @@ import android.os.Build;
 
 import java.lang.reflect.Method;
 
-
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/19 2:42
- * @本类描述	  下载相关工具类
- * @内容说明   1.得到下载信息和状态
- *            2.暂停或重新开始下载
- *            3.判断是否有暂停和重新下载的方法
- *            4.得到下载文件路径/uri
- *            5.得到下载暂停或失败的原因
- *
- * 需要权限:
- *        <uses-permission android:name="android.permission.INTERNET" />
- *         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
- *
- * 具体Demo:
+/**
+ * @Description: 1.得到下载信息和状态
+ * 2.暂停或重新开始下载
+ * 3.判断是否有暂停和重新下载的方法
+ * 4.得到下载文件路径/uri
+ * 5.得到下载暂停或失败的原因
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:21
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * 具体Demo：
  * https://github.com/Trinea/android-demo/blob/master/src/cn/trinea/android/demo/DownloadManagerDemo.java
- * ---------------------------------------------     
- * @更新时间   2016/10/19 
- * @更新说明   ${TODO} 多任务下载,下载使用看DownloadUtils的initDownload()和start()
  */
+
 public class DownloadManagerPro {
 
-    public static final Uri    CONTENT_URI           = Uri.parse("content://downloads/my_downloads");
+    public static final Uri CONTENT_URI = Uri.parse("content://downloads/my_downloads");
     /**
      * represents downloaded file above api 11 *
      */
@@ -39,15 +34,15 @@ public class DownloadManagerPro {
     /**
      * represents downloaded file below api 11 *
      */
-    public static final String COLUMN_LOCAL_URI      = "local_uri";
+    public static final String COLUMN_LOCAL_URI = "local_uri";
 
-    public static final String METHOD_NAME_PAUSE_DOWNLOAD  = "pauseDownload";
+    public static final String METHOD_NAME_PAUSE_DOWNLOAD = "pauseDownload";
     public static final String METHOD_NAME_RESUME_DOWNLOAD = "resumeDownload";
 
-    private static boolean isInitPauseDownload  = false;
+    private static boolean isInitPauseDownload = false;
     private static boolean isInitResumeDownload = false;
 
-    private static Method pauseDownload  = null;
+    private static Method pauseDownload = null;
     private static Method resumeDownload = null;
 
     private DownloadManager downloadManager;
@@ -286,13 +281,13 @@ public class DownloadManagerPro {
 
     public static class RequestPro extends DownloadManager.Request {
 
-        public static final String METHOD_NAME_SET_NOTI_CLASS  = "setNotiClass";
+        public static final String METHOD_NAME_SET_NOTI_CLASS = "setNotiClass";
         public static final String METHOD_NAME_SET_NOTI_EXTRAS = "setNotiExtras";
 
-        private static boolean isInitNotiClass  = false;
+        private static boolean isInitNotiClass = false;
         private static boolean isInitNotiExtras = false;
 
-        private static Method setNotiClass  = null;
+        private static Method setNotiClass = null;
         private static Method setNotiExtras = null;
 
         /**

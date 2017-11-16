@@ -1,11 +1,10 @@
 package com.example.pub.utils.data;
-
 /**
- * @Description: 简化SharedPreferences的帮助类.
+ * @Description:简化SharedPreferences的帮助类
  * @Prject:
- * @Package: com.example.pub.utils
+ * @Package: com.example.pub.utils.data
  * @author: Leader
- * @date: 2017/11/14   19:59
+ * @date: 2017/11/16   15:47
  * @Copyright: 个人版权所有
  * @Company:bc
  * @version: 1.0.0
@@ -52,7 +51,7 @@ public class SPUtil {
         } else if (object instanceof Long) {
             editor.putLong(key, (Long) object);
         } else {
-            editor.putString(key, ""+object.toString());
+            editor.putString(key, "" + object.toString());
         }
 
         SharedPreferencesCompat.apply(editor);
@@ -154,7 +153,6 @@ public class SPUtil {
             editor.commit();
         }
     }
-
 
 
     //第二套类型   等待归纳

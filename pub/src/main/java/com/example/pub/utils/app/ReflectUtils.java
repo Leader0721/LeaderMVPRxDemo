@@ -15,12 +15,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2017/08/07
- *     desc  : 反射相关工具类
- * </pre>
+ * @Description:反射相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:26
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class ReflectUtils {
 

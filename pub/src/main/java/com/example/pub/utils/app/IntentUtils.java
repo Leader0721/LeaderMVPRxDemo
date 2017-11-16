@@ -13,13 +13,16 @@ import com.example.pub.utils.data.FileUtils2;
 
 import java.io.File;
 
+
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/09/23
- *     desc  : 意图相关工具类
- * </pre>
+ * @Description:意图相关工具类
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:24
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public final class IntentUtils {
 

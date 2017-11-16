@@ -9,13 +9,16 @@ import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/6 0:04
- * @本类描述	  Gson 相关工具类
- * @内容说明   利用Gson 对 JSON 数据 处理
- *      
+
+/**
+ * @Description:利用Gson 对 JSON 数据 处理
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:36
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class GsonUtils {
     /**

@@ -10,23 +10,22 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/10 20:43
- * @本类描述	  编码解码转码_相关工具类
- * @内容说明   1.URL 编码解码
- *            2.base64 编码解码
- *            3.base64  安全编码
- *            4.html 编码解码
- *            5.字符串转码
- *
- *  注意:
- *           Base64URL安全编码
- *           将Base64中的URL非法字符�?,/=转为其他字符, 见RFC3548
- * ---------------------------------------------     
- * @更新时间   2016/10/10 
- * @更新说明
+/**
+ * @Description:1.URL 编码解码
+ * 2.base64 编码解码
+ * 3.base64  安全编码
+ * 4.html 编码解码
+ * 5.字符串转码
+ * @Prject:
+ * @Package: com.example.pub.utils.data
+ * @author: Leader
+ * @date: 2017/11/16   15:34
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
+ * 注意:
+ * Base64URL安全编码
+ * 将Base64中的URL非法字符�?,/=转为其他字符, 见RFC3548
  */
 public class EncodeUtils {
     /**

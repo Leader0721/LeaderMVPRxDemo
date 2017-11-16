@@ -1,19 +1,17 @@
 package com.example.pub.utils.app;
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2017/2/7 21:20
- * @本类描述	  WebView 工具类
- * @内容说明   1.打开/关闭自适应
- *            2.打开/关闭缩放
- *            3.开启/关闭JS
- *            4.开启/关闭JS弹窗
- * @补充内容
- *
- * ---------------------------------     
- * @更新时间   $Date$
- * @新增内容   ${TODO}
- *
+/**
+ * @Description: WebView 工具类
+ * 1.打开/关闭自适应
+ * 2.打开/关闭缩放
+ * 3.开启/关闭JS
+ * 4.开启/关闭JS弹窗
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:28
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 
 import android.annotation.SuppressLint;
@@ -21,7 +19,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class WebViewUtils {
-    private WebView     webView;
+    private WebView webView;
     private WebSettings webSettings;
 
     public WebViewUtils(WebView webView) {

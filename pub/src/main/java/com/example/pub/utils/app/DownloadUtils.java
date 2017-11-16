@@ -9,33 +9,29 @@ import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/14 22:53
- * @本类描述	  下载_相关工具类
- * @内容说明   1.设置下载文件名
- *            2.设置下载通知Notification 显示状态
- *
+/**
+ * @Description:1.设置下载文件名 2.设置下载通知Notification 显示状态
+ * @Prject:
+ * @Package: com.example.pub.utils.app
+ * @author: Leader
+ * @date: 2017/11/16   15:22
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  * 使用:
  * DownloadUtil downloadUtil = new DownloadUtil(activity, downloadUrl);
  * //下载显示名字，不能是中文
  * downloadUtil.setDownloadFileName("apkName" + System.currentTimeMillis() + ".apk");
  * downloadUtil.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
  * downloadUtil.start();
- *
- * ---------------------------------------------     
- * @更新时间   2016/10/14 
- * @更新说明   ${TODO} 1.后期添加 下载进度/暂停/缓存/取消  (自定义控件)
- *                      2.根据已有的360/谷歌/公司项目继续完善
  */
 public class DownloadUtils {
 
     private Context mContext;
     private String downloadFileName = "weiyan.apk";
-    private static long                    myReference;
-    private static DownloadManager         downloadManager;
-    private        DownloadManager.Request downloadRequest;
+    private static long myReference;
+    private static DownloadManager downloadManager;
+    private DownloadManager.Request downloadRequest;
 
     public DownloadUtils(Context context, String downloadUrl) {
         this.mContext = context;

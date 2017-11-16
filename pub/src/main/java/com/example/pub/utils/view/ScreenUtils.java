@@ -26,22 +26,24 @@ import com.example.pub.utils.app.Utils;
 
 import java.lang.reflect.Method;
 
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/9/21 16:58
- * @本类描述	  屏幕相关 工具类
- * @内容说明   1.Activity 横屏竖屏
- *            2.获取屏幕宽高
- *            3.设置透明状态栏
- *            4.隐藏状态栏,获取状态栏高度,状态栏是否存在
- *            5.显示/隐藏通知栏
- *            6.判断锁屏状态
- *            7.获取ActiconBar高度
- *            8.获取当前窗口的旋转角度
- *            9.判断是否当前屏幕状态(横屏/竖屏)
- *            10.设置窗口的透明度  1.0f,0.5f 变暗
- *      
+/**
+ * @Description:1.Activity 横屏竖屏
+ * 2.获取屏幕宽高
+ * 3.设置透明状态栏
+ * 4.隐藏状态栏,获取状态栏高度,状态栏是否存在
+ * 5.显示/隐藏通知栏
+ * 6.判断锁屏状态
+ * 7.获取ActiconBar高度
+ * 8.获取当前窗口的旋转角度
+ * 9.判断是否当前屏幕状态(横屏/竖屏)
+ * 10.设置窗口的透明度  1.0f,0.5f 变暗
+ * @Prject:
+ * @Package: com.example.pub.utils.view
+ * @author: Leader
+ * @date: 2017/11/16   15:56
+ * @Copyright: 个人版权所有
+ * @Company:bc
+ * @version: 1.0.0
  */
 public class ScreenUtils {
     //TODO 1.虚拟按键 宽高测量  2.ToolBar,snackbar高以及显示隐藏 3.右下角圆圈控件
@@ -469,7 +471,6 @@ public class ScreenUtils {
     }
 
 
-
     /**
      * Whether the Status bar is hidden or not,the method always helps you get
      * the height of Status bar.
@@ -599,8 +600,6 @@ public class ScreenUtils {
         view.destroyDrawingCache();
         return bp;
     }
-
-
 
 
 }
