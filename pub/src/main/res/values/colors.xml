@@ -11,7 +11,7 @@
     <!--完全透明-->
     <color name="transparent">#00000000</color>
     <!--七成透明-->
-    <color name="transparent_7">#77000000</color>
+    <color name="transparent_7">#B3000000</color>
 
 
     <!-- 状态栏颜色 -->

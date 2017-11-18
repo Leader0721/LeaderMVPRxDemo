@@ -410,7 +410,7 @@ public final class ToastUtils {
      * @param imageId
      */
     public static void showWithPicShort(String str, int imageId) {
-        showWithPic(str, imageId, 1000, 0, 0, 0, 0);
+        showWithPic(str, imageId, R.color.white, Toast.LENGTH_SHORT, 0, 0, 0, 0);
     }
 
     /**
@@ -420,7 +420,7 @@ public final class ToastUtils {
      * @param imageId
      */
     public static void showWithPicLong(String str, int imageId) {
-        showWithPic(str, imageId, 3000, 0, 0, 0, 0);
+        showWithPic(str, imageId, R.color.white, Toast.LENGTH_LONG, 0, 0, 0, 0);
     }
 
 
@@ -435,7 +435,7 @@ public final class ToastUtils {
      * @param offY
      * @param bgResourceId
      */
-    public static void showWithPic(String str, int imageId, int duration, int gravity, int offX, int offY, int bgResourceId) {
+    public static void showWithPic(String str, int imageId, int textColor, int duration, int gravity, int offX, int offY, int bgResourceId) {
         cancel();
         View view = LayoutInflater.from(Utils.getApp()).inflate(R.layout.view_toast, null);
         TextView text = (TextView) view.findViewById(R.id.tv_toast);
@@ -443,6 +443,8 @@ public final class ToastUtils {
         if (EmptyUtils.isEmpty(str)) {// 设置显示文字
             text.setText(str);
         } else {
+            text.setText(str);
+            text.setTextColor(Utils.getApp().getColor(textColor));
             if (imageId == 0) {
                 image.setVisibility(View.GONE);
             } else {
@@ -460,7 +462,11 @@ public final class ToastUtils {
             } else {
                 sToast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, 0);
             }
-            sToast.setDuration(duration); // Toast显示的时间
+            if (duration != Toast.LENGTH_LONG) {
+                sToast.setDuration(Toast.LENGTH_SHORT); // Toast显示的时间
+            } else {
+                sToast.setDuration(Toast.LENGTH_LONG); // Toast显示的时间
+            }
             sToast.setView(view);
             sToast.show();
         }
