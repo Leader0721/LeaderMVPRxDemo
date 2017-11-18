@@ -40,7 +40,6 @@ public class BadgeUtils {
      * HTC
      * Nova 需要这些权限
      *
-     * @param context context
      * @param count   count
      * @param icon    icon应用的图标
      */
@@ -92,7 +91,7 @@ public class BadgeUtils {
     <uses-permission android:name="telecom.mdesk.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="dianxin.permission.ACCESS_LAUNCHER_DATA"/>
     <uses-permission android:name="android.hardware.sensor.accelerometer"/>*/
-    public static void setBadgeCount(Context context, int count, int icon) {
+    public static void setBadgeCount(int count, int icon) {
 
         // TODO 生成器模式重构
         if (count <= 0) {
@@ -101,35 +100,34 @@ public class BadgeUtils {
             count = Math.max(0, Math.min(count, 99));
         }
         if (Build.MANUFACTURER.equalsIgnoreCase("xiaomi")) {
-            setBadgeOfMIUI(context, count, icon);
+            setBadgeOfMIUI(count, icon);
         } else if (Build.MANUFACTURER.equalsIgnoreCase("sony")) {
-            setBadgeOfSony(context, count);
+            setBadgeOfSony(count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("samsung") ||
                 Build.MANUFACTURER.toLowerCase().contains("lg")) {
-            setBadgeOfSumsung(context, count);
+            setBadgeOfSumsung(count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("htc")) {
-            setBadgeOfHTC(context, count);
+            setBadgeOfHTC(count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("nova")) {
-            setBadgeOfNova(context, count);
+            setBadgeOfNova(count);
         } else {
-            Toast.makeText(context, "Not Found Support Launcher", Toast.LENGTH_LONG).show();
+            Toast.makeText(Utils.getApp(), "Not Found Support Launcher", Toast.LENGTH_LONG).show();
         }
     }
 
     /**
      * 设置MIUI的Badge
      *
-     * @param context context
-     * @param count   count
-     * @param icon    icon
+     * @param count count
+     * @param icon  icon
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    private static void setBadgeOfMIUI(Context context, int count, int icon) {
+    private static void setBadgeOfMIUI(int count, int icon) {
 
         Log.d("xys", "Launcher : MIUI");
-        NotificationManager mNotificationManager = (NotificationManager) context
+        NotificationManager mNotificationManager = (NotificationManager) Utils.getApp()
                 .getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification.Builder builder = new Notification.Builder(context)
+        Notification.Builder builder = new Notification.Builder(Utils.getApp())
                 .setContentTitle("title").setContentText("text").setSmallIcon(icon);
         Notification notification = builder.build();
         try {
@@ -148,11 +146,10 @@ public class BadgeUtils {
      * <p/>
      * 需添加权限：<uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
      *
-     * @param context context
-     * @param count   count
+     * @param count count
      */
-    private static void setBadgeOfSony(Context context, int count) {
-        String launcherClassName = getLauncherClassName(context);
+    private static void setBadgeOfSony(int count) {
+        String launcherClassName = getLauncherClassName();
         if (launcherClassName == null) {
             return;
         }
@@ -166,89 +163,85 @@ public class BadgeUtils {
         localIntent.putExtra("com.sonyericsson.home.intent.extra.badge.ACTIVITY_NAME", launcherClassName);//启动页
         localIntent.putExtra("com.sonyericsson.home.intent.extra.badge.MESSAGE", String
                 .valueOf(count));//数字
-        localIntent.putExtra("com.sonyericsson.home.intent.extra.badge.PACKAGE_NAME", context.getPackageName());//包名
-        context.sendBroadcast(localIntent);
+        localIntent.putExtra("com.sonyericsson.home.intent.extra.badge.PACKAGE_NAME", Utils.getApp().getPackageName());//包名
+        Utils.getApp().sendBroadcast(localIntent);
     }
 
     /**
      * 设置三星的Badge\设置LG的Badge
      *
-     * @param context context
-     * @param count   count
+     * @param count count
      */
-    private static void setBadgeOfSumsung(Context context, int count) {
+    private static void setBadgeOfSumsung(int count) {
         // 获取你当前的应用
-        String launcherClassName = getLauncherClassName(context);
+        String launcherClassName = getLauncherClassName();
         if (launcherClassName == null) {
             return;
         }
         Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
         intent.putExtra("badge_count", count);
-        intent.putExtra("badge_count_package_name", context.getPackageName());
+        intent.putExtra("badge_count_package_name", Utils.getApp().getPackageName());
         intent.putExtra("badge_count_class_name", launcherClassName);
-        context.sendBroadcast(intent);
+        Utils.getApp().sendBroadcast(intent);
     }
 
     /**
      * 设置HTC的Badge
      *
-     * @param context context
-     * @param count   count
+     * @param count count
      */
-    private static void setBadgeOfHTC(Context context, int count) {
+    private static void setBadgeOfHTC(int count) {
         Intent intentNotification = new Intent("com.htc.launcher.action.SET_NOTIFICATION");
-        ComponentName localComponentName = new ComponentName(context.getPackageName(),
-                getLauncherClassName(context));
+        ComponentName localComponentName = new ComponentName(Utils.getApp().getPackageName(),
+                getLauncherClassName());
         intentNotification.putExtra("com.htc.launcher.extra.COMPONENT", localComponentName.flattenToShortString());
         intentNotification.putExtra("com.htc.launcher.extra.COUNT", count);
-        context.sendBroadcast(intentNotification);
+        Utils.getApp().sendBroadcast(intentNotification);
 
         Intent intentShortcut = new Intent("com.htc.launcher.action.UPDATE_SHORTCUT");
-        intentShortcut.putExtra("packagename", context.getPackageName());
+        intentShortcut.putExtra("packagename", Utils.getApp().getPackageName());
         intentShortcut.putExtra("count", count);
-        context.sendBroadcast(intentShortcut);
+        Utils.getApp().sendBroadcast(intentShortcut);
     }
 
     /**
      * 设置Nova的Badge
      *
-     * @param context context
-     * @param count   count
+     * @param count count
      */
-    private static void setBadgeOfNova(Context context, int count) {
+    private static void setBadgeOfNova(int count) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put("tag", context.getPackageName() + "/" +
-                getLauncherClassName(context));
+        contentValues.put("tag", Utils.getApp().getPackageName() + "/" +
+                getLauncherClassName());
         contentValues.put("count", count);
-        context.getContentResolver().insert(Uri.parse("content://com.teslacoilsw.notifier/unread_count"),
+        Utils.getApp().getContentResolver().insert(Uri.parse("content://com.teslacoilsw.notifier/unread_count"),
                 contentValues);
     }
 
-    public static void setBadgeOfMadMode(Context context, int count, String packageName, String className) {
+    public static void setBadgeOfMadMode(int count, String packageName, String className) {
         Intent intent = new Intent("android.intent.action.BADGE_COUNT_UPDATE");
         intent.putExtra("badge_count", count);
         intent.putExtra("badge_count_package_name", packageName);
         intent.putExtra("badge_count_class_name", className);
-        context.sendBroadcast(intent);
+        Utils.getApp().sendBroadcast(intent);
     }
 
     /**
      * 重置Badge
      *
-     * @param context context
-     * @param icon    icon
+     * @param icon icon
      */
-    public static void resetBadgeCount(Context context, int icon) {
+    public static void resetBadgeCount(int icon) {
 
-        setBadgeCount(context, 0, icon);
+        setBadgeCount(0, icon);
     }
 
-    public static String getLauncherClassName(Context context) {
-        PackageManager packageManager = context.getPackageManager();
+    public static String getLauncherClassName() {
+        PackageManager packageManager = Utils.getApp().getPackageManager();
         Intent intent = new Intent(Intent.ACTION_MAIN);
         // To limit the components this Intent will resolve to, by setting an
         // explicit package name.
-        intent.setPackage(context.getPackageName());
+        intent.setPackage(Utils.getApp().getPackageName());
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         // All Application must have 1 Activity at least.
         // Launcher activity must be found!

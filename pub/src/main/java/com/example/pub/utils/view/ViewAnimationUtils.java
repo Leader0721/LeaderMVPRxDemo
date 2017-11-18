@@ -5,9 +5,10 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
+
 /**
  * @Description:View动画工具类
- * @Prject: 
+ * @Prject:
  * @Package: com.example.pub.utils.view
  * @author: Leader
  * @date: 2017/11/16   15:58

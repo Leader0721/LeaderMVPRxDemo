@@ -147,7 +147,7 @@ public class CrashUtils implements Thread.UncaughtExceptionHandler {
             }
         }.start();
         //收集设备参数信息
-        collectDeviceInfo(mContext);
+        collectDeviceInfo();
         //保存日志文件
         saveCrashInfo2File(throwable);
         return true;
@@ -156,12 +156,11 @@ public class CrashUtils implements Thread.UncaughtExceptionHandler {
     /**
      * 收集设备参数信息
      *
-     * @param ctx 上下文
      */
-    public void collectDeviceInfo(Context ctx) {
+    public void collectDeviceInfo() {
         try {
-            PackageManager pm = ctx.getPackageManager();
-            PackageInfo pi = pm.getPackageInfo(ctx.getPackageName(), PackageManager.GET_ACTIVITIES);
+            PackageManager pm = Utils.getApp().getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(Utils.getApp().getPackageName(), PackageManager.GET_ACTIVITIES);
             if (pi != null) {
                 String versionName = pi.versionName == null ? "null" : pi.versionName;
                 String versionCode = pi.versionCode + "";

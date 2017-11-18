@@ -45,22 +45,20 @@ public class PhoneUtils {
     /**
      * 判断设备是否是手机
      *
-     * @param context 上下文
      * @return true: 是  ; false: 否
      */
-    public static boolean isPhone(Context context) {
-        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+    public static boolean isPhone( ) {
+        TelephonyManager tm = (TelephonyManager) Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
         return tm.getPhoneType() != TelephonyManager.PHONE_TYPE_NONE;
     }
 
     /**
      * 跳至填充好phoneNumber的拨号界面
      *
-     * @param context     上下文
      * @param phoneNumber 电话号码
      */
-    public static void callToDial(Context context, String phoneNumber) {
-        context.startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber)));
+    public static void callToDial( String phoneNumber) {
+        Utils.getApp().startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber)));
     }
 
     /**
@@ -69,25 +67,23 @@ public class PhoneUtils {
      * 需添加权限
      * <uses-permission android:name="android.permission.CALL_PHONE"/>
      *
-     * @param context     上下文
      * @param phoneNumber 电话号码
      */
-    public static void call(Context context, String phoneNumber) {
-        context.startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" + phoneNumber)));
+    public static void call( String phoneNumber) {
+        Utils.getApp().startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" + phoneNumber)));
     }
 
     /**
      * 发送短信
      *
-     * @param context     上下文
      * @param phoneNumber 接收号码
      * @param content     短信内容
      */
-    public static void sendSms(Context context, String phoneNumber, String content) {
+    public static void sendSms( String phoneNumber, String content) {
         Uri uri = Uri.parse("smsto:" + (StringUtils.isEmpty(phoneNumber) ? "" : phoneNumber));
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
         intent.putExtra("sms_body", StringUtils.isEmpty(content) ? "" : content);
-        context.startActivity(intent);
+        Utils.getApp().startActivity(intent);
     }
 
     /**
@@ -95,14 +91,13 @@ public class PhoneUtils {
      * <p>需添加权限
      * <uses-permission android:name="android.permission.SEND_SMS"/>
      *
-     * @param context     上下文
      * @param phoneNumber 接收号码
      * @param content     短信内容
      */
-    public static void sendSmsSilent(Context context, String phoneNumber, String content) {
+    public static void sendSmsSilent( String phoneNumber, String content) {
         if (StringUtils.isEmpty(content))
             return;
-        PendingIntent sentIntent = PendingIntent.getBroadcast(context, 0, new Intent(), 0);
+        PendingIntent sentIntent = PendingIntent.getBroadcast(Utils.getApp(), 0, new Intent(), 0);
         SmsManager smsManager = SmsManager.getDefault();
         if (content.length() >= 70) {
             List<String> ms = smsManager.divideMessage(content);
@@ -122,14 +117,13 @@ public class PhoneUtils {
      * <p>
      * <uses-permission android:name="android.permission.READ_CONTACTS"/>
      *
-     * @param context 上下文;
      * @return 联系人链表
      */
-    public static List<HashMap<String, String>> getAllContactInfo(Context context) {
+    public static List<HashMap<String, String>> getAllContactInfo( ) {
         SystemClock.sleep(3000);
         ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
         // 1.获取内容解析者
-        ContentResolver resolver = context.getContentResolver();
+        ContentResolver resolver = Utils.getApp().getContentResolver();
         // 2.获取内容提供者的地址:com.android.contacts
         // raw_contacts表的地址 :raw_contacts
         // view_data表的地址 : data
@@ -225,12 +219,11 @@ public class PhoneUtils {
      * <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
      * </p>
      *
-     * @param context 上下文
      */
-    public static void getAllSMS(Context context) {
+    public static void getAllSMS( ) {
         // 1.获取短信
         // 1.1获取内容解析者
-        ContentResolver resolver = context.getContentResolver();
+        ContentResolver resolver = Utils.getApp().getContentResolver();
         // 1.2获取内容提供者地址   sms,sms表的地址:null  不写
         // 1.3获取查询路径
         Uri uri = Uri.parse("content://sms");

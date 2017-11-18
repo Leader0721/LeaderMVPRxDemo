@@ -52,15 +52,14 @@ public class DeviceUtils {
     /**
      * 设备唯一标识(UUID+设备序列号)
      *
-     * @param context
      * @return 唯一识别码(不可变)
      */
-    public static String getUUID(Context context) {
-        final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getUUID() {
+        final TelephonyManager tm = (TelephonyManager) Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
         final String tmDevice, tmSerial, androidId;
         tmDevice = "" + tm.getDeviceId();
         tmSerial = "" + tm.getSimSerialNumber();
-        androidId = "" + Settings.Secure.getString(context.getContentResolver(),
+        androidId = "" + Settings.Secure.getString(Utils.getApp().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
         UUID deviceUuid = new UUID(androidId.hashCode(), ((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
         String uniqueId = deviceUuid.toString();
@@ -70,12 +69,11 @@ public class DeviceUtils {
     /**
      * 获取设备AndroidID
      *
-     * @param context 上下文
      * @return AndroidID
      */
     @SuppressLint("HardwareIds")
-    public static String getAndroidID(Context context) {
-        return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+    public static String getAndroidID() {
+        return Settings.Secure.getString(Utils.getApp().getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
 
@@ -84,11 +82,10 @@ public class DeviceUtils {
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>}</p>
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.INTERNET"/>}</p>
      *
-     * @param context 上下文
      * @return MAC地址
      */
-    public static String getMacAddress(Context context) {
-        String macAddress = getMacAddressByWifiInfo(context);
+    public static String getMacAddress() {
+        String macAddress = getMacAddressByWifiInfo();
         if (!"02:00:00:00:00:00".equals(macAddress)) {
             return macAddress;
         }
@@ -107,13 +104,12 @@ public class DeviceUtils {
      * 获取设备MAC地址
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>}</p>
      *
-     * @param context 上下文
      * @return MAC地址
      */
     @SuppressLint("HardwareIds")
-    private static String getMacAddressByWifiInfo(Context context) {
+    private static String getMacAddressByWifiInfo() {
         try {
-            WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+            WifiManager wifi = (WifiManager) Utils.getApp().getSystemService(Context.WIFI_SERVICE);
             if (wifi != null) {
                 WifiInfo info = wifi.getConnectionInfo();
                 if (info != null) return info.getMacAddress();
@@ -186,11 +182,10 @@ public class DeviceUtils {
     /**
      * TelephonyManager对象
      *
-     * @param context
      * @return
      */
-    private static TelephonyManager getTelphoneManager(Context context) {
-        return (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+    private static TelephonyManager getTelphoneManager() {
+        return (TelephonyManager) Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
     }
 
     /**
@@ -198,11 +193,10 @@ public class DeviceUtils {
      * <p/>
      * 对于CDMA设备,返回的是一个空值
      *
-     * @param context
      * @return
      */
-    public static String getSimSerialNumber(Context context) {
-        return getTelphoneManager(context).getSimSerialNumber();
+    public static String getSimSerialNumber() {
+        return getTelphoneManager().getSimSerialNumber();
     }
 
     /**
@@ -210,22 +204,20 @@ public class DeviceUtils {
      * 需要权限:<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
      * 限制:对于手机来说IMEI是唯一,其他设备如平板可能没有(返回null)
      *
-     * @param context
      * @return
      */
-    public static String getIMEI(Context context) {
-        return getTelphoneManager(context).getDeviceId();
+    public static String getIMEI() {
+        return getTelphoneManager().getDeviceId();
     }
 
     /**
      * 获取客户ID,GSM中是IMSI号(sim卡的电子串号)
      *
-     * @param context
      * @return
      */
-    public static String getImsi(Context context) {
+    public static String getImsi() {
 
-        return getTelphoneManager(context).getSubscriberId();
+        return getTelphoneManager().getSubscriberId();
     }
 
 
@@ -279,7 +271,6 @@ public class DeviceUtils {
      * 需添加权限
      * <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
      *
-     * @param context 上下文
      * @return DeviceId(IMEI) = 99000311726612<br>
      * DeviceSoftwareVersion = 00<br>
      * Line1Number =<br>
@@ -296,8 +287,8 @@ public class DeviceUtils {
      * SubscriberId(IMSI) = 460030419724900<br>
      * VoiceMailNumber = *86<br>
      */
-    public static String getPhoneStatus(Context context) {
-        TelephonyManager tm = (TelephonyManager) context
+    public static String getPhoneStatus() {
+        TelephonyManager tm = (TelephonyManager) Utils.getApp()
                 .getSystemService(Context.TELEPHONY_SERVICE);
         String str = "";
         str += "DeviceId(IMEI) = " + tm.getDeviceId() + "\n";
@@ -330,21 +321,19 @@ public class DeviceUtils {
     /**
      * sim卡运营商名字
      *
-     * @param context
      * @return
      */
-    public static String getSimOperatorName(Context context) {
-        return getTelphoneManager(context).getSimOperatorName();
+    public static String getSimOperatorName() {
+        return getTelphoneManager().getSimOperatorName();
     }
 
     /**
      * 获取当前设备运营商(通过sim卡)
      *
-     * @param context
      * @return 返回0 表示失败 1表示为中国移动 2为中国联通 3为中国电信
      */
-    public static int getProviderName(Context context) {
-        String IMSI = getImsi(context);
+    public static int getProviderName() {
+        String IMSI = getImsi();
         if (IMSI == null) {
             return ERROR;
         }

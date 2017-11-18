@@ -8,7 +8,12 @@
     <!-- 通用颜色 -->
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
+    <!--完全透明-->
     <color name="transparent">#00000000</color>
+    <!--七成透明-->
+    <color name="transparent_7">#77000000</color>
+
+
     <!-- 状态栏颜色 -->
     <color name="statusBar_color">#343b44</color>
 
@@ -32,5 +37,6 @@
     <item name="gray_holo_light" type="color">#ffd0d0d0</item>
     <!-- 分割线颜色 -->
     <color name="linecolor">#ffe9e9e9</color>
+    <color name="lightgray">#C1C1C1</color>
 
 </resources>

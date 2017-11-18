@@ -29,13 +29,12 @@ public class DeviceStatusUtils {
     /**
      * 获取系统屏幕亮度模式的状态，需要WRITE_SETTINGS权限
      *
-     * @param context 上下文
      * @return System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC：自动；System.
      * SCREEN_BRIGHTNESS_MODE_AUTOMATIC
      * ：手动；默认：System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
      */
-    public static int getScreenBrightnessModeState(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
+    public static int getScreenBrightnessModeState() {
+        return Settings.System.getInt(Utils.getApp().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
     }
@@ -46,11 +45,10 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return true：自动；false：手动；默认：true
      */
-    public static boolean isScreenBrightnessModeAuto(Context context) {
-        return getScreenBrightnessModeState(context) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
+    public static boolean isScreenBrightnessModeAuto() {
+        return getScreenBrightnessModeState() == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
     }
 
     /**
@@ -59,14 +57,13 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
-     * @param auto    自动
+     * @param auto 自动
      * @return 是否设置成功
      */
-    public static boolean setScreenBrightnessMode(Context context, boolean auto) {
+    public static boolean setScreenBrightnessMode(boolean auto) {
         boolean result = true;
-        if (isScreenBrightnessModeAuto(context) != auto) {
-            result = Settings.System.putInt(context.getContentResolver(),
+        if (isScreenBrightnessModeAuto() != auto) {
+            result = Settings.System.putInt(Utils.getApp().getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS_MODE,
                     auto ? Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
                             : Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
@@ -80,11 +77,10 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 亮度，范围是0-255；默认255
      */
-    public static int getScreenBrightness(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
+    public static int getScreenBrightness() {
+        return Settings.System.getInt(Utils.getApp().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, 255);
     }
 
@@ -94,12 +90,11 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context          上下文
      * @param screenBrightness 亮度，范围是0-255
      * @return 设置是否成功
      */
-    public static boolean setScreenBrightness(Context context,
-                                              int screenBrightness) {
+    public static boolean setScreenBrightness(
+            int screenBrightness) {
         int brightness = screenBrightness;
         if (screenBrightness < 1) {
             brightness = 1;
@@ -109,7 +104,7 @@ public class DeviceStatusUtils {
                 brightness = 255;
             }
         }
-        boolean result = Settings.System.putInt(context.getContentResolver(),
+        boolean result = Settings.System.putInt(Utils.getApp().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, brightness);
         return result;
     }
@@ -150,7 +145,7 @@ public class DeviceStatusUtils {
     public static boolean setScreenBrightnessAndApply(Activity activity,
                                                       int screenBrightness) {
         boolean result = true;
-        result = setScreenBrightness(activity, screenBrightness);
+        result = setScreenBrightness(screenBrightness);
         if (result) {
             setWindowBrightness(activity, screenBrightness);
         }
@@ -163,11 +158,10 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 屏幕休眠时间，单位毫秒，默认30000
      */
-    public static int getScreenDormantTime(Context context) {
-        return Settings.System.getInt(context.getContentResolver(),
+    public static int getScreenDormantTime() {
+        return Settings.System.getInt(Utils.getApp().getContentResolver(),
                 Settings.System.SCREEN_OFF_TIMEOUT, 30000);
     }
 
@@ -177,11 +171,10 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 设置是否成功
      */
-    public static boolean setScreenDormantTime(Context context, int millis) {
-        return Settings.System.putInt(context.getContentResolver(),
+    public static boolean setScreenDormantTime(int millis) {
+        return Settings.System.putInt(Utils.getApp().getContentResolver(),
                 Settings.System.SCREEN_OFF_TIMEOUT, millis);
     }
 
@@ -191,16 +184,15 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 1：打开；0：关闭；默认：关闭
      */
     @SuppressWarnings("deprecation")
-    public static int getAirplaneModeState(Context context) {
+    public static int getAirplaneModeState() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            return Settings.System.getInt(context.getContentResolver(),
+            return Settings.System.getInt(Utils.getApp().getContentResolver(),
                     Settings.System.AIRPLANE_MODE_ON, 0);
         } else {
-            return Settings.Global.getInt(context.getContentResolver(),
+            return Settings.Global.getInt(Utils.getApp().getContentResolver(),
                     Settings.Global.AIRPLANE_MODE_ON, 0);
         }
     }
@@ -215,7 +207,7 @@ public class DeviceStatusUtils {
      * @return true：打开；false：关闭；默认关闭
      */
     public static boolean isAirplaneModeOpen(Context context) {
-        return getAirplaneModeState(context) == 1;
+        return getAirplaneModeState() == 1;
     }
 
     /**
@@ -224,25 +216,24 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
-     * @param enable  飞行模式的状态
+     * @param enable 飞行模式的状态
      * @return 设置是否成功
      */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @SuppressWarnings("deprecation")
-    public static boolean setAirplaneMode(Context context, boolean enable) {
+    public static boolean setAirplaneMode(boolean enable) {
         boolean result = true;
         // 如果飞行模式当前的状态与要设置的状态不一样
-        if (isAirplaneModeOpen(context) != enable) {
+        if (isAirplaneModeOpen(Utils.getApp()) != enable) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                result = Settings.System.putInt(context.getContentResolver(),
+                result = Settings.System.putInt(Utils.getApp().getContentResolver(),
                         Settings.System.AIRPLANE_MODE_ON, enable ? 1 : 0);
             } else {
-                result = Settings.Global.putInt(context.getContentResolver(),
+                result = Settings.Global.putInt(Utils.getApp().getContentResolver(),
                         Settings.Global.AIRPLANE_MODE_ON, enable ? 1 : 0);
             }
             // 发送飞行模式已经改变广播
-            context.sendBroadcast(new Intent(
+            Utils.getApp().sendBroadcast(new Intent(
                     Intent.ACTION_AIRPLANE_MODE_CHANGED));
         }
         return result;
@@ -345,11 +336,10 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 铃声音量，取值范围为0-7；默认为0
      */
-    public static int getRingVolume(Context context) {
-        return ((AudioManager) context.getSystemService(Context.AUDIO_SERVICE)).getStreamVolume(AudioManager
+    public static int getRingVolume() {
+        return ((AudioManager) Utils.getApp().getSystemService(Context.AUDIO_SERVICE)).getStreamVolume(AudioManager
                 .STREAM_RING);
     }
 
@@ -359,10 +349,9 @@ public class DeviceStatusUtils {
      * 需要权限:
      * <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
      *
-     * @param context 上下文
      * @return 媒体音量，取值范围为0-7
      */
-    public static void setRingVolume(Context context, int ringVloume) {
+    public static void setRingVolume(int ringVloume) {
         if (ringVloume < 0) {
             ringVloume = 0;
         } else if (ringVloume > 7) {
@@ -372,19 +361,18 @@ public class DeviceStatusUtils {
             }
         }
 
-        ((AudioManager) context.getSystemService(Context.AUDIO_SERVICE)).setStreamVolume(AudioManager.STREAM_RING,
+        ((AudioManager) Utils.getApp().getSystemService(Context.AUDIO_SERVICE)).setStreamVolume(AudioManager.STREAM_RING,
                 ringVloume, AudioManager.FLAG_PLAY_SOUND);
     }
 
     /**
      * 时长震动
      *
-     * @param context
      * @param milliseconds 震动的时长，单位是毫秒
      */
-    public static void Vibrate(final Context context, long milliseconds, boolean isVibrate) {
+    public static void Vibrate(long milliseconds, boolean isVibrate) {
         if (isVibrate) {
-            Vibrator vib = (Vibrator) context.getSystemService(Service.VIBRATOR_SERVICE);
+            Vibrator vib = (Vibrator) Utils.getApp().getSystemService(Service.VIBRATOR_SERVICE);
             vib.vibrate(milliseconds);
         }
     }

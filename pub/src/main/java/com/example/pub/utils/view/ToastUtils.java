@@ -15,12 +15,16 @@ import android.support.v4.widget.TextViewCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pub.R;
 import com.example.pub.utils.app.Utils;
+import com.example.pub.utils.function.EmptyUtils;
 
 import java.lang.ref.WeakReference;
+
 /**
  * @Description:吐司相关工具类
  * @Prject:
@@ -33,18 +37,18 @@ import java.lang.ref.WeakReference;
  */
 public final class ToastUtils {
 
-    private static final int     DEFAULT_COLOR = 0xFEFFFFFF;
-    private static final Handler HANDLER       = new Handler(Looper.getMainLooper());
+    private static final int DEFAULT_COLOR = 0xFEFFFFFF;
+    private static final Handler HANDLER = new Handler(Looper.getMainLooper());
 
-    private static Toast               sToast;
+    private static Toast sToast;
     private static WeakReference<View> sViewWeakReference;
-    private static int sLayoutId  = -1;
-    private static int gravity    = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
-    private static int xOffset    = 0;
-    private static int yOffset    = (int) (64 * Utils.getApp().getResources().getDisplayMetrics().density + 0.5);
-    private static int bgColor    = DEFAULT_COLOR;
+    private static int sLayoutId = -1;
+    private static int gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
+    private static int xOffset = 0;
+    private static int yOffset = (int) (64 * Utils.getApp().getResources().getDisplayMetrics().density + 0.5);
+    private static int bgColor = DEFAULT_COLOR;
     private static int bgResource = -1;
-    private static int msgColor   = DEFAULT_COLOR;
+    private static int msgColor = DEFAULT_COLOR;
 
     private ToastUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
@@ -89,6 +93,7 @@ public final class ToastUtils {
     public static void setMsgColor(@ColorInt final int msgColor) {
         ToastUtils.msgColor = msgColor;
     }
+
 
     /**
      * 安全地显示短时吐司
@@ -338,6 +343,7 @@ public final class ToastUtils {
         }
     }
 
+
     private static void show(@StringRes final int resId, final int duration) {
         show(Utils.getApp().getResources().getText(resId).toString(), duration);
     }
@@ -396,4 +402,68 @@ public final class ToastUtils {
         sLayoutId = layoutId;
         return toastView;
     }
+
+    /**
+     * 短时间显示带有图片的toast
+     *
+     * @param str
+     * @param imageId
+     */
+    public static void showWithPicShort(String str, int imageId) {
+        showWithPic(str, imageId, 1000, 0, 0, 0, 0);
+    }
+
+    /**
+     * 短时间显示带有图片的toast
+     *
+     * @param str
+     * @param imageId
+     */
+    public static void showWithPicLong(String str, int imageId) {
+        showWithPic(str, imageId, 3000, 0, 0, 0, 0);
+    }
+
+
+    /**
+     * 显示带有图片的toast 属性比较全
+     *
+     * @param str
+     * @param imageId
+     * @param duration
+     * @param gravity
+     * @param offX
+     * @param offY
+     * @param bgResourceId
+     */
+    public static void showWithPic(String str, int imageId, int duration, int gravity, int offX, int offY, int bgResourceId) {
+        cancel();
+        View view = LayoutInflater.from(Utils.getApp()).inflate(R.layout.view_toast, null);
+        TextView text = (TextView) view.findViewById(R.id.tv_toast);
+        ImageView image = (ImageView) view.findViewById(R.id.iv_toast);
+        if (EmptyUtils.isEmpty(str)) {// 设置显示文字
+            text.setText(str);
+        } else {
+            if (imageId == 0) {
+                image.setVisibility(View.GONE);
+            } else {
+                image.setVisibility(View.VISIBLE);
+                image.setImageResource(imageId);
+            }
+            if (bgResourceId != 0) {//设置背景
+                view.setBackgroundResource(bgResourceId);
+            } else {
+                view.setBackgroundResource(R.drawable.bg_corner_tran);
+            }
+            sToast = new Toast(Utils.getApp());
+            if (gravity != 0 || offX != 0 || offY != 0) {// Toast显示的位置
+                sToast.setGravity(gravity, offX, offY);
+            } else {
+                sToast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, 0);
+            }
+            sToast.setDuration(duration); // Toast显示的时间
+            sToast.setView(view);
+            sToast.show();
+        }
+    }
+
 }

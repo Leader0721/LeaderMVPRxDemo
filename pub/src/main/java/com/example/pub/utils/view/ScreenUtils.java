@@ -18,9 +18,11 @@ import android.util.TypedValue;
 import android.view.Display;
 import android.view.Surface;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+import android.widget.LinearLayout;
 
 import com.example.pub.utils.app.Utils;
 
@@ -78,32 +80,6 @@ public class ScreenUtils {
     }
 
     /**
-     * 获取屏幕的宽度px
-     *
-     * @param context 上下文
-     * @return 屏幕宽px
-     */
-    public static int getScreenWidth(Context context) {
-        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics outMetrics = new DisplayMetrics();// 创建了一张白纸
-        windowManager.getDefaultDisplay().getMetrics(outMetrics);// 给白纸设置宽高
-        return outMetrics.widthPixels;
-    }
-
-    /**
-     * 获取屏幕的高度px
-     *
-     * @param context 上下文
-     * @return 屏幕高px
-     */
-    public static int getScreenHeight(Context context) {
-        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics outMetrics = new DisplayMetrics();// 创建了一张白纸
-        windowManager.getDefaultDisplay().getMetrics(outMetrics);// 给白纸设置宽高
-        return outMetrics.heightPixels;
-    }
-
-    /**
      * 设置透明状态栏
      * <p>
      * 可在Activity的onCreat()中调用
@@ -142,15 +118,14 @@ public class ScreenUtils {
     /**
      * 获取状态栏高度
      *
-     * @param context 上下文
      * @return 状态栏高度
      */
-    public static int getStatusBarHeight(Context context) {
+    public static int getStatusBarHeight() {
         int result = 0;
-        int resourceId = context.getResources()
+        int resourceId = Utils.getApp().getResources()
                 .getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
-            result = context.getResources().getDimensionPixelSize(resourceId);
+            result = Utils.getApp().getResources().getDimensionPixelSize(resourceId);
         }
         return result;
     }
@@ -187,13 +162,12 @@ public class ScreenUtils {
      * 注意:需添加权限
      * <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
      *
-     * @param context        上下文
      * @param isSettingPanel {@code true}: 打开设置<br>{@code false}: 打开通知
      */
-    public static void showNotificationBar(Context context, boolean isSettingPanel) {
+    public static void showNotificationBar(boolean isSettingPanel) {
         String methodName = (Build.VERSION.SDK_INT <= 16) ? "expand"
                 : (isSettingPanel ? "expandSettingsPanel" : "expandNotificationsPanel");
-        invokePanels(context, methodName);
+        invokePanels(methodName);
     }
 
     /**
@@ -201,23 +175,20 @@ public class ScreenUtils {
      * <p>
      * 注意:需添加权限
      * <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
-     *
-     * @param context 上下文
      */
-    public static void hideNotificationBar(Context context) {
+    public static void hideNotificationBar() {
         String methodName = (Build.VERSION.SDK_INT <= 16) ? "collapse" : "collapsePanels";
-        invokePanels(context, methodName);
+        invokePanels(methodName);
     }
 
     /**
      * 反射唤醒通知栏
      *
-     * @param context    上下文
      * @param methodName 方法名
      */
-    private static void invokePanels(Context context, String methodName) {
+    private static void invokePanels(String methodName) {
         try {
-            Object service = context.getSystemService("statusbar");
+            Object service = Utils.getApp().getSystemService("statusbar");
             Class<?> statusBarManager = Class.forName("android.app.StatusBarManager");
             Method expand = statusBarManager.getMethod(methodName);
             expand.invoke(service);
@@ -225,6 +196,88 @@ public class ScreenUtils {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 设置状态栏的颜色
+     * 1.将状态栏透明
+     * 2.添加一个自定义颜色的View覆盖状态栏
+     *
+     * @param activity
+     * @param argb
+     */
+    public static void setStatusBarColor(Activity activity, int argb) {
+        setTransparentStatusBar(activity);
+        addStatusBarView(activity, argb);
+    }
+
+    /**
+     * 设置透明状态栏(相当于隐藏状态栏)
+     * <p>
+     * 可在Activity的onCreat()中调用
+     * <p>
+     * 注意:需在顶部控件布局中加入以下属性让内容出现在状态栏之下:
+     * android:clipToPadding="true"   // true 会贴近上层布局 ; false 与上层布局有一定间隙
+     * android:fitsSystemWindows="true"   //true 会保留actionBar,title,虚拟键的空间 ; false 不保留
+     *
+     * @param activity activity
+     */
+    public static void setTransparentStatusBar(Activity activity) {
+        //5.0及以上
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            View decorView = activity.getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+            /**
+             * 如果上面无效,用这个
+             *activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+             *activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+             */
+            //4.4到5.0
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = activity.getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+            /**
+             * 如果上面无效,用这个
+             * activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+             */
+
+        }
+    }
+
+    /**
+     * 添加状态栏View
+     *
+     * @param activity 需要设置的 activity
+     * @param argb     Color.argb(alpha, 0, 0, 0)  颜色属性
+     */
+    private static void addStatusBarView(Activity activity, int argb) {
+        ViewGroup contentView = (ViewGroup) activity.findViewById(android.R.id.content);
+        // 移除半透明矩形,以免叠加
+        if (contentView.getChildCount() > 1) {
+            contentView.removeViewAt(1);
+        }
+        contentView.addView(createStatusBarView(activity, argb));
+    }
+
+    /**
+     * 创建矩形 View
+     *
+     * @param argb Color.argb(alpha, 0, 0, 0)  颜色属性
+     * @return View
+     */
+    private static View createStatusBarView(Activity activity, int argb) {
+        // 绘制一个和状态栏一样高的矩形
+        View statusBarView = new View(activity);
+        LinearLayout.LayoutParams params =
+                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                        getStatusBarHeight());
+        statusBarView.setLayoutParams(params);
+        statusBarView.setBackgroundColor(argb);
+        return statusBarView;
+    }
+
 
     /**
      * 设置屏幕为横屏
@@ -299,18 +352,6 @@ public class ScreenUtils {
         valueAnimator.start();
     }
 
-
-    /**
-     * 判断是否锁屏
-     *
-     * @param context 上下文
-     * @return {@code true}: 是<br>{@code false}: 否
-     */
-    public static boolean isScreenLock(Context context) {
-        KeyguardManager km = (KeyguardManager) context
-                .getSystemService(Context.KEYGUARD_SERVICE);
-        return km.inKeyguardRestrictedInputMode();
-    }
 
     /**
      * 获取屏幕旋转角度
@@ -481,13 +522,13 @@ public class ScreenUtils {
      *                {@link Activity} object.
      * @return Return the height of Status bar.
      */
-    public static int getStatusHeight(Context context) {
+    public static int getStatusHeight() {
         int statusHeight = -1;
         try {
             Class<?> clazz = Class.forName("com.android.internal.R$dimen");
             Object object = clazz.newInstance();
             int id = (Integer) (clazz.getField("status_bar_height").get(object));
-            statusHeight = context.getResources().getDimensionPixelSize(id);
+            statusHeight = Utils.getApp().getResources().getDimensionPixelSize(id);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -521,12 +562,11 @@ public class ScreenUtils {
     /**
      * 功能描述：获取虚拟按键区域的高度
      *
-     * @param context
      * @return int 如果有虚拟按键则返回其高度否则返回0；
      */
-    public static int getNavigationAreaHeight(Context context) {
-        int realScreenHeight = ScreenUtils.getRealScreenHeight(context);
-        int screenHeight = ScreenUtils.getScreenHeight(context);
+    public static int getNavigationAreaHeight() {
+        int realScreenHeight = ScreenUtils.getRealScreenHeight(Utils.getApp());
+        int screenHeight = ScreenUtils.getScreenHeight();
 
         return realScreenHeight - screenHeight;
     }
@@ -534,31 +574,28 @@ public class ScreenUtils {
     /**
      * 功能描述：获取倍率
      *
-     * @param context
      * @return float
      */
-    public static int getSmallestScreenWidthDp(Context context) {
-        return context.getResources().getConfiguration().smallestScreenWidthDp;
+    public static int getSmallestScreenWidthDp() {
+        return Utils.getApp().getResources().getConfiguration().smallestScreenWidthDp;
     }
 
     /**
      * 功能描述：获取倍率
      *
-     * @param context
      * @return float
      */
-    public static float getDensity(Context context) {
-        return context.getResources().getDisplayMetrics().density;
+    public static float getDensity() {
+        return Utils.getApp().getResources().getDisplayMetrics().density;
     }
 
     /**
      * 获取导航栏高度
      *
-     * @param c
      * @return
      */
-    public static int getNavigationBarrH(Context c) {
-        Resources resources = c.getResources();
+    public static int getNavigationBarrH() {
+        Resources resources = Utils.getApp().getResources();
         int identifier = resources.getIdentifier("navigation_bar_height", "dimen", "android");
         return resources.getDimensionPixelOffset(identifier);
     }
@@ -572,8 +609,8 @@ public class ScreenUtils {
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
         Bitmap bmp = view.getDrawingCache();
-        int width = getScreenWidth(activity);
-        int height = getScreenHeight(activity);
+        int width = getScreenWidth();
+        int height = getScreenHeight();
         Bitmap bp = null;
         bp = Bitmap.createBitmap(bmp, 0, 0, width, height);
         view.destroyDrawingCache();
@@ -593,8 +630,8 @@ public class ScreenUtils {
         activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
         int statusBarHeight = frame.top;
 
-        int width = getScreenWidth(activity);
-        int height = getScreenHeight(activity);
+        int width = getScreenWidth();
+        int height = getScreenHeight();
         Bitmap bp = null;
         bp = Bitmap.createBitmap(bmp, 0, statusBarHeight, width, height - statusBarHeight);
         view.destroyDrawingCache();

@@ -196,12 +196,11 @@ public final class ProcessUtils {
      * <p>API < 21，需要添加 {@code <uses-permission android:name="android.permission.GET_TASKS"/>} 权限</p>
      * <p>API >= 22，需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context
      * @param packageName
      * @return
      */
-    public static boolean isAppForeground(Context context, String packageName) {
-        return TextUtils.equals(packageName, getForegroundPackage(context));
+    public static boolean isAppForeground(String packageName) {
+        return TextUtils.equals(packageName, getForegroundPackage( ));
     }
 
     /**
@@ -209,16 +208,15 @@ public final class ProcessUtils {
      * <p>API < 21，需要添加 {@code <uses-permission android:name="android.permission.GET_TASKS"/>} 权限</p>
      * <p>API >= 22，需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context
      * @return
      */
-    public static String getForegroundPackage(Context context) {
+    public static String getForegroundPackage() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            return getForegroundPackage1(context);
+            return getForegroundPackage1();
         } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP_MR1) {
-            return getForegroundPackage2(context);
+            return getForegroundPackage2();
         } else {
-            return getForegroundPackage3(context);
+            return getForegroundPackage3();
         }
     }
 
@@ -227,12 +225,11 @@ public final class ProcessUtils {
      * 获取前台应用包名（API < 21，已被遗弃，不能使用）
      * <p>需要添加　{@code <uses-permission android:name="android.permission.GET_TASKS"/>} 权限</p>
      *
-     * @param context
      * @return
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private static String getForegroundPackage1(Context context) {
-        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+    private static String getForegroundPackage1() {
+        ActivityManager manager = (ActivityManager) Utils.getApp().getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningTaskInfo> runningTaskInfos = manager.getRunningTasks(1);
         if (runningTaskInfos == null || runningTaskInfos.size() == 0
                 || runningTaskInfos.get(0) == null) {
@@ -245,12 +242,11 @@ public final class ProcessUtils {
     /**
      * 获取前台应用包名（在 API 22 开始仅可以获取自己的应用，其他应用位于前台时获取到为 null，但可以通过此方式判断自己的应用是否处于前台）
      *
-     * @param context
      * @return
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP_MR1)
-    private static String getForegroundPackage2(Context context) {
-        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+    private static String getForegroundPackage2() {
+        ActivityManager manager = (ActivityManager) Utils.getApp().getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningAppProcessInfo> runningAppProcessInfos = manager.getRunningAppProcesses();
         if (runningAppProcessInfos == null || runningAppProcessInfos.size() == 0) {
             return null;
@@ -267,12 +263,11 @@ public final class ProcessUtils {
      * 获取前台应用包名（API >= 22）
      * <p>需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context
      * @return
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP_MR1)
-    public static String getForegroundPackage3(Context context) {
-        UsageStatsManager usageStatsManager = (UsageStatsManager) context.getSystemService(Context.USAGE_STATS_SERVICE);
+    public static String getForegroundPackage3() {
+        UsageStatsManager usageStatsManager = (UsageStatsManager) Utils.getApp().getSystemService(Context.USAGE_STATS_SERVICE);
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());
@@ -298,12 +293,11 @@ public final class ProcessUtils {
      * 获取前台应用包名（API >= 22）
      * <p>需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context
      * @return
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP_MR1)
-    private static String getForegroundPackage4(Context context) {
-        UsageStatsManager usageStatsManager = (UsageStatsManager) context.getSystemService(Context.USAGE_STATS_SERVICE);
+    private static String getForegroundPackage4( ) {
+        UsageStatsManager usageStatsManager = (UsageStatsManager) Utils.getApp().getSystemService(Context.USAGE_STATS_SERVICE);
 
         long endTime = System.currentTimeMillis();
         long beginTime = endTime - 10 * 1000;

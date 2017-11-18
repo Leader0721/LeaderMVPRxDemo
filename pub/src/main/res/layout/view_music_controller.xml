@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@drawable/bg_gray_circle">
+
+    <RelativeLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/v16">
+
+        <ImageButton
+            android:id="@+id/turn_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/v16"
+            android:background="#00000000"
+            android:src="@mipmap/music_player_btn" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/turn_button"
+            android:indeterminateDrawable="@drawable/music_play_progress_seek"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:progressDrawable="@drawable/music_play_progress_seek"
+            android:thumb="@mipmap/music_seek_dot"
+            android:thumbOffset="@dimen/v10" />
+
+        <TextView
+            android:id="@+id/msg_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/seekbar"
+            android:layout_marginBottom="@dimen/v7"
+            android:layout_toRightOf="@+id/turn_button"
+            android:paddingLeft="@dimen/v16"
+            android:text="点击播放音频"
+            android:textColor="@color/tvc6"
+            android:textSize="@dimen/t14" />
+
+        <TextView
+            android:id="@+id/has_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/duration"
+            android:layout_alignBottom="@+id/duration"
+            android:layout_gravity="center_vertical"
+            android:layout_toEndOf="@+id/turn_button"
+            android:paddingLeft="@dimen/v16"
+            android:text="00:00"
+            android:textColor="@color/lightgray"
+            android:textSize="@dimen/t12" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/seekbar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/v7"
+            android:paddingRight="@dimen/v16"
+            android:text="00:00"
+            android:textColor="@color/lightgray"
+            android:textSize="@dimen/t12" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -37,18 +37,17 @@ public class AssetUtils {
     /**
      * 获取Assets中的文件
      *
-     * @param context  上下文
      * @param fileName 文件名(可以带层级的)
      * @return
      */
-    public static String geFileFromAssets(Context context, String fileName) {
-        if (context == null || TextUtils.isEmpty(fileName)) {
+    public static String geFileFromAssets( String fileName) {
+        if (Utils.getApp() == null || TextUtils.isEmpty(fileName)) {
             return null;
         }
 
         StringBuilder s = new StringBuilder("");
         try {
-            InputStreamReader in = new InputStreamReader(context.getResources().getAssets().open(fileName));
+            InputStreamReader in = new InputStreamReader(Utils.getApp().getResources().getAssets().open(fileName));
             BufferedReader br = new BufferedReader(in);
             String line;
             while ((line = br.readLine()) != null) {
@@ -66,18 +65,17 @@ public class AssetUtils {
      * <p>
      * String 和 color 资源不能获取
      *
-     * @param context 上下文
      * @param resId   资源ID
      * @return
      */
-    public static String geFileFromRaw(Context context, int resId) {
-        if (context == null) {
+    public static String geFileFromRaw( int resId) {
+        if (Utils.getApp() == null) {
             return null;
         }
 
         StringBuilder s = new StringBuilder();
         try {
-            InputStreamReader in = new InputStreamReader(context.getResources().openRawResource(resId));
+            InputStreamReader in = new InputStreamReader(Utils.getApp().getResources().openRawResource(resId));
             BufferedReader br = new BufferedReader(in);
             String line;
             while ((line = br.readLine()) != null) {
@@ -93,18 +91,17 @@ public class AssetUtils {
     /**
      * 获取Assets中的文件
      *
-     * @param context  上下文
      * @param fileName 文件名(可以带层级的)
      * @return
      */
-    public static List<String> geFileToListFromAssets(Context context, String fileName) {
-        if (context == null || TextUtils.isEmpty(fileName)) {
+    public static List<String> geFileToListFromAssets( String fileName) {
+        if (Utils.getApp() == null || TextUtils.isEmpty(fileName)) {
             return null;
         }
 
         List<String> fileContent = new ArrayList<String>();
         try {
-            InputStreamReader in = new InputStreamReader(context.getResources().getAssets().open(fileName));
+            InputStreamReader in = new InputStreamReader(Utils.getApp().getResources().getAssets().open(fileName));
             BufferedReader br = new BufferedReader(in);
             String line;
             while ((line = br.readLine()) != null) {
@@ -123,19 +120,18 @@ public class AssetUtils {
      * <p>
      * String 和 color 资源不能获取
      *
-     * @param context 上下文
      * @param resId   资源ID
      * @return
      */
-    public static List<String> geFileToListFromRaw(Context context, int resId) {
-        if (context == null) {
+    public static List<String> geFileToListFromRaw( int resId) {
+        if (Utils.getApp() == null) {
             return null;
         }
 
         List<String> fileContent = new ArrayList<String>();
         BufferedReader reader;
         try {
-            InputStreamReader in = new InputStreamReader(context.getResources().openRawResource(resId));
+            InputStreamReader in = new InputStreamReader(Utils.getApp().getResources().openRawResource(resId));
             reader = new BufferedReader(in);
             String line;
             while ((line = reader.readLine()) != null) {
@@ -156,11 +152,11 @@ public class AssetUtils {
      * @throws RuntimeException if cannot copy database from assets
      * @throws SQLiteException  if the database cannot be opened
      */
-    public synchronized SQLiteDatabase getWritableDatabase(Context context, String databaseNme) {
-        File dbFile = context.getDatabasePath(databaseNme);
+    public synchronized SQLiteDatabase getWritableDatabase( String databaseNme) {
+        File dbFile = Utils.getApp().getDatabasePath(databaseNme);
         if (dbFile != null && !dbFile.exists()) {
             try {
-                copyDatabase(dbFile, context, databaseNme);
+                copyDatabase(dbFile, Utils.getApp(), databaseNme);
             } catch (IOException e) {
                 throw new RuntimeException("Error creating source database", e);
             }
@@ -178,11 +174,11 @@ public class AssetUtils {
      * @throws RuntimeException if cannot copy database from assets
      * @throws SQLiteException  if the database cannot be opened
      */
-    public synchronized SQLiteDatabase getReadableDatabase(Context context, String databaseNme) {
-        File dbFile = context.getDatabasePath(databaseNme);
+    public synchronized SQLiteDatabase getReadableDatabase(String databaseNme) {
+        File dbFile = Utils.getApp().getDatabasePath(databaseNme);
         if (dbFile != null && !dbFile.exists()) {
             try {
-                copyDatabase(dbFile, context, databaseNme);
+                copyDatabase(dbFile, Utils.getApp(), databaseNme);
             } catch (IOException e) {
                 throw new RuntimeException("Error creating source database", e);
             }

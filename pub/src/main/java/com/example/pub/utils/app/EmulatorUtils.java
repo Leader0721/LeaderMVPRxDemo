@@ -127,12 +127,11 @@ public class EmulatorUtils {
     /**
      * 检测模拟器默认的电话号码
      *
-     * @param context The context of the application package.
      * @return launcher activity name of this application. From the
      * "android:name" attribute.
      */
-    public static Boolean CheckPhoneNumber(Context context) {
-        TelephonyManager telephonyManager = (TelephonyManager) context
+    public static Boolean CheckPhoneNumber( ) {
+        TelephonyManager telephonyManager = (TelephonyManager) Utils.getApp()
                 .getSystemService(Context.TELEPHONY_SERVICE);
 
         String phonenumber = telephonyManager.getLine1Number();
@@ -151,13 +150,12 @@ public class EmulatorUtils {
     /**
      * 检测imsi id是不是“310260000000000”
      *
-     * @param context The context of the application package.
      * @return launcher activity name of this application. From the
      * "android:name" attribute.
      */
-    public static Boolean CheckImsiIDS(Context context) {
+    public static Boolean CheckImsiIDS( ) {
         TelephonyManager telephonyManager = (TelephonyManager)
-                context.getSystemService(Context.TELEPHONY_SERVICE);
+                Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
 
         String imsi_ids = telephonyManager.getSubscriberId();
 
@@ -175,11 +173,10 @@ public class EmulatorUtils {
     /**
      * 检测手机上的一些硬件信息
      *
-     * @param context The context of the application package.
      * @return launcher activity name of this application. From the
      * "android:name" attribute.
      */
-    public static Boolean CheckEmulatorBuild(Context context) {
+    public static Boolean CheckEmulatorBuild( ) {
         String BOARD = android.os.Build.BOARD;
         String BOOTLOADER = android.os.Build.BOOTLOADER;
         String BRAND = android.os.Build.BRAND;

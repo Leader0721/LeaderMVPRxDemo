@@ -56,8 +56,8 @@ public class FlashlightUtils {
     private final String mCameraId;
     private boolean mTorchAvailable;
 
-    public FlashlightUtils(Context mContext) {
-        mCameraManager = (CameraManager) mContext.getSystemService(Context.CAMERA_SERVICE);
+    public FlashlightUtils( ) {
+        mCameraManager = (CameraManager) Utils.getApp().getSystemService(Context.CAMERA_SERVICE);
 
         String cameraId = null;
         try {

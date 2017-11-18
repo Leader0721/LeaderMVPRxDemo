@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -9,9 +10,8 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -19,6 +19,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
 }
 
 dependencies {
@@ -77,15 +83,10 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     //时间总线的第三方解决方案   由谷歌的进行封装而来
     compile files('libs/androideventbus-1.0.4.jar')
-    //第三方视频解决方案
-    compile files('libs/CCSDK.jar')
     //Android 6.0之后不再提供HttpClient的包
     compile files('libs/org.apache.http.legacy.jar')
     //图片使用框架，比较稳定
     compile files('libs/universal-image-loader-1.9.3.jar')
-    //mpush推送客户端调用的方法
-    compile files('libs/mpush-client-java-0.0.6.jar')
     //pinyin4j是一个支持将简体和繁体中文转换到成拼音的Java开源类库
     compile files('libs/pinyin4j-2.5.0.jar')
-
 }

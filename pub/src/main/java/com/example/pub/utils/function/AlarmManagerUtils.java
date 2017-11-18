@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.example.pub.utils.app.Utils;
+
 import java.util.Calendar;
 
 /**
@@ -26,9 +28,9 @@ public class AlarmManagerUtils {
     /**
      * 简化10分钟之后启动一个intent 600代表10分钟   20代表20秒
      */
-    public static AlarmManager sendUpdateBroadcastRepeat(Context ctx, Intent intent) {
-        pendingIntent = PendingIntent.getBroadcast(ctx, 0, intent, 0);
-        am = (AlarmManager) ctx.getSystemService(ctx.ALARM_SERVICE);
+    public static AlarmManager sendUpdateBroadcastRepeat(Intent intent) {
+        pendingIntent = PendingIntent.getBroadcast(Utils.getApp(), 0, intent, 0);
+        am = (AlarmManager) Utils.getApp().getSystemService(Utils.getApp().ALARM_SERVICE);
         am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 600 * 1000,
                 pendingIntent);
         return am;
@@ -48,11 +50,9 @@ public class AlarmManagerUtils {
     /**
      * 设置午夜定时器, 午夜12点发送广播, MIDNIGHT_ALARM_FILTER.
      * 实际测试可能会有一分钟左右的偏差.
-     *
-     * @param context 上下文
      */
-    public static void setMidnightAlarm(Context context, String action) {
-        Context appContext = context.getApplicationContext();
+    public static void setMidnightAlarm(String action) {
+        Context appContext = Utils.getApp().getApplicationContext();
         Intent intent = new Intent(action);
 
         PendingIntent pi = PendingIntent.getBroadcast(appContext, 0, intent,

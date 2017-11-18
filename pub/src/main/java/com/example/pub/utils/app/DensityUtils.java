@@ -1,6 +1,5 @@
 package com.example.pub.utils.app;
 
-import android.content.Context;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
@@ -27,37 +26,34 @@ public class DensityUtils {
     /**
      * 根据dip值转化成px值
      *
-     * @param context
      * @param dip
      * @return
      */
-    public static int dipToPix(Context context, int dip) {
-        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dip, context.getResources().getDisplayMetrics());
+    public static int dipToPix( int dip) {
+        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dip, Utils.getApp().getResources().getDisplayMetrics());
         return size;
     }
 
     /**
      * dp转px
      *
-     * @param context
      * @param dpVal
      * @return
      */
-    public static int dp2px(Context context, float dpVal) {
+    public static int dp2px(float dpVal) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                dpVal, context.getResources().getDisplayMetrics());
+                dpVal, Utils.getApp().getResources().getDisplayMetrics());
     }
 
 
     /**
      * px转dp
      *
-     * @param context
      * @param pxVal
      * @return
      */
-    public static float px2dp(Context context, float pxVal) {
-        final float scale = context.getResources().getDisplayMetrics().density;
+    public static float px2dp(float pxVal) {
+        final float scale = Utils.getApp().getResources().getDisplayMetrics().density;
         return (pxVal / scale);
     }
 
@@ -65,48 +61,44 @@ public class DensityUtils {
     /**
      * 根据手机的分辨率从 dip 的单位 转成为 px(像素)
      *
-     * @param context 上下文
      * @param dpValue dp值
      * @return px值
      */
-    public static int dip2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
+    public static int dip2px(float dpValue) {
+        final float scale = Utils.getApp().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f * (dpValue >= 0 ? 1 : -1));
     }
 
     /**
      * 根据手机的分辨率从 px(像素) 的单位 转成为 dp
      *
-     * @param context 上下文
      * @param pxValue px值
      * @return dp值
      */
-    public static int px2dip(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
+    public static int px2dip(float pxValue) {
+        final float scale = Utils.getApp().getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f * (pxValue >= 0 ? 1 : -1));
     }
 
     /**
      * sp转px
      *
-     * @param context 上下文
      * @param spValue sp值
      * @return px值
      */
-    public static int sp2px(Context context, float spValue) {
-        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+    public static int sp2px(float spValue) {
+        final float fontScale = Utils.getApp().getResources().getDisplayMetrics().scaledDensity;
         return (int) (spValue * fontScale + 0.5f);
     }
 
     /**
      * px转sp
      *
-     * @param context 上下文
      * @param pxValue px值
      * @return sp值
      */
-    public static int px2sp(Context context, float pxValue) {
-        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+    public static int px2sp(float pxValue) {
+        final float fontScale = Utils.getApp().getResources().getDisplayMetrics().scaledDensity;
         return (int) (pxValue / fontScale + 0.5f);
     }
 

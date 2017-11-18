@@ -2,7 +2,6 @@ package com.example.pub.utils.data;
 
 import android.annotation.SuppressLint;
 import android.content.ContentUris;
-import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
@@ -10,6 +9,8 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+
+import com.example.pub.utils.app.Utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -57,23 +58,23 @@ public class FileUtils1 {
      * 获取临时缓存目录
      * getCacheDir()方法用于获取/data/data//cache目录
      */
-    public static final String getCacheDir(Context context) {
+    public static final String getCacheDir() {
         if (isExternalMemoryAvailable()) {
-            File file = context.getExternalCacheDir();
+            File file = Utils.getApp().getExternalCacheDir();
             if (file != null) {
                 return file.getPath() + "/";
             }
         }
 
-        return context.getCacheDir().getPath() + "/";
+        return Utils.getApp().getCacheDir().getPath() + "/";
     }
 
     /**
      * 获取临时文件路径
      * getFilesDir()方法用于获取/data/data//files目录
      */
-    public static final String getFilesDir(Context context) {
-        String path = isExternalMemoryAvailable() ? context.getExternalFilesDir((String) null).getPath() + "/" : context.getFilesDir().getPath() + "/";
+    public static final String getFilesDir() {
+        String path = isExternalMemoryAvailable() ? Utils.getApp().getExternalFilesDir((String) null).getPath() + "/" : Utils.getApp().getFilesDir().getPath() + "/";
         File file = new File(path);
         if (!file.exists()) {
             file.mkdirs();
@@ -84,11 +85,9 @@ public class FileUtils1 {
 
     /**
      * 删除临时文件
-     *
-     * @param context
      */
-    public static final void deleteFile(Context context) {
-        File cacheDir = new File(getFilesDir(context));
+    public static final void deleteFile() {
+        File cacheDir = new File(getFilesDir());
         if (cacheDir.exists()) {
             File[] files = cacheDir.listFiles();
             for (int i = 0; i < files.length; ++i) {
@@ -99,11 +98,9 @@ public class FileUtils1 {
 
     /**
      * 删除临时缓存文件
-     *
-     * @param context
      */
-    public static final void deleteCacheDir(Context context) {
-        File cacheDir = new File(getCacheDir(context));
+    public static final void deleteCacheDir() {
+        File cacheDir = new File(getCacheDir());
         if (cacheDir.exists()) {
             File[] files = cacheDir.listFiles();
             for (int i = 0; i < files.length; ++i) {
@@ -128,8 +125,8 @@ public class FileUtils1 {
     /**
      * 获取文件
      */
-    public static File getTempFile(Context context) {
-        String savedir = getCacheDir(context);
+    public static File getTempFile() {
+        String savedir = getCacheDir();
         File dir = new File(savedir);
         if (!dir.exists())
             dir.mkdirs();
@@ -145,8 +142,8 @@ public class FileUtils1 {
     /**
      * 获取文件
      */
-    public static File getFile(Context context) {
-        String savedir = getFilesDir(context);
+    public static File getFile() {
+        String savedir = getFilesDir();
         File dir = new File(savedir);
         if (!dir.exists())
             dir.mkdirs();
@@ -169,11 +166,11 @@ public class FileUtils1 {
      * 根据URI获取文件路径
      */
     @SuppressLint("NewApi")
-    public static String getPath(final Context context, final Uri uri) {
+    public static String getPath(final Uri uri) {
         final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
 
         // DocumentProvider
-        if (isKitKat && DocumentsContract.isDocumentUri(context, uri)) {
+        if (isKitKat && DocumentsContract.isDocumentUri(Utils.getApp(), uri)) {
             // ExternalStorageProvider
             if (isExternalStorageDocument(uri)) {
                 final String docId = DocumentsContract.getDocumentId(uri);
@@ -191,7 +188,7 @@ public class FileUtils1 {
                 final Uri contentUri = ContentUris.withAppendedId(
                         Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
 
-                return getDataColumn(context, contentUri, null, null);
+                return getDataColumn(contentUri, null, null);
             }
             // MediaProvider
             else if (isMediaDocument(uri)) {
@@ -211,12 +208,12 @@ public class FileUtils1 {
                 final String selection = "_id=?";
                 final String[] selectionArgs = new String[]{split[1]};
 
-                return getDataColumn(context, contentUri, selection, selectionArgs);
+                return getDataColumn(contentUri, selection, selectionArgs);
             }
         }
         // MediaStore (and general)
         else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            return getDataColumn(context, uri, null, null);
+            return getDataColumn(uri, null, null);
         }
         // File
         else if ("file".equalsIgnoreCase(uri.getScheme())) {
@@ -226,7 +223,7 @@ public class FileUtils1 {
         return null;
     }
 
-    public static String getDataColumn(Context context, Uri uri, String selection,
+    public static String getDataColumn(Uri uri, String selection,
                                        String[] selectionArgs) {
 
         Cursor cursor = null;
@@ -234,7 +231,7 @@ public class FileUtils1 {
         final String[] projection = {column};
 
         try {
-            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs,
+            cursor = Utils.getApp().getContentResolver().query(uri, projection, selection, selectionArgs,
                     null);
             if (cursor != null && cursor.moveToFirst()) {
                 final int column_index = cursor.getColumnIndexOrThrow(column);
@@ -394,12 +391,11 @@ public class FileUtils1 {
     /**
      * 获取缓存大小
      *
-     * @param context
      * @return
      */
-    public static String getCacheSize(Context context) {
+    public static String getCacheSize() {
 
-        String cacheDirPath = getCacheDir(context);
+        String cacheDirPath = getCacheDir();
         File cacheDir = new File(cacheDirPath);
 
         if (cacheDir.exists()) {
@@ -502,9 +498,9 @@ public class FileUtils1 {
     /**
      * 下载文件
      */
-    public static File downLoadFile(Context context, ResponseBody response, String fileName) {
+    public static File downLoadFile(ResponseBody response, String fileName) {
         BufferedSink bufferedSink = null;
-        String filePath = FileUtils1.getFilesDir(context) + fileName;
+        String filePath = FileUtils1.getFilesDir() + fileName;
         //String filePath = FileUtils1.getExternalMemoryPath() + fileName;
 
         File file = new File(filePath);

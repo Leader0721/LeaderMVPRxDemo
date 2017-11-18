@@ -18,7 +18,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.pub.utils.constant.AppInfo;
-import com.example.pub.utils.data.CleanUtils;
 import com.example.pub.utils.data.CleanUtils1;
 import com.example.pub.utils.data.FileUtils;
 import com.example.pub.utils.function.EncryptUtils;
@@ -63,13 +62,12 @@ public class AppUtils {
     /**
      * 获取应用的 SHA1 值， 可据此判断高德，百度地图 key 是否正确
      *
-     * @param context 上下文
      * @return 应用的 SHA1 字符串, 比如： 53:FD:54:DC:19:0F:11:AC:B5:22:9E:F1:1A:68:88:1B:8B:E8:54:42
      */
-    public static String getSHA1(Context context) {
+    public static String getSHA1() {
         try {
-            PackageInfo info = context.getPackageManager().getPackageInfo(
-                    context.getPackageName(), PackageManager.GET_SIGNATURES);
+            PackageInfo info = Utils.getApp().getPackageManager().getPackageInfo(
+                    Utils.getApp().getPackageName(), PackageManager.GET_SIGNATURES);
             byte[] cert = info.signatures[0].toByteArray();
             MessageDigest md = MessageDigest.getInstance("SHA1");
             byte[] publicKey = md.digest(cert);
@@ -93,34 +91,31 @@ public class AppUtils {
     /**
      * 判断App是否安装
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return {@code true}: 已安装<br>{@code false}: 未安装
      */
-    public static boolean isInstallApp(Context context, String packageName) {
+    public static boolean isInstallApp(String packageName) {
         return !isSpace(packageName) && IntentUtils.getLaunchAppIntent(packageName) != null;
     }
 
     /**
      * 安装App(支持6.0)
      *
-     * @param context  上下文
      * @param filePath 文件路径
      */
-    public static void installApp(Context context, String filePath) {
-        installApp(context, FileUtils.getFileByPath(filePath));
+    public static void installApp(String filePath) {
+        installApp(FileUtils.getFileByPath(filePath));
     }
 
     /**
      * 安装App(支持6.0)
      *
-     * @param context 上下文
-     * @param file    文件
+     * @param file 文件
      */
-    public static void installApp(Context context, File file) {
+    public static void installApp(File file) {
         if (!FileUtils.isFileExists(file))
             return;
-        context.startActivity(IntentUtils.getInstallAppIntent(file));
+        Utils.getApp().startActivity(IntentUtils.getInstallAppIntent(file));
     }
 
     /**
@@ -153,29 +148,27 @@ public class AppUtils {
      * 非root需添加权限
      * <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
      *
-     * @param context  上下文
      * @param filePath 文件路径
      * @return {@code true}: 安装成功<br>{@code false}: 安装失败
      */
-    public static boolean installAppSilent(Context context, String filePath) {
+    public static boolean installAppSilent(String filePath) {
         File file = FileUtils.getFileByPath(filePath);
         if (!FileUtils.isFileExists(file))
             return false;
         String command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm install " + filePath;
-        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(context), true);
+        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(), true);
         return commandResult.successMsg != null && commandResult.successMsg.toLowerCase().contains("success");
     }
 
     /**
      * 卸载App
      *
-     * @param context     上下文
      * @param packageName 包名
      */
-    public static void uninstallApp(Context context, String packageName) {
+    public static void uninstallApp(String packageName) {
         if (isSpace(packageName))
             return;
-        context.startActivity(IntentUtils.getUninstallAppIntent(packageName));
+        Utils.getApp().startActivity(IntentUtils.getUninstallAppIntent(packageName));
     }
 
     /**
@@ -195,30 +188,28 @@ public class AppUtils {
      * 静默卸载App
      * <p>非root需添加权限 {@code <uses-permission android:name="android.permission.DELETE_PACKAGES" />}</p>
      *
-     * @param context     上下文
      * @param packageName 包名
      * @param isKeepData  是否保留数据
      * @return {@code true}: 卸载成功<br>{@code false}: 卸载成功
      */
-    public static boolean uninstallAppSilent(Context context, String packageName, boolean isKeepData) {
+    public static boolean uninstallAppSilent(String packageName, boolean isKeepData) {
         if (isSpace(packageName))
             return false;
         String command = "LD_LIBRARY_PATH=/vendor/lib:/system/lib pm uninstall " + (isKeepData ? "-k " : "") +
                 packageName;
-        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(context), true);
+        ShellUtils.CommandResult commandResult = ShellUtils.execCmd(command, !isSystemApp(), true);
         return commandResult.successMsg != null && commandResult.successMsg.toLowerCase().contains("success");
     }
 
     /**
      * 打开App
      *
-     * @param context     上下文
      * @param packageName 包名
      */
-    public static void launchApp(Context context, String packageName) {
+    public static void launchApp(String packageName) {
         if (isSpace(packageName))
             return;
-        context.startActivity(IntentUtils.getLaunchAppIntent(packageName));
+        Utils.getApp().startActivity(IntentUtils.getLaunchAppIntent(packageName));
     }
 
     /**
@@ -237,56 +228,50 @@ public class AppUtils {
     /**
      * 获取App包名
      *
-     * @param context 上下文
      * @return App包名
      */
-    public static String getAppPackageName(Context context) {
-        return context.getPackageName();
+    public static String getAppPackageName() {
+        return Utils.getApp().getPackageName();
     }
 
     /**
      * 获取App具体设置
-     *
-     * @param context 上下文
      */
-    public static void getAppDetailsSettings(Context context) {
-        getAppDetailsSettings(context, context.getPackageName());
+    public static void getAppDetailsSettings() {
+        getAppDetailsSettings(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App具体设置
      *
-     * @param context     上下文
      * @param packageName 包名
      */
-    public static void getAppDetailsSettings(Context context, String packageName) {
+    public static void getAppDetailsSettings(String packageName) {
         if (isSpace(packageName))
             return;
-        context.startActivity(IntentUtils.getAppDetailsSettingsIntent(packageName));
+        Utils.getApp().startActivity(IntentUtils.getAppDetailsSettingsIntent(packageName));
     }
 
     /**
      * 获取App名称
      *
-     * @param context 上下文
      * @return App名称
      */
-    public static String getAppName(Context context) {
-        return getAppName(context, context.getPackageName());
+    public static String getAppName() {
+        return getAppName(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App名称
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App名称
      */
-    public static String getAppName(Context context, String packageName) {
+    public static String getAppName(String packageName) {
         if (isSpace(packageName))
             return null;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? null : pi.applicationInfo.loadLabel(pm).toString();
         } catch (PackageManager.NameNotFoundException e) {
@@ -298,25 +283,23 @@ public class AppUtils {
     /**
      * 获取App图标
      *
-     * @param context 上下文
      * @return App图标
      */
-    public static Drawable getAppIcon(Context context) {
-        return getAppIcon(context, context.getPackageName());
+    public static Drawable getAppIcon() {
+        return getAppIcon(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App图标
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App图标
      */
-    public static Drawable getAppIcon(Context context, String packageName) {
+    public static Drawable getAppIcon(String packageName) {
         if (isSpace(packageName))
             return null;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? null : pi.applicationInfo.loadIcon(pm);
         } catch (PackageManager.NameNotFoundException e) {
@@ -328,25 +311,23 @@ public class AppUtils {
     /**
      * 获取App路径
      *
-     * @param context 上下文
      * @return App路径
      */
-    public static String getAppPath(Context context) {
-        return getAppPath(context, context.getPackageName());
+    public static String getAppPath() {
+        return getAppPath(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App路径
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App路径
      */
-    public static String getAppPath(Context context, String packageName) {
+    public static String getAppPath(String packageName) {
         if (isSpace(packageName))
             return null;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? null : pi.applicationInfo.sourceDir;
         } catch (PackageManager.NameNotFoundException e) {
@@ -358,25 +339,23 @@ public class AppUtils {
     /**
      * 获取App版本号
      *
-     * @param context 上下文
      * @return App版本号
      */
-    public static String getAppVersionName(Context context) {
-        return getAppVersionName(context, context.getPackageName());
+    public static String getAppVersionName() {
+        return getAppVersionName(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App版本号
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App版本号
      */
-    public static String getAppVersionName(Context context, String packageName) {
+    public static String getAppVersionName(String packageName) {
         if (isSpace(packageName))
             return null;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? null : pi.versionName;
         } catch (PackageManager.NameNotFoundException e) {
@@ -388,25 +367,23 @@ public class AppUtils {
     /**
      * 获取App版本码
      *
-     * @param context 上下文
      * @return App版本码
      */
-    public static int getAppVersionCode(Context context) {
-        return getAppVersionCode(context, context.getPackageName());
+    public static int getAppVersionCode() {
+        return getAppVersionCode(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App版本码
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App版本码
      */
-    public static int getAppVersionCode(Context context, String packageName) {
+    public static int getAppVersionCode(String packageName) {
         if (isSpace(packageName))
             return -1;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? -1 : pi.versionCode;
         } catch (PackageManager.NameNotFoundException e) {
@@ -418,25 +395,23 @@ public class AppUtils {
     /**
      * 获取App签名
      *
-     * @param context 上下文
      * @return App签名
      */
-    public static Signature[] getAppSignature(Context context) {
-        return getAppSignature(context, context.getPackageName());
+    public static Signature[] getAppSignature() {
+        return getAppSignature(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App签名
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return App签名
      */
-    public static Signature[] getAppSignature(Context context, String packageName) {
+    public static Signature[] getAppSignature(String packageName) {
         if (isSpace(packageName))
             return null;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return pi == null ? null : pi.signatures;
         } catch (PackageManager.NameNotFoundException e) {
@@ -449,23 +424,21 @@ public class AppUtils {
      * 获取应用签名的的SHA1值
      * <p>可据此判断高德，百度地图key是否正确</p>
      *
-     * @param context 上下文
      * @return 应用签名的SHA1字符串, 比如：53:FD:54:DC:19:0F:11:AC:B5:22:9E:F1:1A:68:88:1B:8B:E8:54:42
      */
-    public static String getAppSignatureSHA1(Context context) {
-        return getAppSignatureSHA1(context, context.getPackageName());
+    public static String getAppSignatureSHA1() {
+        return getAppSignatureSHA1(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取应用签名的的SHA1值
      * <p>可据此判断高德，百度地图key是否正确</p>
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return 应用签名的SHA1字符串, 比如：53:FD:54:DC:19:0F:11:AC:B5:22:9E:F1:1A:68:88:1B:8B:E8:54:42
      */
-    public static String getAppSignatureSHA1(Context context, String packageName) {
-        Signature[] signature = getAppSignature(context, packageName);
+    public static String getAppSignatureSHA1(String packageName) {
+        Signature[] signature = getAppSignature(packageName);
         if (signature == null)
             return null;
         return EncryptUtils.encryptSHA1ToString(signature[0].toByteArray()).
@@ -475,13 +448,12 @@ public class AppUtils {
     /**
      * 获取APP 32位的签名
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return 32位的签名
      */
-    public static String getAPP32Singnature(Context context, String packageName) {
+    public static String getAPP32Singnature(String packageName) {
         try {
-            PackageInfo pis = context.getPackageManager().getPackageInfo(
+            PackageInfo pis = Utils.getApp().getPackageManager().getPackageInfo(
                     packageName, PackageManager.GET_SIGNATURES);
             return hexdigest(pis.signatures[0].toByteArray());
         } catch (PackageManager.NameNotFoundException e) {
@@ -521,25 +493,23 @@ public class AppUtils {
     /**
      * 判断App是否是系统应用
      *
-     * @param context 上下文
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isSystemApp(Context context) {
-        return isSystemApp(context, context.getPackageName());
+    public static boolean isSystemApp() {
+        return isSystemApp(Utils.getApp().getPackageName());
     }
 
     /**
      * 判断App是否是系统应用
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isSystemApp(Context context, String packageName) {
+    public static boolean isSystemApp(String packageName) {
         if (isSpace(packageName))
             return false;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             ApplicationInfo ai = pm.getApplicationInfo(packageName, 0);
             return ai != null && (ai.flags & ApplicationInfo.FLAG_SYSTEM) != 0;
         } catch (PackageManager.NameNotFoundException e) {
@@ -551,11 +521,10 @@ public class AppUtils {
     /**
      * 判断App是否处于前台
      *
-     * @param context 上下文
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isAppForeground(Context context) {
-        return ProcessUtils.isAppForeground(context);
+    public static boolean isAppForeground() {
+        return ProcessUtils.isAppForeground(Utils.getApp());
     }
 
     /**
@@ -563,13 +532,12 @@ public class AppUtils {
      * <p>API < 21，需要添加 {@code <uses-permission android:name="android.permission.GET_TASKS"/>} 权限</p>
      * <p>API >= 22，需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context     上下文
      * @param packageName 包名
      * @return {@code true}: 是<br>{@code false}: 否
      */
     @Deprecated
-    public static boolean isAppForeground(Context context, String packageName) {
-        return ProcessUtils.isAppForeground(context, packageName);
+    public static boolean isAppForeground(String packageName) {
+        return ProcessUtils.isAppForeground(packageName);
     }
 
     /**
@@ -577,34 +545,31 @@ public class AppUtils {
      * <p>API < 21，需要添加 {@code <uses-permission android:name="android.permission.GET_TASKS"/>} 权限</p>
      * <p>API >= 22，需要添加　{@code <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>} 权限</p>
      *
-     * @param context 上下文
      * @return 前台应用包名
      */
-    public String getForegroundApp(Context context) {
-        return ProcessUtils.getForegroundPackage(context);
+    public String getForegroundApp() {
+        return ProcessUtils.getForegroundPackage();
     }
 
     /**
      * 获取App信息
      * <p>AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）</p>
      *
-     * @param context 上下文
      * @return 当前应用的AppInfo
      */
-    public static AppInfo getAppInfo(Context context) {
-        return getAppInfo(context, context.getPackageName());
+    public static AppInfo getAppInfo() {
+        return getAppInfo(Utils.getApp().getPackageName());
     }
 
     /**
      * 获取App信息
      * <p>AppInfo（名称，图标，包名，版本号，版本Code，是否系统应用）</p>
      *
-     * @param context 上下文
      * @return 当前应用的AppInfo
      */
-    public static AppInfo getAppInfo(Context context, String packageName) {
+    public static AppInfo getAppInfo(String packageName) {
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             PackageInfo pi = pm.getPackageInfo(packageName, 0);
             return getBean(pm, pi);
         } catch (PackageManager.NameNotFoundException e) {
@@ -639,12 +604,11 @@ public class AppUtils {
      * <p>{@link #getBean(PackageManager, PackageInfo)}（名称，图标，包名，包路径，版本号，版本Code，是否系统应用）</p>
      * <p>依赖上面的getBean方法</p>
      *
-     * @param context 上下文
      * @return 所有已安装的AppInfo列表
      */
-    public static List<AppInfo> getAppsInfo(Context context) {
+    public static List<AppInfo> getAppsInfo() {
         List<AppInfo> list = new ArrayList<>();
-        PackageManager pm = context.getPackageManager();
+        PackageManager pm = Utils.getApp().getPackageManager();
         // 获取系统中安装的所有软件信息
         List<PackageInfo> installedPackages = pm.getInstalledPackages(0);
         for (PackageInfo pi : installedPackages) {
@@ -659,35 +623,17 @@ public class AppUtils {
     /**
      * 清除App所有数据
      *
-     * @param context  上下文
      * @param dirPaths 目录路径
      */
-    public static boolean cleanAppData(Context context, String... dirPaths) {
+    public static boolean cleanAppData(String... dirPaths) {
         File[] dirs = new File[dirPaths.length];
         int i = 0;
         for (String dirPath : dirPaths) {
             dirs[i++] = new File(dirPath);
         }
-        return cleanAppData(context, dirs);
+        return cleanAppData(dirs);
     }
 
-    /**
-     * 清除App所有数据
-     *
-     * @param context 上下文
-     * @param dirs    目录
-     */
-    public static boolean cleanAppData(Context context, File... dirs) {
-        boolean isSuccess = CleanUtils.cleanInternalCache(context);
-        isSuccess &= CleanUtils.cleanInternalDbs(context);
-        isSuccess &= CleanUtils.cleanInternalSP(context);
-        isSuccess &= CleanUtils.cleanInternalFiles(context);
-        isSuccess &= CleanUtils.cleanExternalCache(context);
-        for (File dir : dirs) {
-            isSuccess &= CleanUtils.cleanCustomCache(dir);
-        }
-        return isSuccess;
-    }
 
     private static final boolean DEBUG = true;
     private static final String TAG = "AppUtils";
@@ -700,7 +646,7 @@ public class AppUtils {
      */
     @TargetApi(Build.VERSION_CODES.FROYO)
     public static int gc(Context context) {
-        long i = getDeviceUsableMemory(context);
+        long i = getDeviceUsableMemory();
         int count = 0; // 清理掉的进程数
         ActivityManager am = (ActivityManager) context
                 .getSystemService(Context.ACTIVITY_SERVICE);
@@ -741,7 +687,7 @@ public class AppUtils {
                 }
             }
         if (DEBUG) {
-            LogUtils.d(TAG, "清理了" + (getDeviceUsableMemory(context) - i) + "M内存");
+            LogUtils.d(TAG, "清理了" + (getDeviceUsableMemory() - i) + "M内存");
         }
         return count;
     }
@@ -749,11 +695,10 @@ public class AppUtils {
     /**
      * 获取设备的可用内存大小
      *
-     * @param context 应用上下文对象context
      * @return 当前内存大小
      */
-    public static int getDeviceUsableMemory(Context context) {
-        ActivityManager am = (ActivityManager) context
+    public static int getDeviceUsableMemory() {
+        ActivityManager am = (ActivityManager) Utils.getApp()
                 .getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(mi);
@@ -776,9 +721,9 @@ public class AppUtils {
      *
      * @return 最大内存
      */
-    public static String getAppMemoryClass_Rom(Context context) {
+    public static String getAppMemoryClass_Rom() {
         StringBuilder sb = new StringBuilder();
-        ActivityManager activityManager = (ActivityManager) context
+        ActivityManager activityManager = (ActivityManager) Utils.getApp()
                 .getSystemService(Context.ACTIVITY_SERVICE);
         int memoryClass = activityManager.getMemoryClass();
         int largeMemoryClass = activityManager.getLargeMemoryClass();
@@ -790,14 +735,13 @@ public class AppUtils {
     /**
      * 检测服务是否运行
      *
-     * @param context   上下文
      * @param className 类名
      * @return 是否运行的状态
      */
-    public static boolean isServiceRunning(Context context, String className) {
+    public static boolean isServiceRunning(String className) {
         boolean isRunning = false;
         ActivityManager activityManager
-                = (ActivityManager) context.getSystemService(
+                = (ActivityManager) Utils.getApp().getSystemService(
                 Context.ACTIVITY_SERVICE);
         List<RunningServiceInfo> servicesList
                 = activityManager.getRunningServices(Integer.MAX_VALUE);
@@ -813,20 +757,19 @@ public class AppUtils {
     /**
      * 停止运行服务
      *
-     * @param context   上下文
      * @param className 类名
      * @return 是否执行成功
      */
-    public static boolean stopRunningService(Context context, String className) {
+    public static boolean stopRunningService(String className) {
         Intent intent_service = null;
         boolean ret = false;
         try {
-            intent_service = new Intent(context, Class.forName(className));
+            intent_service = new Intent(Utils.getApp(), Class.forName(className));
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (intent_service != null) {
-            ret = context.stopService(intent_service);
+            ret = Utils.getApp().stopService(intent_service);
         }
         return ret;
     }
@@ -834,17 +777,16 @@ public class AppUtils {
     /**
      * 是否含有当前进程
      *
-     * @param context     上下文
      * @param processName 进程名
      * @return 是否含有当前的进程
      */
-    public static boolean isCurrentProcess(Context context, String processName) {
-        if (context == null || TextUtils.isEmpty(processName)) {
+    public static boolean isCurrentProcess(String processName) {
+        if (Utils.getApp() == null || TextUtils.isEmpty(processName)) {
             return false;
         }
 
         int pid = android.os.Process.myPid();
-        ActivityManager manager = (ActivityManager) context.getSystemService(
+        ActivityManager manager = (ActivityManager) Utils.getApp().getSystemService(
                 Context.ACTIVITY_SERVICE);
         List<RunningAppProcessInfo> processInfoList
                 = manager.getRunningAppProcesses();
@@ -931,9 +873,20 @@ public class AppUtils {
      *
      * @return
      */
-    public static String getUUID(Context context) {
-        String uuid = getDeviceId(context);
+    public static String getUUID() {
+        String uuid = getDeviceId();
         String sbMed5 = EncryptUtils.encryption(uuid);
+//
+//        if (StringUtils.isEmpty(UUID)){
+//            UUID = (String) SPUtil.get(MyApplication.getInstance(), Keys.KEY_UUID, "");
+//            // 如果没有UUID则去获取
+//            if (StringUtils.isEmpty(UUID)) {
+//                UUID = APPUtils.getUUID(MyApplication.getInstance());
+//                SPUtil.putAndApply(MyApplication.getInstance(), Keys.KEY_UUID, UUID);
+//            }
+//        }
+//        return UUID;
+
         return sbMed5;
     }
 
@@ -950,10 +903,9 @@ public class AppUtils {
      * 3， 序列号（sn）；
      * 4， id：随机码。若前面的都取不到时，则随机生成一个随机码，需要缓存。
      *
-     * @param context
      * @return
      */
-    public static String getDeviceId(Context context) {
+    public static String getDeviceId() {
 
         StringBuilder deviceId = new StringBuilder();
         // 渠道标志
@@ -968,7 +920,7 @@ public class AppUtils {
                 deviceId.append(sn);
             }
 
-            String androidId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+            String androidId = Settings.Secure.getString(Utils.getApp().getContentResolver(), Settings.Secure.ANDROID_ID);
             if (androidId != null && !androidId.isEmpty()) {
                 deviceId.append("aid");
                 deviceId.append(androidId);
@@ -1017,8 +969,8 @@ public class AppUtils {
      *
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isAppDebug(Context context) {
-        return isAppDebug(context, context.getPackageName());
+    public static boolean isAppDebug() {
+        return isAppDebug(Utils.getApp().getPackageName());
     }
 
     /**
@@ -1027,10 +979,10 @@ public class AppUtils {
      * @param packageName 包名
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isAppDebug(Context context, final String packageName) {
+    public static boolean isAppDebug(final String packageName) {
         if (isSpace(packageName)) return false;
         try {
-            PackageManager pm = context.getPackageManager();
+            PackageManager pm = Utils.getApp().getPackageManager();
             ApplicationInfo ai = pm.getApplicationInfo(packageName, 0);
             return ai != null && (ai.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
         } catch (PackageManager.NameNotFoundException e) {

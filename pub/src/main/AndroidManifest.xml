@@ -4,6 +4,7 @@
 
     <!-- 读取内存卡信息 数据缓存需要 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 录制音频权限 极光推送需要 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -41,69 +42,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 
-    <!--mpush的权限   start-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- Optional. Required for location feature -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <!--mpush的权限   end-->
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-
-
-
-
-
-
-        <!-- 自写文件选择框的时候使用 ，现在是使用系统的，还未有足够的数据证明可行。但是也很有可能以后会用到 -->
-        <provider
-            android:name=".ui.views.filechoose.LocalStorageProvider"
-            android:authorities="cn.bcbook.pad.teacher.documents"
-            android:enabled="@bool/use_provider"
-            android:exported="true"
-            android:grantUriPermissions="true"
-            android:permission="android.permission.MANAGE_DOCUMENTS">
-            <intent-filter>
-                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
-            </intent-filter>
-        </provider>
-
-
-        <!--mpush  start-->
-        <receiver
-            android:name=".mpush.MPushReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="com.mpush.HEALTH_CHECK" />
-                <action android:name="com.mpush.NOTIFY_CANCEL" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".mpush.MPushService"
-            android:enabled="true"
-            android:exported="true" />
-        <service android:name=".mpush.MPushFakeService" />
-        <!--mpush  end-->
     </application>
 
 </manifest>

@@ -104,8 +104,8 @@ public class ScreenShot {
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
         Bitmap bmp = view.getDrawingCache();
-        int width = ScreenUtils.getScreenWidth(activity);
-        int height = ScreenUtils.getScreenHeight(activity);
+        int width = ScreenUtils.getScreenWidth();
+        int height = ScreenUtils.getScreenHeight();
         Bitmap ret = Bitmap.createBitmap(bmp, 0, 0, width, height);
         view.destroyDrawingCache();
         return ret;
@@ -123,9 +123,9 @@ public class ScreenShot {
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
         Bitmap bmp = view.getDrawingCache();
-        int statusBarHeight = ScreenUtils.getStatusBarHeight(activity);
-        int width = ScreenUtils.getScreenWidth(activity);
-        int height = ScreenUtils.getScreenHeight(activity);
+        int statusBarHeight = ScreenUtils.getStatusBarHeight();
+        int width = ScreenUtils.getScreenWidth();
+        int height = ScreenUtils.getScreenHeight();
         Bitmap ret = Bitmap.createBitmap(bmp, 0, statusBarHeight, width, height - statusBarHeight);
         view.destroyDrawingCache();
         return ret;

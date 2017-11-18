@@ -11,7 +11,6 @@ package com.example.pub.utils.app;
  */
 
 
-import android.content.Context;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -22,17 +21,14 @@ public class DoubleClickExitUtils {
     private int effectiveIntervalTime;    // 有效的间隔时间，单位毫秒
     private long lastClickTime;    // 上次点击时间
     private String hintMessage;    // 提示消息
-    private Context context;
 
     /**
      * 创建一个双击退出识别器
      *
-     * @param context               Androdi上下文
      * @param hintMessage           提示消息
      * @param effectiveIntervalTime 有效间隔时间
      */
-    public DoubleClickExitUtils(Context context, String hintMessage, int effectiveIntervalTime) {
-        this.context = context;
+    public DoubleClickExitUtils(String hintMessage, int effectiveIntervalTime) {
         this.hintMessage = hintMessage;
         this.effectiveIntervalTime = effectiveIntervalTime;
     }
@@ -40,20 +36,17 @@ public class DoubleClickExitUtils {
     /**
      * 创建一个双击退出识别器，有效间隔时间默认为2000毫秒
      *
-     * @param context     Androdi上下文
      * @param hintMessage 提示消息
      */
-    public DoubleClickExitUtils(Context context, String hintMessage) {
-        this(context, hintMessage, 2000);
+    public DoubleClickExitUtils(String hintMessage) {
+        this(hintMessage, 2000);
     }
 
     /**
      * 创建一个双击退出识别器，中国环境下默认提示消息为“再按一次退出程序”，其它环境下默认提示消息为“Press again to exit the program”；有效间隔时间默认为2000毫秒
-     *
-     * @param context Androdi上下文
      */
-    public DoubleClickExitUtils(Context context) {
-        this(context, Locale.CHINA.equals(Locale.getDefault()) ? DEFAULT_HINT_MESSAGE_CHINA : DEFAULT_HINT_MESSAGE_OTHER, 2000);
+    public DoubleClickExitUtils() {
+        this(Locale.CHINA.equals(Locale.getDefault()) ? DEFAULT_HINT_MESSAGE_CHINA : DEFAULT_HINT_MESSAGE_OTHER, 2000);
     }
 
     /**
@@ -66,7 +59,7 @@ public class DoubleClickExitUtils {
         boolean result = (currentTime - lastClickTime) < effectiveIntervalTime;
         lastClickTime = currentTime;
         if (!result) {
-            Toast.makeText(context, hintMessage, Toast.LENGTH_SHORT).show();
+            Toast.makeText(Utils.getApp(), hintMessage, Toast.LENGTH_SHORT).show();
         }
         return result;
     }

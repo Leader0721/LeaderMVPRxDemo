@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/v40"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/v12"
+    android:paddingRight="@dimen/v12">
+
+    <ImageView
+        android:id="@+id/ic_minus"
+        android:layout_width="@dimen/v30"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:padding="@dimen/v10"
+        android:scaleType="centerInside"
+        android:src="@mipmap/delete_black" />
+
+    <View
+        android:layout_width="@dimen/v1"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/v10"
+        android:layout_marginLeft="@dimen/v5"
+        android:layout_marginTop="@dimen/v10"
+        android:background="@color/tvc6" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="number"
+        android:minWidth="@dimen/v40"
+        android:singleLine="true"
+        android:text="1"
+        android:textColor="@color/tvc9"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/t14" />
+
+    <View
+        android:layout_width="@dimen/v1"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/v10"
+        android:layout_marginRight="@dimen/v5"
+        android:layout_marginTop="@dimen/v10"
+        android:background="@color/tvc6" />
+
+    <ImageView
+        android:id="@+id/ic_plus"
+        android:layout_width="@dimen/v30"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:padding="@dimen/v10"
+        android:scaleType="centerInside"
+        android:src="@mipmap/add_black" />
+
+
+</LinearLayout>

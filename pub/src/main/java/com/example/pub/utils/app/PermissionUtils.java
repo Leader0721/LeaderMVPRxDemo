@@ -67,7 +67,7 @@ public final class PermissionUtils {
         if (context instanceof Activity) {
             mRequestCode = requestCode;
             mOnPermissionListener = listener;
-            String[] deniedPermissions = getDeniedPermissions(context, permissions);
+            String[] deniedPermissions = getDeniedPermissions( permissions);
             if (deniedPermissions.length > 0) {
                 boolean rationale = shouldShowRequestPermissionRationale(context, deniedPermissions);
                 if (rationale && handler != null) {
@@ -91,7 +91,7 @@ public final class PermissionUtils {
             grantResults) {
         if (mRequestCode != -1 && requestCode == mRequestCode) {
             if (mOnPermissionListener != null) {
-                String[] deniedPermissions = getDeniedPermissions(context, permissions);
+                String[] deniedPermissions = getDeniedPermissions(permissions);
                 if (deniedPermissions.length > 0) {
                     mOnPermissionListener.onPermissionDenied(deniedPermissions);
                 } else {
@@ -104,10 +104,10 @@ public final class PermissionUtils {
     /**
      * 获取请求权限中需要授权的权限
      */
-    private static String[] getDeniedPermissions(final Context context, final String[] permissions) {
+    private static String[] getDeniedPermissions(final String[] permissions) {
         List<String> deniedPermissions = new ArrayList<>();
         for (String permission : permissions) {
-            if (ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_DENIED) {
+            if (ContextCompat.checkSelfPermission(Utils.getApp(), permission) == PackageManager.PERMISSION_DENIED) {
                 deniedPermissions.add(permission);
             }
         }

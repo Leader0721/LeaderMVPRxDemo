@@ -82,12 +82,11 @@ public class NetWorkUtils {
     /**
      * 获取当前手机连接的网络类型
      *
-     * @param context 上下文
      * @return int 网络类型
      */
-    public static int getNetworkState(Context context) {
+    public static int getNetworkState() {
         //获取ConnectivityManager对象
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) Utils.getApp().getSystemService(CONNECTIVITY_SERVICE);
         //获得当前网络信息
         NetworkInfo networkInfo = cm.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isAvailable()) {
@@ -143,12 +142,11 @@ public class NetWorkUtils {
     /**
      * 获取当前网络的状态
      *
-     * @param context 上下文
      * @return 当前网络的状态。具体类型可参照NetworkInfo.State.CONNECTED、NetworkInfo.State.CONNECTED.DISCONNECTED等字段。当前没有网络连接时返回null
      */
-    public static NetworkInfo.State getCurrentNetworkState(Context context) {
+    public static NetworkInfo.State getCurrentNetworkState() {
         NetworkInfo networkInfo
-                = ((ConnectivityManager) context.getSystemService(
+                = ((ConnectivityManager) Utils.getApp().getSystemService(
                 Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
         return networkInfo != null ? networkInfo.getState() : null;
     }
@@ -156,12 +154,11 @@ public class NetWorkUtils {
     /**
      * 判断网络是否连接
      *
-     * @param activity Activity
      * @return boolean 网络连接状态
      */
-    public static boolean isNetworkConnected(Activity activity) {
+    public static boolean isNetworkConnected() {
         boolean falg = false;
-        ConnectivityManager mConnectivityManager = (ConnectivityManager) activity.getApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) Utils.getApp().getApplicationContext().getSystemService(CONNECTIVITY_SERVICE);
         if (mConnectivityManager == null) {
             return falg;
         }
@@ -193,11 +190,10 @@ public class NetWorkUtils {
     /**
      * 检测3G是否连接
      *
-     * @param context 上下文
      * @return 结果
      */
-    public static boolean is3gConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
+    public static boolean is3gConnected() {
+        ConnectivityManager cm = (ConnectivityManager) Utils.getApp().getSystemService(CONNECTIVITY_SERVICE);
         if (cm != null) {
             NetworkInfo networkInfo = cm.getActiveNetworkInfo();
             if (networkInfo != null
@@ -331,11 +327,10 @@ public class NetWorkUtils {
     /**
      * 检测当前打开的网络类型是否3G
      *
-     * @param context 上下文
      * @return 是否是3G上网
      */
-    public static boolean is3G(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context
+    public static boolean is3G() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) Utils.getApp()
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetInfo != null
@@ -391,11 +386,10 @@ public class NetWorkUtils {
     /**
      * 判断Wifi是否打开，需要ACCESS_WIFI_STATE权限
      *
-     * @param context 上下文
      * @return true：打开；false：关闭
      */
-    public static boolean isWifiOpen(Context context) throws Exception {
-        int wifiState = getWifiState(context);
+    public static boolean isWifiOpen() throws Exception {
+        int wifiState = getWifiState();
         return wifiState == WifiManager.WIFI_STATE_ENABLED ||
                 wifiState == WifiManager.WIFI_STATE_ENABLING
                 ? true
@@ -405,7 +399,6 @@ public class NetWorkUtils {
     /**
      * 获取Wifi的状态，需要ACCESS_WIFI_STATE权限
      *
-     * @param context 上下文
      * @return 取值为WifiManager中的
      * <p>
      * WIFI_STATE_ENABLED=3、
@@ -419,8 +412,8 @@ public class NetWorkUtils {
      * 、WIFI_STATE_UNKNOWN=4之一
      * @throws Exception 没有找到wifi设备
      */
-    public static int getWifiState(Context context) throws Exception {
-        WifiManager wifiManager = ((WifiManager) context.getSystemService(
+    public static int getWifiState() throws Exception {
+        WifiManager wifiManager = ((WifiManager) Utils.getApp().getSystemService(
                 Context.WIFI_SERVICE));
         if (wifiManager != null) {
             return wifiManager.getWifiState();
@@ -433,15 +426,14 @@ public class NetWorkUtils {
     /**
      * 设置Wifi，需要CHANGE_WIFI_STATE权限
      *
-     * @param context 上下文
      * @param enable  wifi状态
      * @return 设置是否成功
      */
-    public static boolean openWifi(Context context, boolean enable)
+    public static boolean openWifi( boolean enable)
             throws Exception {
         //如果当前wifi的状态和要设置的状态不一样
-        if (isWifiOpen(context) != enable) {
-            ((WifiManager) context.getSystemService(
+        if (isWifiOpen( ) != enable) {
+            ((WifiManager) Utils.getApp().getSystemService(
                     Context.WIFI_SERVICE)).setWifiEnabled(enable);
         }
         return true;

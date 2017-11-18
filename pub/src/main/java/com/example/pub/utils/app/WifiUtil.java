@@ -30,10 +30,9 @@ public class WifiUtil {
     /**
      * 构造函数
      *
-     * @param context
      */
-    public WifiUtil(Context context) {
-        this.wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);// 获取Wifi服务
+    public WifiUtil( ) {
+        this.wifiManager = (WifiManager) Utils.getApp().getSystemService(Context.WIFI_SERVICE);// 获取Wifi服务
         // 得到Wifi信息
         this.wifiInfo = wifiManager.getConnectionInfo();// 得到连接信息
     }

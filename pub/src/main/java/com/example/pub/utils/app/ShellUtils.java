@@ -281,11 +281,10 @@ public final class ShellUtils {
      * 重启
      * <p>需系统权限 {@code <android:sharedUserId="android.uid.system"/>}</p>
      *
-     * @param context 上下文
      * @param reason  传递给内核来请求特殊的引导模式，如"recovery"
      */
-    public static void reboot(Context context, String reason) {
-        PowerManager mPowerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+    public static void reboot( String reason) {
+        PowerManager mPowerManager = (PowerManager) Utils.getApp().getSystemService(Context.POWER_SERVICE);
         try {
             mPowerManager.reboot(reason);
         } catch (Exception e) {
