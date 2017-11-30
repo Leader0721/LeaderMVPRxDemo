@@ -2,17 +2,22 @@ package com.example.android.leadermvprxdemo.activity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v7.graphics.Palette;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.android.leadermvprxdemo.R;
+import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
 import com.example.pub.utils.app.Utils;
-import com.example.pub.utils.view.ScreenUtils;
+import com.example.pub.utils.function.LogUtils;
+import com.example.pub.utils.view.AppSystemBarMgr;
+import com.example.pub.utils.view.BitmapUtils;
 import com.example.pub.utils.view.SecurityCodeUtils;
 import com.example.pub.utils.view.SnackbarUtils;
 import com.example.pub.utils.view.ToastUtils;
@@ -28,6 +33,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener {
     @BindView(R.id.lv_content)
     ListView lvContent;
+    @BindView(R.id.ll_total)
+    LinearLayout llTotal;
     @BindView(R.id.iv_content)
     ImageView ivContent;
     private MainAdapter mainAdapter;
@@ -52,10 +59,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "视图动画验证");
         listString.add((index++) + "视图动画验证");
         listString.add((index++) + "视图动画验证");
-        listString.add((index++) + "设置透明状态栏");
-        listString.add((index++) + "设置透明状态栏");
-        listString.add((index++) + "设置透明状态栏");
-        listString.add((index++) + "设置透明状态栏");
+
+
+        listString.add((index++) + "懷舊  对图片进行的一些特效处理");
+        listString.add((index++) + "浮雕    对图片进行的一些特效处理");
+        listString.add((index++) + "黑白   对图片进行的一些特效处理");
+        listString.add((index++) + "异步加载获取图片的主色调    对图片进行的一些特效处理");
+        listString.add((index++) + "DownMenu效果");
+        listString.add((index++) + "拖拽填空");
+        listString.add((index++) + "流式布局");
+        listString.add((index++) + "步骤完成StepView");
+        listString.add((index++) + "图片压缩框架LuBan");
+
+
         initView();
     }
 
@@ -99,16 +115,54 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 ViewAnimationUtils.visibleViewByAlpha(ivContent);
                 break;
             case 9:
-                ScreenUtils.setTransparentStatusBar(this);
+                ivContent.setImageBitmap(BitmapUtils.nostalgic(BitmapUtils.getBitmap(ivContent)));
                 break;
             case 10:
-                ScreenUtils.setStatusBarColor(this, R.color.red);
+                ivContent.setImageBitmap(BitmapUtils.emboss(BitmapUtils.getBitmap(ivContent)));
                 break;
             case 11:
-                ScreenUtils.setTransparentStatusBar(this);
+                ivContent.setImageBitmap(BitmapUtils.convertToBlackWhite(BitmapUtils.getBitmap(ivContent)));
                 break;
             case 12:
-                ScreenUtils.setTransparentStatusBar(this);
+                LogUtils.sLogSwitch = false;
+                LogUtils.d("rentong", "dddddddddddddddasdflasdfklasdjfasldfj" + LogUtils.sLogSwitch);
+                LogUtils.i("rentong", "大速度发是打发三大速度发阿呆as" + LogUtils.sLogSwitch);
+                LogUtils.sLogSwitch = true;
+                LogUtils.d("rentong", "dddddddddddddddasdflasdfklasdjfasldfj" + LogUtils.sLogSwitch);
+                LogUtils.i("rentong", "大速度发是打发三大速度发阿呆as" + LogUtils.sLogSwitch);
+                Palette.from(BitmapUtils.getBitmap(ivContent)).generate(new Palette.PaletteAsyncListener() {
+                    @Override
+                    public void onGenerated(Palette palette) {
+                        Palette.Swatch swatch = palette.getMutedSwatch();
+                        //Palette.Swatch swatch = palette.getVibrantSwatch();
+                        //Palette.Swatch swatch = palette.getDarkMutedSwatch();
+                        //Palette.Swatch swatch = palette.getDarkVibrantSwatch();
+                        //Palette.Swatch swatch = palette.getLightMutedSwatch();
+                        //Palette.Swatch swatch = palette.getLightVibrantSwatch();
+                        if (swatch != null) {
+                            ToastUtils.showShort(swatch.getRgb() + "");
+                            AppSystemBarMgr.setColor(MainActivity.this, swatch.getRgb());
+                            llTotal.setBackgroundColor(swatch.getRgb());
+                        } else {
+                            LogUtils.e("smallsoho", "swatch为空");
+                        }
+                    }
+                });
+                break;
+            case 13:
+                openActivity(DownTabActivity.class, null);
+                break;
+            case 14:
+                openActivity(DragBlankActivity.class, null);
+                break;
+            case 15:
+                openActivity(FlowLayoutActivity.class, null);
+                break;
+            case 16:
+                openActivity(StepViewActivity.class, null);
+                break;
+            case 17:
+                openActivity(LubanActivity.class, null);
                 break;
         }
     }

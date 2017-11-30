@@ -68,6 +68,10 @@
     <dimen name="v220">220dp</dimen>
     <dimen name="v240">240dp</dimen>
     <dimen name="v270">270dp</dimen>
+    <dimen name="v300">300dp</dimen>
+    <dimen name="v400">400dp</dimen>
+    <dimen name="v500">500dp</dimen>
+    <dimen name="v600">600dp</dimen>
 
 
 </resources>

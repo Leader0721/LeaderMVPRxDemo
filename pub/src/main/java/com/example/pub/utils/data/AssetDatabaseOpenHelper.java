@@ -29,7 +29,7 @@ public class AssetDatabaseOpenHelper {
 
     public AssetDatabaseOpenHelper(Context context, String databaseNme) {
         this.context = context;
-        this.databaseName = databaseName;
+        this.databaseName = databaseNme;
     }
 
     /**

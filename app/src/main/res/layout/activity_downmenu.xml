@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_total"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/iv_content"
-        android:layout_width="@dimen/v400"
-        android:layout_height="@dimen/v300"
-        android:layout_gravity="center"
-        android:src="@mipmap/ren" />
 
     <ListView
         android:id="@+id/lv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/red"
-        android:dividerHeight="@dimen/v1" />
-
+        android:divider="@color/linecolor"
+        android:dividerHeight="@dimen/v1"
+        android:scrollbars="none" />
 </LinearLayout>

@@ -9,6 +9,7 @@ import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 /**
  * @Description:反射相关_工具类
  * @Prject:
@@ -19,19 +20,9 @@ import java.util.List;
  * @Company:bc
  * @version: 1.0.0
  */
-/*
- * @创建者     默小铭
- * @博客       http://blog.csdn.net/u012792686
- * @创建时间   2016/10/21 4:11
- * @本类描述	  反射相关_工具类
- * @内容说明
- * ---------------------------------------------     
- * @更新时间   2016/10/21 
- * @更新说明
- */
 public class ReflectUtils {
     public static final Class<?>[] EMPTY_PARAM_TYPES = new Class<?>[0];
-    public static final Object[]   EMPTY_PARAMS      = new Object[0];
+    public static final Object[] EMPTY_PARAMS = new Object[0];
 
 	/* ************************************************** 字段相关的方法
     * ******************************************************* */
@@ -377,7 +368,7 @@ public class ReflectUtils {
 
 
 	/* ************************************************** 父类相关的方法
-	* ******************************************************* */
+    * ******************************************************* */
 
     /**
      * 获取给定的类所有的父类

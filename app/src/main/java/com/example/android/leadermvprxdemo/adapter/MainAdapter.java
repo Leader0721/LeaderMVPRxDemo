@@ -26,7 +26,7 @@ public class MainAdapter extends BaseListAdapter<String> {
         ViewHolder holder;
 
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.item_main_listview, parent, false);
+            convertView = mInflater.inflate(R.layout.item_luban_listview, parent, false);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
