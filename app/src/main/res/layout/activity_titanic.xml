@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicTextView
+        android:id="@+id/my_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="任统帅任统帅任统帅任统帅任统帅"
+        android:textColor="#212121"
+        android:textSize="70sp" />
+</LinearLayout>
