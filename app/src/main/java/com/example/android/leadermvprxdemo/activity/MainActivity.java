@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
+import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
@@ -72,6 +73,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "步骤完成StepView");
         listString.add((index++) + "图片压缩框架LuBan");
         listString.add((index++) + "波纹效果的文字下载效果");
+        listString.add((index++) + "多层列表");
 
 
         initView();
@@ -168,6 +170,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 18:
                 openActivity(TitanicViewActivity.class, null);
+                break;
+            case 19:
+                openActivity(MultiLevelActivity.class, null);
                 break;
         }
     }

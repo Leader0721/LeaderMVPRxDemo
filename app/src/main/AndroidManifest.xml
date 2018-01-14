@@ -20,6 +20,7 @@
         <activity android:name=".activity.StepViewActivity" />
         <activity android:name=".activity.luban.LubanActivity" />
         <activity android:name=".activity.wave_titanic.TitanicViewActivity" />
+        <activity android:name=".activity.multiLevel.multilevellist.test.MultiLevelActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"
