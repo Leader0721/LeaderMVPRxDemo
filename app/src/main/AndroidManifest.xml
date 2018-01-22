@@ -21,6 +21,10 @@
         <activity android:name=".activity.luban.LubanActivity" />
         <activity android:name=".activity.wave_titanic.TitanicViewActivity" />
         <activity android:name=".activity.multiLevel.multilevellist.test.MultiLevelActivity" />
+        <activity android:name=".activity.shineTextView.ShimmerActivity" />
+        <activity android:name=".activity.note_text.NormalActivity" />
+        <activity android:name=".activity.note_text.RichActivity" />
+        <activity android:name=".activity.bezierIndicator.BezierIndicatorActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

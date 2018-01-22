@@ -11,8 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.android.leadermvprxdemo.R;
+import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
+import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
+import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
+import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
@@ -74,6 +78,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "图片压缩框架LuBan");
         listString.add((index++) + "波纹效果的文字下载效果");
         listString.add((index++) + "多层列表");
+        listString.add((index++) + "一闪而过的字体样式");
+        listString.add((index++) + "正常样式____可绘制下划线，笔记标志和点击弹框的TextView");
+        listString.add((index++) + "复杂样式____可绘制下划线，笔记标志和点击弹框的TextView");
+        listString.add((index++) + "贝塞尔曲线水滴效果导航栏");
 
 
         initView();
@@ -173,6 +181,18 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 19:
                 openActivity(MultiLevelActivity.class, null);
+                break;
+            case 20:
+                openActivity(ShimmerActivity.class, null);
+                break;
+            case 21:
+                openActivity(NormalActivity.class, null);
+                break;
+            case 22:
+                openActivity(RichActivity.class, null);
+                break;
+            case 23:
+                openActivity(BezierIndicatorActivity.class, null);
                 break;
         }
     }
