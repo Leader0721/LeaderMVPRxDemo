@@ -38,5 +38,9 @@
     <!-- 分割线颜色 -->
     <color name="linecolor">#ffe9e9e9</color>
     <color name="lightgray">#C1C1C1</color>
+    <color name="tick_yellow">#f5d747</color>
+    <color name="tick_gray">#eaeaea</color>
+    <color name="tick_white">#fff</color>
+
 
 </resources>

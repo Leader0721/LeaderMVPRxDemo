@@ -36,6 +36,8 @@
         <activity android:name=".activity.bezierView.TestActivity" />
         <activity android:name=".activity.bezierView.shoppingcart.ShoppingCartActivity" />
         <activity android:name=".activity.roundProgress.RoundProgressActivity" />
+        <activity android:name=".activity.tickView.TickViewActivity" />
+        <activity android:name=".activity.lockView.LockViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

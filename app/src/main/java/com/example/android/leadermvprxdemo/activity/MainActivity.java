@@ -14,6 +14,7 @@ import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
+import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
@@ -21,6 +22,7 @@ import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
+import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
@@ -92,6 +94,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "签到的自定义视图");
         listString.add((index++) + "贝塞尔曲线的几个小自定义view");
         listString.add((index++) + "原型进度条roundProgress");
+        listString.add((index++) + "打对号的动画效果");
+        listString.add((index++) + "锁屏的一个视图");
 
 
         initView();
@@ -218,6 +222,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 28:
                 openActivity(RoundProgressActivity.class, null);
+                break;
+            case 29:
+                openActivity(TickViewActivity.class, null);
+                break;
+            case 30:
+                openActivity(LockViewActivity.class, null);
                 break;
         }
     }
