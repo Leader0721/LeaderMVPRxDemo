@@ -14,7 +14,7 @@
         android:clickable="true"
         android:padding="@dimen/v10"
         android:scaleType="centerInside"
-        android:src="@mipmap/delete_black" />
+        android:src="@mipmap/add_delete_delete_black" />
 
     <View
         android:layout_width="@dimen/v1"
@@ -55,7 +55,7 @@
         android:clickable="true"
         android:padding="@dimen/v10"
         android:scaleType="centerInside"
-        android:src="@mipmap/add_black" />
+        android:src="@mipmap/add_delete_add_black" />
 
 
 </LinearLayout>

@@ -18,6 +18,7 @@ import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.marqueenView.MarqueeActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
+import com.example.android.leadermvprxdemo.activity.musicWaveView.MusicWaveActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "锁屏的一个视图");
         listString.add((index++) + "带有百分比的波浪视图");
         listString.add((index++) + "跑马灯的效果");
+        listString.add((index++) + "音乐跳动动效自定义视图");
 
 
         initView();
@@ -236,6 +238,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 32:
                 openActivity(MarqueeActivity.class, null);
+                break;
+            case 33:
+                openActivity(MusicWaveActivity.class, null);
                 break;
         }
     }

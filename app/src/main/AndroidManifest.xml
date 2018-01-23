@@ -41,6 +41,7 @@
         <activity android:name=".activity.wavePercentView.WavePercentActivity" />
         <activity android:name=".activity.marqueenView.MarqueeActivity" />
         <activity android:name=".activity.marqueenView.AboutActivity" />
+        <activity android:name=".activity.musicWaveView.MusicWaveActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

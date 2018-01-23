@@ -14,7 +14,7 @@
         android:layout_marginLeft="36dp"
         android:padding="@dimen/widget_margin"
         android:scaleType="center"
-        android:src="@mipmap/back"
+        android:src="@mipmap/xheader_back"
         android:visibility="gone" />
     <!-- 左边文本 -->
     <TextView
@@ -25,7 +25,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="36dp"
-        android:drawableLeft="@mipmap/back"
+        android:drawableLeft="@mipmap/xheader_back"
         android:drawablePadding="@dimen/v16"
         android:gravity="center"
         android:paddingLeft="@dimen/widget_margin"
@@ -81,7 +81,7 @@
         android:layout_marginRight="36dp"
         android:padding="@dimen/widget_margin"
         android:scaleType="center"
-        android:src="@mipmap/back"
+        android:src="@mipmap/xheader_back"
         android:visibility="visible" />
 
     <!-- 右边文本 -->
