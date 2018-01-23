@@ -38,6 +38,9 @@
         <activity android:name=".activity.roundProgress.RoundProgressActivity" />
         <activity android:name=".activity.tickView.TickViewActivity" />
         <activity android:name=".activity.lockView.LockViewActivity" />
+        <activity android:name=".activity.wavePercentView.WavePercentActivity" />
+        <activity android:name=".activity.marqueenView.MarqueeActivity" />
+        <activity android:name=".activity.marqueenView.AboutActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

@@ -48,13 +48,13 @@
 
     <!--popupwindow的style-->
     <style name="PopupTop" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/slide_top_show</item>
-        <item name="android:windowExitAnimation">@anim/slide_top_hide</item>
+        <item name="android:windowEnterAnimation">@anim/anim_slide_top_show</item>
+        <item name="android:windowExitAnimation">@anim/anim_slide_top_hide</item>
     </style>
 
     <style name="anim_pop">
-        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
-        <item name="android:windowExitAnimation">@anim/pop_exit</item>
+        <item name="android:windowEnterAnimation">@anim/anim_pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_exit</item>
     </style>
 
     <style name="def_sign">

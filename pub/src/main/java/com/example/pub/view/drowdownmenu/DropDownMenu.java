@@ -307,7 +307,7 @@ public class DropDownMenu extends LinearLayout {
         //设置显示分割线
         tabMenuView.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         //设置分割线样式 drawable文件
-        tabMenuView.setDividerDrawable(getResources().getDrawable(R.drawable.divider_line));
+        tabMenuView.setDividerDrawable(getResources().getDrawable(R.drawable.bg_divider_line));
         //设置分割线边距
         tabMenuView.setDividerPadding(35);
     }
@@ -355,9 +355,9 @@ public class DropDownMenu extends LinearLayout {
                     getResources().getDrawable(menuUnselectedIcon), null);
             ((TextView) tabMenuView.getChildAt(current_tab_position)).setTextColor(textUnselectedColor);
             popupMenuViews.setVisibility(View.GONE);
-            popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_out));
+            popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.anim_menu_out));
             maskView.setVisibility(GONE);
-            maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_out));
+            maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.anim_mask_out));
             current_tab_position = -1;
         }
 
@@ -392,9 +392,9 @@ public class DropDownMenu extends LinearLayout {
                 } else {
                     if (current_tab_position == -1) {
                         popupMenuViews.setVisibility(View.VISIBLE);
-                        popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_menu_in));
+                        popupMenuViews.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.anim_menu_in));
                         maskView.setVisibility(VISIBLE);
-                        maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.dd_mask_in));
+                        maskView.setAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.anim_mask_in));
                         popupMenuViews.getChildAt(i).setVisibility(View.VISIBLE);
                     } else {
                         popupMenuViews.getChildAt(i).setVisibility(View.VISIBLE);

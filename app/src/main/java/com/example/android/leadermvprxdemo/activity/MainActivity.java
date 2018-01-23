@@ -16,6 +16,7 @@ import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivit
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
+import com.example.android.leadermvprxdemo.activity.marqueenView.MarqueeActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
@@ -24,6 +25,7 @@ import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressA
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
+import com.example.android.leadermvprxdemo.activity.wavePercentView.WavePercentActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
@@ -70,10 +72,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "验证码图片验证");
         listString.add((index++) + "视图动画验证");
         listString.add((index++) + "视图动画验证");
-        listString.add((index++) + "视图动画验证");
-        listString.add((index++) + "视图动画验证");
-
-
+        listString.add((index++) + "视图动画验证，图片渐渐消失");
+        listString.add((index++) + "视图动画验证，从新进行显示");
         listString.add((index++) + "懷舊  对图片进行的一些特效处理");
         listString.add((index++) + "浮雕    对图片进行的一些特效处理");
         listString.add((index++) + "黑白   对图片进行的一些特效处理");
@@ -96,6 +96,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "原型进度条roundProgress");
         listString.add((index++) + "打对号的动画效果");
         listString.add((index++) + "锁屏的一个视图");
+        listString.add((index++) + "带有百分比的波浪视图");
+        listString.add((index++) + "跑马灯的效果");
 
 
         initView();
@@ -228,6 +230,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 30:
                 openActivity(LockViewActivity.class, null);
+                break;
+            case 31:
+                openActivity(WavePercentActivity.class, null);
+                break;
+            case 32:
+                openActivity(MarqueeActivity.class, null);
                 break;
         }
     }

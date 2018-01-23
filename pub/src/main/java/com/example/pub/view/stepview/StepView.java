@@ -48,7 +48,7 @@ public class StepView extends LinearLayout {
             isSelectList.clear();
         }
         for (int i = 0; i < mList.size(); i++) {
-            View itemView = LayoutInflater.from(mContext).inflate(R.layout.stepview_item, null);
+            View itemView = LayoutInflater.from(mContext).inflate(R.layout.view_stepview_item, null);
             RelativeLayout mLayout;
             View mViewLeft;
             View mViewRight;

@@ -89,13 +89,13 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
 
             if ("start".equals(location)) {
                 //把布局和当前类形成整体
-                LayoutInflater.from(context).inflate(R.layout.adddeleteutil_start_layout, this);
+                LayoutInflater.from(context).inflate(R.layout.view_adddeleteutil_start, this);
             } else if ("end".equals(location)) {
                 //把布局和当前类形成整体
-                LayoutInflater.from(context).inflate(R.layout.adddeleteutil_end_layout, this);
+                LayoutInflater.from(context).inflate(R.layout.view_adddeleteutil_end, this);
             } else {
                 //把布局和当前类形成整体
-                LayoutInflater.from(context).inflate(R.layout.adddeleteutil_layout, this);
+                LayoutInflater.from(context).inflate(R.layout.view_adddeleteutil, this);
             }
 
             icPlus = (ImageView) findViewById(R.id.ic_plus);

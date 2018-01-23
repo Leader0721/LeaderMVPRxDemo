@@ -77,7 +77,7 @@ public class DragFillBlankView extends RelativeLayout implements View.OnDragList
 
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        inflater.inflate(R.layout.layout_drag_fill_blank, this);
+        inflater.inflate(R.layout.view_drag_fill_blank, this);
 
         tvContent = (TextView) findViewById(R.id.tv_content);
         llOption = (LinearLayout) findViewById(R.id.ll_option);

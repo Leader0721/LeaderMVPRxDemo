@@ -26,10 +26,10 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:layout_toRightOf="@+id/turn_button"
-            android:indeterminateDrawable="@drawable/music_play_progress_seek"
+            android:indeterminateDrawable="@drawable/bg_music_progress"
             android:maxHeight="2dp"
             android:minHeight="2dp"
-            android:progressDrawable="@drawable/music_play_progress_seek"
+            android:progressDrawable="@drawable/bg_music_progress"
             android:thumb="@mipmap/music_seek_dot"
             android:thumbOffset="@dimen/v10" />
 

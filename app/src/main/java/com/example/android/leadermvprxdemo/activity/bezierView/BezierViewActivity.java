@@ -37,21 +37,21 @@ public class BezierViewActivity extends BaseActivity {
     //    findViewById(R.id.bt_main_wave).setOnClickListener(new View.OnClickListener() {
 //        @Override
 //        public void onClick(View v) {
-//            startActivity(new Intent(MainActivity.this, TestActivity.class));
+//            startActivity(new Intent(AirPurgeActivity.this, TestActivity.class));
 //        }
 //    });
 //
 //    findViewById(R.id.bt_main_shop).setOnClickListener(new View.OnClickListener() {
 //        @Override
 //        public void onClick(View v) {
-//            startActivity(new Intent(MainActivity.this, ShoppingCartActivity.class));
+//            startActivity(new Intent(AirPurgeActivity.this, ShoppingCartActivity.class));
 //        }
 //    });
 //
 //    findViewById(R.id.bt_main_test).setOnClickListener(new View.OnClickListener() {
 //        @Override
 //        public void onClick(View v) {
-//            startActivity(new Intent(MainActivity.this, StarViewActivity.class));
+//            startActivity(new Intent(AirPurgeActivity.this, StarViewActivity.class));
 //        }
 //    });
     @OnClick({R.id.bt_main_wave, R.id.bt_main_shop, R.id.bt_main_test})

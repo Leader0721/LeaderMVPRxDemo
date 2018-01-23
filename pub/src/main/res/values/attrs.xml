@@ -173,4 +173,118 @@
         </attr>
         <attr name="clickable" format="boolean" />
     </declare-styleable>
+
+
+    <declare-styleable name="WaveView">
+        <!--波纹颜色-->
+        <attr name="wave_wavecolor" format="color" />
+        <!--波纹进度文字是否显示-->
+        <attr name="wave_progress_text_show" format="boolean" />
+        <!--波纹进度文字颜色-->
+        <attr name="wave_progress_text_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AirPurgeLayoutView">
+        <attr name="granule_num" format="integer" />    <!--颗粒物数-->
+        <attr name="granule_radius" format="float" />   <!--颗粒物数-->
+        <attr name="granule_color" format="color" />    <!--颗粒颜色,最好不透明的-->
+
+        <attr name="circle_proportion" format="float" />  <!--圆的直径大小占宽高中最小的那个的比例-->
+        <attr name="main_color" format="color" />            <!--实体圆环和扇叶圆环和字体的颜色-->
+        <attr name="solidring_width" format="float" />    <!--最外圈实线圆环的宽度，最好不要太大-->
+        <attr name="dashedring_width" format="float" />    <!--扇叶圆环的宽度，经测量是solidwidth四倍最好，可以适当调节-->
+        <attr name="toptitle" format="string" />
+        <attr name="centertitle" format="string" />
+        <attr name="bottomtitle" format="string" />
+        <attr name="toptitle_textsize" format="dimension" />
+        <attr name="centertitle_textsize" format="dimension" />
+        <attr name="bottomtitle_textsize" format="dimension" />
+        <attr name="speed_level" format="integer" />     <!--风速默认3000，可以修改-->
+        <attr name="eachpan_angle" format="float" />    <!--每片扇叶的角度 自己要计算好加间隙 一共360-->
+        <attr name="eachpan_anglegap" format="float" />    <!--相邻扇叶的间隙-->
+
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference" />
+        <attr name="mvAnimDuration" format="integer|reference" />
+        <attr name="mvTextSize" format="dimension|reference" />
+        <attr name="mvTextColor" format="color|reference" />
+        <attr name="mvSingleLine" format="boolean" />
+        <attr name="mvGravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0" />
+            <enum name="top_to_bottom" value="1" />
+            <enum name="right_to_left" value="2" />
+            <enum name="left_to_right" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AddSubUtils">
+        <!--是否可以手动输入-->
+        <attr name="editable" format="boolean"></attr>
+        <!--输入框的位置-->
+        <attr name="location" format="string"></attr>
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="ImageWidth" format="dimension" />
+        <!-- 中间EditText的宽度 -->
+        <attr name="contentWidth" format="dimension" />
+        <!--中间TextView的大小-->
+        <attr name="contentTextSize" format="dimension" />
+        <!--中间字体的颜色-->
+        <attr name="contentTextColor" format="color" />
+        <!--整个控件的background-->
+        <attr name="all_background" format="color|reference" />
+        <!--左面控件的背景-->
+        <attr name="leftBackground" format="color|reference" />
+        <!--右面控件的背景-->
+        <attr name="rightBackground" format="color|reference" />
+        <!--中间控件的背景-->
+        <attr name="contentBackground" format="color|reference" />
+        <!--左面控件的资源-->
+        <attr name="leftResources" format="color|reference" />
+        <!--右面控件的资源-->
+        <attr name="rightResources" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="imgSrc" format="reference" />
+        <attr name="cropMode">
+            <enum name="ratio_fit_image" value="0"/>
+            <enum name="ratio_4_3" value="1"/>
+            <enum name="ratio_3_4" value="2"/>
+            <enum name="ratio_1_1" value="3"/>
+            <enum name="ratio_16_9" value="4"/>
+            <enum name="ratio_9_16" value="5"/>
+            <enum name="ratio_free" value="6"/>
+            <enum name="ratio_custom" value="7"/>
+            <enum name="circle" value="8"/>
+        </attr>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="overlayColor" format="color"/>
+        <attr name="frameColor" format="color"/>
+        <attr name="handleColor" format="color"/>
+        <attr name="guideColor" format="color"/>
+        <attr name="guideShowMode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr name="handleShowMode">
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
+        </attr>
+        <attr name="handleSize" format="dimension"/>
+        <attr name="touchPadding" format="dimension"/>
+        <attr name="minFrameSize" format="dimension"/>
+        <attr name="frameStrokeWeight" format="dimension"/>
+        <attr name="guideStrokeWeight" format="dimension"/>
+        <attr name="cropEnabled" format="boolean"/>
+        <attr name="initialFrameScale" format="float"/>
+    </declare-styleable>
+
 </resources>
