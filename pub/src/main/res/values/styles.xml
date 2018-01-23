@@ -45,22 +45,24 @@
         <item name="android:background">@drawable/selector_btn_cancel</item>
         <item name="android:gravity">center</item>
     </style>
-    <!-- 状态视图 -->
-    <declare-styleable name="XStateView">
-        <attr name="empty_text" format="string" />
-        <attr name="iconRes" format="reference" />
-        <attr name="state">
-            <enum name="empty" value="1" />
-            <enum name="error" value="2" />
-            <enum name="load" value="3" />
-        </attr>
-        <attr name="size" format="dimension" />
-        <attr name="color" format="color" />
-    </declare-styleable>
+
     <!--popupwindow的style-->
     <style name="PopupTop" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/slide_top_show</item>
         <item name="android:windowExitAnimation">@anim/slide_top_hide</item>
+    </style>
+
+    <style name="anim_pop">
+        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit</item>
+    </style>
+
+    <style name="def_sign">
+        <item name="sign_in_bg_color">#000</item>
+        <item name="sign_in_pb_color">@android:color/holo_orange_dark</item>\
+        <item name="sign_in_check_color">@android:color/white</item>
+        <item name="sign_in_text_color">@android:color/holo_purple</item>
+        <item name="sign_in_text_siz">12sp</item>
     </style>
 
 </resources>

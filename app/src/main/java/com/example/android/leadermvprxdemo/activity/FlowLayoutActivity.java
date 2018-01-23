@@ -69,7 +69,7 @@ public class FlowLayoutActivity extends BaseActivity {
         optionList.add("公路");
         optionList.add("大雪");
         flowAdapter = new FlowAdapter<>(this, R.layout.grid_item_flowlayout, R.id.tv_flowlayout);
-        flContent.setTagCheckedMode(FlowLayout.FLOW_TAG_CHECKED_SINGLE);
+        flContent.setTagCheckedMode(FlowLayout.FLOW_TAG_CHECKED_MULTI);
         flContent.setAdapter(flowAdapter);
         flContent.setOnTagSelectListener(new OnTagSelectListener() {
             @Override

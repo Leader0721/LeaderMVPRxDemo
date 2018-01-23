@@ -12,18 +12,4 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-
-    <style name="anim_pop">
-        <item name="android:windowEnterAnimation">@anim/pop_enter</item>
-        <item name="android:windowExitAnimation">@anim/pop_exit</item>
-    </style>
-
-
-    <declare-styleable name="BezierBottomIndicator">
-        <attr name="leftRightGap" format="dimension" />
-        <attr name="childPadding" format="dimension" />
-        <attr name="bgCircularColor" format="color" />
-        <attr name="defCircularColor" format="color" />
-    </declare-styleable>
 </resources>

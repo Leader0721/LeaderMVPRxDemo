@@ -26,4 +26,133 @@
         <attr name="ddmenuUnselectedIcon" format="reference" />
     </declare-styleable>
     <!-- DropDownMenu end -->
+
+
+    <declare-styleable name="ShimmerView">
+        <attr name="reflectionColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BezierBottomIndicator">
+        <attr name="leftRightGap" format="dimension" />
+        <attr name="childPadding" format="dimension" />
+        <attr name="bgCircularColor" format="color" />
+        <attr name="defCircularColor" format="color" />
+    </declare-styleable>
+
+    <!-- 状态视图 -->
+    <declare-styleable name="XStateView">
+        <attr name="empty_text" format="string" />
+        <attr name="iconRes" format="reference" />
+        <attr name="state">
+            <enum name="empty" value="1" />
+            <enum name="error" value="2" />
+            <enum name="load" value="3" />
+        </attr>
+        <attr name="size" format="dimension" />
+        <attr name="color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ArcView">
+        <attr name="arcColor" format="color" />
+        <attr name="bgColor" format="color" />
+        <attr name="arc_textColor" format="color" />
+        <attr name="arc_textSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomDotIndicator">
+        <attr name="dotColor" format="color" />
+        <attr name="dotRadius" format="dimension" />
+        <attr name="dotFillOrStroke" format="integer" />
+        <attr name="dotStrokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRectangleIndicator">
+        <attr name="rectColor" format="color" />
+        <attr name="rectHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTriangleIndicator">
+        <attr name="triangleColor" format="color" />
+        <attr name="triangleWidth" format="dimension" />
+        <attr name="triangleHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRadarChart">
+        <attr name="radarPieceNumber" format="integer" />
+        <attr name="radarLineWidth" format="dimension" />
+        <attr name="radarLineColor" format="color" />
+        <attr name="radarTextColor" format="color" />
+        <attr name="radarTextSize" format="integer" />
+        <attr name="radarRadius" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="voiceView">
+        <!--中间线的颜色，就是波形的时候，大家可以看到，中间有一条直线，就是那个-->
+        <attr name="middleLine" format="color" />
+        <!--中间线的高度，因为宽度是充满的-->
+        <attr name="middleLineHeight" format="dimension" />
+        <!--波动的线的颜色，如果是矩形样式的话，刚是矩形的颜色-->
+        <attr name="voiceLine" format="color" />
+        <!--波动线的横向移动速度，线的速度的反比，即这个值越小，线横向移动越快，越大线移动越慢，默认90-->
+        <attr name="lineSpeed" format="integer" />
+        <!--矩形的宽度-->
+        <attr name="rectWidth" format="dimension" />
+        <!--矩形之间的间隔-->
+        <attr name="rectSpace" format="dimension" />
+        <!--矩形的初始高度，就是没有声音的时候，矩形的高度-->
+        <attr name="rectInitHeight" format="dimension" />
+        <!--所输入音量的最大值-->
+        <attr name="maxVolume" format="float" />
+        <!--控件的样式，一共有两种，波形或者矩形-->
+        <attr name="viewMode">
+            <enum name="line" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+        <!--灵敏度，默认值是4-->
+        <attr name="sensibility">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+        <!--精细度，绘制曲线的时候，每几个像素绘制一次，默认是1，一般，这个值越小，曲线越顺滑，
+            但在一些旧手机上，会出现帧率过低的情况，可以把这个值调大一点，在图片的顺滑度与帧率之间做一个取舍-->
+        <attr name="fineness">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="Signin">
+        <attr name="sign_in_bg_color" format="color" />
+        <attr name="sign_in_pb_color" format="color" />
+        <attr name="sign_in_check_color" format="color" />
+        <attr name="sign_in_text_color" format="color" />
+        <attr name="sign_in_text_siz" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressView">
+
+        <attr name="border_width" format="integer" />
+        <attr name="border_color" format="color" />
+        <attr name="background_color" format="color" />
+        <attr name="milli_second" format="integer" />
+
+        <attr name="text" format="string"></attr>
+        <attr name="text_color" format="color"></attr>
+        <attr name="text_size" format="dimension"></attr>
+
+        <attr name="image_resource" format="reference" />
+        <attr name="image_scale" format="float" />
+
+        <attr name="mode">
+            <enum name="auto" value="1" />
+            <enum name="update" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>

@@ -25,6 +25,17 @@
         <activity android:name=".activity.note_text.NormalActivity" />
         <activity android:name=".activity.note_text.RichActivity" />
         <activity android:name=".activity.bezierIndicator.BezierIndicatorActivity" />
+        <activity android:name=".activity.leiDa.LeiDaActivity" />
+        <activity android:name=".activity.leiDa.activity.CustomArcProgressBarActivity" />
+        <activity android:name=".activity.leiDa.activity.IndicatorActivity" />
+        <activity android:name=".activity.leiDa.activity.RadarActivity" />
+        <activity android:name=".activity.voiceLine.VoiceLineActivity" />
+        <activity android:name=".activity.qianDao.QianDaoActivity" />
+        <activity android:name=".activity.bezierView.BezierViewActivity" />
+        <activity android:name=".activity.bezierView.starview.StarViewActivity" />
+        <activity android:name=".activity.bezierView.TestActivity" />
+        <activity android:name=".activity.bezierView.shoppingcart.ShoppingCartActivity" />
+        <activity android:name=".activity.roundProgress.RoundProgressActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

@@ -12,11 +12,16 @@ import android.widget.ListView;
 
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
+import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
+import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
+import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
+import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
+import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
@@ -82,6 +87,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "正常样式____可绘制下划线，笔记标志和点击弹框的TextView");
         listString.add((index++) + "复杂样式____可绘制下划线，笔记标志和点击弹框的TextView");
         listString.add((index++) + "贝塞尔曲线水滴效果导航栏");
+        listString.add((index++) + "雷达相关的视图");
+        listString.add((index++) + "根据声音大小进行波段图的绘制");
+        listString.add((index++) + "签到的自定义视图");
+        listString.add((index++) + "贝塞尔曲线的几个小自定义view");
+        listString.add((index++) + "原型进度条roundProgress");
 
 
         initView();
@@ -193,6 +203,21 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 23:
                 openActivity(BezierIndicatorActivity.class, null);
+                break;
+            case 24:
+                openActivity(LeiDaActivity.class, null);
+                break;
+            case 25:
+                openActivity(VoiceLineActivity.class, null);
+                break;
+            case 26:
+                openActivity(QianDaoActivity.class, null);
+                break;
+            case 27:
+                openActivity(BezierViewActivity.class, null);
+                break;
+            case 28:
+                openActivity(RoundProgressActivity.class, null);
                 break;
         }
     }
