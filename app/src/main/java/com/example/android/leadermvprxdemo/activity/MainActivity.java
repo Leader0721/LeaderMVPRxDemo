@@ -22,6 +22,7 @@ import com.example.android.leadermvprxdemo.activity.musicWaveView.MusicWaveActiv
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
+import com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBarActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
@@ -100,6 +101,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "带有百分比的波浪视图");
         listString.add((index++) + "跑马灯的效果");
         listString.add((index++) + "音乐跳动动效自定义视图");
+        listString.add((index++) + "进度相关的视图");
 
 
         initView();
@@ -241,6 +243,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 33:
                 openActivity(MusicWaveActivity.class, null);
+                break;
+            case 34:
+                openActivity(RangeSeekBarActivity.class, null);
                 break;
         }
     }
