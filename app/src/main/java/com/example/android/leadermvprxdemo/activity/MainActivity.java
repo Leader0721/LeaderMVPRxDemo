@@ -13,6 +13,8 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
+import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
+import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
@@ -102,6 +104,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "跑马灯的效果");
         listString.add((index++) + "音乐跳动动效自定义视图");
         listString.add((index++) + "进度相关的视图");
+        listString.add((index++) + "自定义键盘自定义视图，可以用一个popupWindow来实现，可以封装一下");
+        listString.add((index++) + "仿京东物流配送流程图");
 
 
         initView();
@@ -246,6 +250,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 34:
                 openActivity(RangeSeekBarActivity.class, null);
+                break;
+            case 35:
+                openActivity(DiyKeyBoardActivity.class, null);
+                break;
+            case 36:
+                openActivity(JdStepViewActivity.class, null);
                 break;
         }
     }

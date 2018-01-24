@@ -43,6 +43,8 @@
         <activity android:name=".activity.marqueenView.AboutActivity" />
         <activity android:name=".activity.musicWaveView.MusicWaveActivity" />
         <activity android:name=".activity.rangeSeekBar.RangeSeekBarActivity" />
+        <activity android:name=".activity.diyKeyBorad.DiyKeyBoardActivity" />
+        <activity android:name=".activity.jdStepView.JdStepViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

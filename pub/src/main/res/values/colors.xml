@@ -47,4 +47,8 @@
     <color name="half_transparent">#4f000000</color>
     <color name="half_transparent_white">#80ffffff</color>
     <color name="colorSeekBarDefault">#c3c3c3</color>
+
+
+    <color name="uncompleted_color">#A3E0D9</color>
+    <color name="uncompleted_text_color">#F8F8F8</color>
 </resources>
