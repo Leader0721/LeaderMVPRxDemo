@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.redarView.RadarView
+        android:id="@+id/radarView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="#ff0000"
+        app:bWidth="2dp"
+        app:count="7"
+        app:enabledBorder="true"
+        app:enabledShowPoint="false"
+        app:endColor="#D4F0F2"
+        app:layerCount="4"
+        app:radiusColor="#88D3D8"
+        app:startColor="#278892" />
+
+
+</LinearLayout>

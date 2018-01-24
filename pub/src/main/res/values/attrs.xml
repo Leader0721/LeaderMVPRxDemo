@@ -321,4 +321,56 @@
             <enum name="range" value="2" />
         </attr>
     </declare-styleable>
+
+    <!--注意这里的name要和自定义View的名称一致，不然在xml布局中无法引用-->
+    <declare-styleable name="HorizontalExpandMenuView">
+        <attr name="back_color" format="color"></attr><!-- 菜单栏背景颜色 color-->
+        <attr name="stroke_size" format="dimension"></attr><!--菜单栏边框粗细 dimension-->
+        <attr name="stroke_color" format="color"></attr><!--菜单栏边框颜色 color-->
+        <attr name="corner_radius" format="dimension"></attr><!--菜单栏边框圆角半径 dimension-->
+        <attr name="button_style"><!--按钮类型（居左或右） left | right-->
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="button_icon_size" format="dimension"></attr><!--按钮icon大小 dimension-->
+        <attr name="button_icon_stroke_width" format="dimension"></attr><!--按钮icon粗细 dimension-->
+        <attr name="button_icon_color" format="color"></attr><!--按钮icon颜色 color-->
+        <attr name="expand_time" format="integer"></attr><!--菜单栏展开收起动画时长（毫秒）-->
+    </declare-styleable>
+
+    <!--drawables	各项图标组成的数组-->
+    <!--titles	标题数组(支持SpannableString)-->
+    <!--percents	各项的值数组（转换成0-1之间的数值）-->
+    <!--values	值的文本数组-->
+    <!--colors	多色区域时，每个区域的颜色数组（数组长度可以小于count）-->
+    <declare-styleable name="RadarView">
+        <attr name="count" format="integer" /><!--几边形雷达-->
+        <attr name="layerCount" format="integer" /><!--几层蜘蛛网-->
+        <attr name="mDrawableSize" format="dimension|reference" /><!--图标的大小-->
+        <attr name="mDrawablePadding" format="dimension|reference" /><!--图标和文字间距-->
+        <attr name="descPadding" format="dimension|reference" /><!--标题描述与节点间距-->
+        <attr name="titleSize" format="dimension|reference" /><!--标题文字大小-->
+        <attr name="dataSize" format="dimension|reference" /><!--标题下面的数值的文字大小-->
+        <attr name="radarPercent" format="float" /><!--雷达图图形占整个空间的比例-->
+        <attr name="startColor" format="color|reference" /><!--开启渐变色时，圆心处的颜色-->
+        <attr name="endColor" format="color|reference" /><!--开启渐变色时，外圈处的颜色-->
+        <attr name="cobwebColor" format="color|reference" /><!--正几边形的网线的颜色-->
+        <attr name="lineColor" format="color|reference" /><!--圆心与各个顶点连线的颜色-->
+        <attr name="dataColor" format="color|reference" /><!--数值文本的颜色-->
+        <attr name="singleColor" format="color|reference" /><!--如果不是多色区域，是单一的颜色-->
+        <attr name="titleColor" format="color|reference" /><!--标题文本的颜色-->
+        <attr name="pointColor" format="color|reference" /><!--圆点颜色-->
+        <attr name="borderColor" format="color|reference" /><!--边界线颜色-->
+        <attr name="radiusColor" format="color|reference" /><!--半径线的颜色-->
+        <attr name="bWidth" format="dimension|reference" /><!--边界线的宽度-->
+        <attr name="pointRadius" format="dimension|reference" /><!--圆点半径大小-->
+        <attr name="enabledBorder" format="boolean" /><!--是否画边界线-->
+        <attr name="enabledAnimation" format="boolean" /><!--是否开启动画-->
+        <attr name="enabledShowPoint" format="boolean" /><!--是否显示圆点-->
+        <attr name="enabledPolygon" format="boolean" /><!--是否绘制网格-->
+        <attr name="enabledShade" format="boolean" /><!--是否绘制渐变环-->
+        <attr name="enabledRadius" format="boolean" /><!--是否绘制半径-->
+        <attr name="enabledText" format="boolean" /><!--是否绘制文本-->
+        <attr name="animDuration" format="integer" /><!--动画执行时间-->
+    </declare-styleable>
 </resources>

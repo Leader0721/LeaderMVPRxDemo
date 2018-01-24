@@ -45,6 +45,9 @@
         <activity android:name=".activity.rangeSeekBar.RangeSeekBarActivity" />
         <activity android:name=".activity.diyKeyBorad.DiyKeyBoardActivity" />
         <activity android:name=".activity.jdStepView.JdStepViewActivity" />
+        <activity android:name=".activity.horizontalExpandMenu.HorizontalExpandMenuActivity" />
+        <activity android:name=".activity.redarView.RadarViewActivity" />
+        <activity android:name=".activity.redarView.RadarDemoActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

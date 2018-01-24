@@ -14,6 +14,7 @@ import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
+import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
 import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
@@ -25,6 +26,7 @@ import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
 import com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBarActivity;
+import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
@@ -106,6 +108,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "进度相关的视图");
         listString.add((index++) + "自定义键盘自定义视图，可以用一个popupWindow来实现，可以封装一下");
         listString.add((index++) + "仿京东物流配送流程图");
+        listString.add((index++) + "纵向的可以收缩扩展的Menu");
+        listString.add((index++) + "各式各样的雷达图");
 
 
         initView();
@@ -256,6 +260,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 36:
                 openActivity(JdStepViewActivity.class, null);
+                break;
+            case 37:
+                openActivity(HorizontalExpandMenuActivity.class, null);
+                break;
+            case 38:
+                openActivity(RadarViewActivity.class, null);
                 break;
         }
     }

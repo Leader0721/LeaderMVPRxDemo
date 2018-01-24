@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuView
+        android:id="@+id/hemv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v20"
+        android:layout_marginTop="@dimen/v20"
+        app:back_color="@color/orange"
+        app:button_icon_color="@color/tvc9"
+        app:button_icon_size="@dimen/v20"
+        app:button_icon_stroke_width="@dimen/v5"
+        app:button_style="left"
+        app:corner_radius="@dimen/v5"
+        app:expand_time="1000"
+        app:stroke_color="@color/red"
+        app:stroke_size="@dimen/v2" />
+
+    <com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuView
+        android:id="@+id/hemv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v20"
+        android:layout_marginTop="@dimen/v20"
+        app:back_color="@color/orange"
+        app:button_icon_color="@color/tvc9"
+        app:button_icon_size="@dimen/v20"
+        app:button_icon_stroke_width="@dimen/v5"
+        app:button_style="left"
+        app:corner_radius="@dimen/v5"
+        app:expand_time="1000"
+        app:stroke_color="@color/red"
+        app:stroke_size="@dimen/v2" />
+
+    <com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuView
+        android:id="@+id/hemv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v20"
+        android:layout_marginTop="@dimen/v20"
+        app:back_color="@color/orange"
+        app:button_icon_color="@color/tvc9"
+        app:button_icon_size="@dimen/v20"
+        app:button_icon_stroke_width="@dimen/v5"
+        app:button_style="left"
+        app:corner_radius="@dimen/v5"
+        app:expand_time="1000"
+        app:stroke_color="@color/red"
+        app:stroke_size="@dimen/v2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="two" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="three" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="four" />
+
+        </LinearLayout>
+
+    </com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuView>
+
+    <com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuView
+        android:id="@+id/hemv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v20"
+        android:layout_marginTop="@dimen/v20"
+        app:back_color="@color/orange"
+        app:button_icon_color="@color/tvc9"
+        app:button_icon_size="@dimen/v20"
+        app:button_icon_stroke_width="@dimen/v5"
+        app:button_style="left"
+        app:corner_radius="@dimen/v5"
+        app:expand_time="1000"
+        app:stroke_color="@color/red"
+        app:stroke_size="@dimen/v2" />
+</LinearLayout>

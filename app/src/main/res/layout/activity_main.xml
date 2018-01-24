@@ -18,5 +18,4 @@
         android:layout_height="match_parent"
         android:divider="@color/red"
         android:dividerHeight="@dimen/v1" />
-
 </LinearLayout>
