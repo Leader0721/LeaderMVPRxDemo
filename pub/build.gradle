@@ -104,5 +104,9 @@ dependencies {
     //    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     //鲁班测试类用到的东西  end
     // stream: java8 第三方 stream
-    compile 'com.annimon:stream:1.0.9'
+//    compile 'com.annimon:stream:1.0.9'
+    // 第三方的一个颜色选择器
+//    compile 'cn.qqtheme.framework:ColorPicker:1.1.3'
+
+
 }

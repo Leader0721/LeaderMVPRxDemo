@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar_layout"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_height"
@@ -11,8 +11,7 @@
         android:layout_width="@dimen/nav_height"
         android:layout_height="@dimen/nav_height"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="36dp"
-        android:padding="@dimen/widget_margin"
+        android:padding="@dimen/v10"
         android:scaleType="center"
         android:src="@mipmap/xheader_back"
         android:visibility="gone" />
@@ -24,15 +23,15 @@
         android:layout_above="@+id/bottom_line"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="36dp"
         android:drawableLeft="@mipmap/xheader_back"
-        android:drawablePadding="@dimen/v16"
+        android:drawablePadding="@dimen/v10"
         android:gravity="center"
-        android:paddingLeft="@dimen/widget_margin"
-        android:paddingRight="@dimen/widget_margin"
-        android:text="Back"
+        android:paddingLeft="@dimen/v10"
+        android:paddingRight="@dimen/v20"
+        android:text=""
         android:textColor="@color/tvc3"
-        android:textSize="@dimen/t16" />
+        android:textSize="@dimen/t16"
+        android:visibility="visible" />
 
     <!-- 中间标题 -->
     <RelativeLayout
@@ -48,13 +47,14 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:drawablePadding="@dimen/v5"
-            android:ellipsize="end"
+            android:ellipsize="middle"
             android:gravity="center"
-            android:lines="1"
-            android:maxLength="27"
+            android:maxWidth="@dimen/v200"
+            android:singleLine="true"
             android:text="Title111111111111111111111111111111"
             android:textColor="@color/tvc3"
             android:textSize="@dimen/t18" />
+        <!--android:maxLength="20"-->
 
         <ProgressBar
             android:id="@+id/toolbar_pro"
@@ -78,7 +78,7 @@
         android:layout_height="@dimen/nav_height"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="36dp"
+        android:layout_marginRight="@dimen/v10"
         android:padding="@dimen/widget_margin"
         android:scaleType="center"
         android:src="@mipmap/xheader_back"
@@ -91,12 +91,12 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/toolbar_right2_txt"
-        android:drawablePadding="@dimen/v8"
+        android:drawablePadding="@dimen/v5"
         android:gravity="center"
         android:paddingLeft="@dimen/widget_margin"
         android:paddingRight="@dimen/widget_margin"
         android:text="Add3"
-        android:textColor="@color/tvc3"
+        android:textColor="@color/tvc6"
         android:textSize="@dimen/t16" />
 
     <!-- 右边文本 -->
@@ -106,12 +106,12 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/toolbar_right_txt"
-        android:drawablePadding="@dimen/v8"
+        android:drawablePadding="@dimen/v5"
         android:gravity="center"
         android:paddingLeft="@dimen/widget_margin"
         android:paddingRight="@dimen/widget_margin"
         android:text="Add2"
-        android:textColor="@color/tvc3"
+        android:textColor="@color/tvc6"
         android:textSize="@dimen/t16" />
 
     <!-- 右边文本 -->
@@ -122,13 +122,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="36dp"
-        android:drawablePadding="@dimen/v8"
+        android:layout_marginRight="@dimen/v10"
+        android:drawablePadding="@dimen/v5"
         android:gravity="center"
-        android:paddingLeft="@dimen/widget_margin"
-        android:paddingRight="@dimen/widget_margin"
         android:text="Add1"
-        android:textColor="@color/tvc3"
+        android:textColor="@color/tvc6"
         android:textSize="@dimen/t16" />
 
     <!-- 底部划线 -->
@@ -137,6 +135,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
-        android:background="#E8E8E8" />
+        android:background="@color/tvc9" />
 </RelativeLayout>
 

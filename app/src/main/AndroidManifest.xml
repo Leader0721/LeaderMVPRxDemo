@@ -48,6 +48,10 @@
         <activity android:name=".activity.horizontalExpandMenu.HorizontalExpandMenuActivity" />
         <activity android:name=".activity.redarView.RadarViewActivity" />
         <activity android:name=".activity.redarView.RadarDemoActivity" />
+        <activity android:name=".activity.countDownView.CountDownList1Activity" />
+        <activity android:name=".activity.countDownView.CountDownList2Activity" />
+        <activity android:name=".activity.countDownView.CountDownShowActivity" />
+        <activity android:name=".activity.countDownView.CountDownViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

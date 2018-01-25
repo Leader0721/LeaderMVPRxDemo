@@ -1,12 +1,18 @@
 <resources>
 
 
-    <style name="AppTheme" parent="Base.AppTheme" type="text/css"><!-- Customize your theme here. --></style>
+    <!--<style name="AppTheme" parent="Base.AppTheme" type="text/css">&lt;!&ndash; Customize your theme here. &ndash;&gt;</style>-->
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar" type="text/css">-->
+    <!--<item name="colorPrimary">#454D57</item>-->
+    <!--<item name="colorPrimaryDark">#000000</item>-->
+    <!--<item name="colorAccent">#FF4081</item>-->
+    <!--</style>-->
+
     <!-- Base application theme. -->
-    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar" type="text/css">
-        <item name="colorPrimary">#454D57</item>
-        <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">#FF4081</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="textAllCaps">false</item>
     </style>
 
     <style name="dialog" parent="@style/Theme.AppCompat.Dialog">

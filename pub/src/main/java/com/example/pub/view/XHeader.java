@@ -19,8 +19,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.pub.R;
-import com.example.pub.utils.function.StringUtils;
-
 
 /**
  * description 自定义的一个相对布局，头部
@@ -149,6 +147,19 @@ public class XHeader extends LinearLayout {
     }
 
     /**
+     * 设置右键文字
+     *
+     * @param text 右键文字
+     */
+    public void setRightText(CharSequence text) {
+        if (text != null) {
+            right_text.setVisibility(VISIBLE);
+            right_text.setText(text);
+            right_text.setOnClickListener(null);
+        }
+    }
+
+    /**
      * 设置右键3文字
      *
      * @param text 右键文字
@@ -177,24 +188,24 @@ public class XHeader extends LinearLayout {
      */
     public void setLeftAsBack() {
         //setLeftAsBack(R.mipmap.back);
-        setLeftAsBack("返回");
+        setLeftAsBack("");
     }
 
     public void setLeftAsBack(String text) {
 
-        if (!StringUtils.isEmpty(text)) {
-            left_text.setVisibility(View.VISIBLE);
-            left_text.setText(text);
-            left_text.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (context instanceof Activity) {
-                        Activity activity = (Activity) context;
-                        activity.finish();
-                    }
+        //if (!StringUtils.isEmpty(text)) {
+        left_text.setVisibility(View.VISIBLE);
+        left_text.setText(text);
+        left_text.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (context instanceof Activity) {
+                    Activity activity = (Activity) context;
+                    activity.finish();
                 }
-            });
-        }
+            }
+        });
+        //}
     }
 
 
@@ -323,6 +334,16 @@ public class XHeader extends LinearLayout {
         if (img != null) {
             img.setBounds(0, 0, img.getMinimumWidth(), img.getMinimumHeight());
             right_text.setCompoundDrawables(img, null, null, null);
+        }
+    }
+
+    /**
+     * 右键显示文字
+     */
+    public void setReText(Spanned text) {
+        if (text != null) {
+            right_text.setVisibility(View.VISIBLE);
+            right_text.setText(text);
         }
     }
 

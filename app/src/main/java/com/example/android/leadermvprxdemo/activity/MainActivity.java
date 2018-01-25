@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
+import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
 import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
 import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
@@ -110,6 +111,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "仿京东物流配送流程图");
         listString.add((index++) + "纵向的可以收缩扩展的Menu");
         listString.add((index++) + "各式各样的雷达图");
+        listString.add((index++) + "样式齐全的倒计时的图");
 
 
         initView();
@@ -266,6 +268,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 38:
                 openActivity(RadarViewActivity.class, null);
+                break;
+            case 39:
+                openActivity(CountDownViewActivity.class, null);
                 break;
         }
     }
