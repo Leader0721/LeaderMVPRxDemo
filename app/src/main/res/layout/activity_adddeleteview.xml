@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteView
+        android:id="@+id/add_sub_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+    <com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteView
+        android:id="@+id/add_sub_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:ImageWidth="40dp"
+        app:all_background="@color/material_light_green_200"
+        app:contentBackground="@color/material_amber_200"
+        app:editable="true"
+        app:leftResources="@drawable/adddelete_left"
+        app:rightResources="@drawable/adddelete_right" />
+
+    <com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteView
+        android:id="@+id/add_sub_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:ImageWidth="60dp"
+        app:contentBackground="@color/material_teal_200"
+        app:contentTextColor="@color/tvc9"
+        app:contentTextSize="16sp"
+        app:contentWidth="120dp"
+        app:editable="true"
+        app:leftBackground="@drawable/adddelete_left"
+        app:leftResources="@drawable/adddelete_minus"
+        app:rightBackground="@drawable/adddelete_right"
+        app:rightResources="@drawable/adddelete_plus" />
+
+
+</LinearLayout>

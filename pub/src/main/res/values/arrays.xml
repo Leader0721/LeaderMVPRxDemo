@@ -49,4 +49,13 @@
         <item>ut</item>
         <item>labore</item>
     </string-array>
+
+
+    <array name="splash_bg">
+        <item>@color/light_green_500</item>
+        <item>@color/amber_500</item>
+        <item>@color/red_400</item>
+        <item>@color/blue_500</item>
+    </array>
+
 </resources>

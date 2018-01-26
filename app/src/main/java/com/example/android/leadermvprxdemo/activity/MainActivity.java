@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_one.PicsLayoutView1Activity;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.PicsLayoutView2Activity;
+import com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteViewActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelPanelActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
@@ -41,6 +42,7 @@ import com.example.android.leadermvprxdemo.activity.relativeCircleLayout.CircleL
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.slideRulerView.SlideRulerViewActivity;
+import com.example.android.leadermvprxdemo.activity.spanStringView.SpanStringViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipCardTanTan.SwipCardViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipMenuListView.ui.SwipMenuListViewActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
@@ -145,6 +147,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "原生的仿Excel表格形式的自定义视图1");
         listString.add((index++) + "弧形流量条控件");
         listString.add((index++) + "原生的仿Excel表格形式的自定义视图2");
+        listString.add((index++) + "购物车添加减去自定义view");
+        listString.add((index++) + "利用StringSpan实现多种字体效果");
 
 
         initView();
@@ -352,6 +356,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 55:
                 openActivity(ExcelPanelActivity.class, null);
+                break;
+            case 56:
+                openActivity(AddDeleteViewActivity.class, null);
+                break;
+            case 57:
+                openActivity(SpanStringViewActivity.class, null);
                 break;
         }
     }

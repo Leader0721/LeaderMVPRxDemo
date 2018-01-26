@@ -1,4 +1,4 @@
-package com.example.pub.view;
+package com.example.android.leadermvprxdemo.activity.addDeleteView;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -15,18 +15,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.pub.R;
+import com.example.android.leadermvprxdemo.R;
 
 
 /**
- * @Description:增加和删除的按钮
- * @Prject:
- * @Package: cn.bcbook.pad.teacher.ui.activity.homework_test
- * @author: Leader
- * @date: 2017/11/15   19:19
- * @Copyright: 个人版权所有
- * @Company:bc
- * @version: 1.0.0
+ * Created by 贾梦飞 on 2017/8/10 10:55.
+ * QQ:821176301
+ * 微信：j821176301
+ * desc：类似购物车功能的增加和加减
  */
 
 public class AddDeleteView extends LinearLayout implements View.OnClickListener, TextWatcher {
@@ -42,7 +38,6 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
     private EditText etInput;
     private ImageView icPlus;
     private ImageView icMinus;
-    private int returnNum;//这个是实时返回的值
 
     public AddDeleteView(Context context) {
         this(context, null);
@@ -111,14 +106,14 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
 
             // 设置两边按钮的宽度
             if (ImageWidth > 0) {
-                LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(ImageWidth, LinearLayout.LayoutParams.MATCH_PARENT);
+                LayoutParams textParams = new LayoutParams(ImageWidth, LayoutParams.MATCH_PARENT);
                 icPlus.setLayoutParams(textParams);
                 icMinus.setLayoutParams(textParams);
             }
 
             // 设置中间输入框的宽度
             if (contentWidth > 0) {
-                LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(contentWidth, LinearLayout.LayoutParams.MATCH_PARENT);
+                LayoutParams textParams = new LayoutParams(contentWidth, LayoutParams.MATCH_PARENT);
                 etInput.setLayoutParams(textParams);
             }
             if (contentTextColor > 0) {
@@ -192,8 +187,6 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
             // 输入框
             etInput.setSelection(etInput.getText().toString().length());
         }
-        returnNum = inputValue;
-        returnNum(returnNum);
     }
 
     /**
@@ -218,16 +211,6 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
      */
     private void warningForInventory() {
         if (mOnWarnListener != null) mOnWarnListener.onWarningForInventory(inventory);
-    }
-
-    /**
-     * 返回当前的数值
-     */
-    private void returnNum(int num) {
-        this.returnNum = num;
-        if (mOnWarnListener != null) {
-            mOnWarnListener.onReturnNum(this.returnNum);
-        }
     }
 
     @Override
@@ -333,7 +316,6 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
         return mBuyMin;
     }
 
-
     public interface OnWarnListener {
 
         void onWarningForInventory(int inventory);
@@ -341,7 +323,5 @@ public class AddDeleteView extends LinearLayout implements View.OnClickListener,
         void onWarningForBuyMax(int max);
 
         void onWarningForBuyMin(int min);
-
-        void onReturnNum(int returnNum);
     }
 }
