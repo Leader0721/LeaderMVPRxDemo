@@ -4,5 +4,6 @@
     <item name="tag_type_view" type="id" />
     <item name="tag_row" type="id" />
     <item name="tag_column" type="id" />
-
+    <!-- ExcelPanel IDs-->
+    <item name="lib_excel_panel_tag_key" type="id" />
 </resources>

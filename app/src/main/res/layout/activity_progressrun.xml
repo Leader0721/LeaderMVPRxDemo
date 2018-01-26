@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.pub.view.flowlayout.FlowLayout
-        android:id="@+id/fl_content"
-        android:layout_width="wrap_content"
+    <com.example.android.leadermvprxdemo.activity.progressRunView.ArcBarView
+        android:id="@+id/arc_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        android:background="#5CACEE" />
 </LinearLayout>

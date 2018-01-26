@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_one.PicsLayoutView1Activity;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.PicsLayoutView2Activity;
+import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelPanelActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
@@ -32,6 +33,7 @@ import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.numberAnimView.NumberAnimTextViewActivity;
 import com.example.android.leadermvprxdemo.activity.postmanViewLoading.PostManLoadingActivity;
+import com.example.android.leadermvprxdemo.activity.progressRunView.ProgressRunViewActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
 import com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBarActivity;
 import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
@@ -140,7 +142,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "模仿小米手环App首页的展示计步数据的自定义View");
         listString.add((index++) + "一种堆叠头像的点赞效果第一种");
         listString.add((index++) + "一种堆叠头像的点赞效果第二种");
-        listString.add((index++) + "原生的仿Excel表格形式的自定义视图");
+        listString.add((index++) + "原生的仿Excel表格形式的自定义视图1");
+        listString.add((index++) + "弧形流量条控件");
+        listString.add((index++) + "原生的仿Excel表格形式的自定义视图2");
 
 
         initView();
@@ -342,6 +346,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 53:
                 openActivity(ExcelViewActivity.class, null);
+                break;
+            case 54:
+                openActivity(ProgressRunViewActivity.class, null);
+                break;
+            case 55:
+                openActivity(ExcelPanelActivity.class, null);
                 break;
         }
     }

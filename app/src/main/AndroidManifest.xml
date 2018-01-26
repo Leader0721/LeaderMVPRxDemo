@@ -72,6 +72,8 @@
         <activity android:name=".activity.androidExcelView.SimpleTableActivity" />
         <activity android:name=".activity.androidExcelView.StyleTableActivity" />
         <activity android:name=".activity.androidExcelView.FamilyTableActivity" />
+        <activity android:name=".activity.progressRunView.ProgressRunViewActivity" />
+        <activity android:name=".activity.androidExcelPanelView.ExcelPanelActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"
