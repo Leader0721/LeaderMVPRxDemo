@@ -68,6 +68,10 @@
         <activity android:name=".activity.xiaoMiStepView.XiaoMiStepViewActivity" />
         <activity android:name=".activity.PicsLayoutView.style_one.PicsLayoutView1Activity" />
         <activity android:name=".activity.PicsLayoutView.style_two.PicsLayoutView2Activity" />
+        <activity android:name=".activity.androidExcelView.ExcelViewActivity" />
+        <activity android:name=".activity.androidExcelView.SimpleTableActivity" />
+        <activity android:name=".activity.androidExcelView.StyleTableActivity" />
+        <activity android:name=".activity.androidExcelView.FamilyTableActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

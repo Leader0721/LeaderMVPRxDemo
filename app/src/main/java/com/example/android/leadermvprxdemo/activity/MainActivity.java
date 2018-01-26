@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_one.PicsLayoutView1Activity;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.PicsLayoutView2Activity;
+import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
@@ -139,6 +140,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "模仿小米手环App首页的展示计步数据的自定义View");
         listString.add((index++) + "一种堆叠头像的点赞效果第一种");
         listString.add((index++) + "一种堆叠头像的点赞效果第二种");
+        listString.add((index++) + "原生的仿Excel表格形式的自定义视图");
 
 
         initView();
@@ -337,6 +339,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 52:
                 openActivity(PicsLayoutView2Activity.class, null);
+                break;
+            case 53:
+                openActivity(ExcelViewActivity.class, null);
                 break;
         }
     }
