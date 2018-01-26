@@ -45,7 +45,9 @@
         <activity android:name=".activity.marqueenView.MarqueeActivity" />
         <activity android:name=".activity.marqueenView.AboutActivity" />
         <activity android:name=".activity.musicWaveView.MusicWaveActivity" />
-        <activity android:name=".activity.rangeSeekBar.RangeSeekBarActivity" />
+        <activity android:name=".activity.rangeSeekBar.style_one.RangeSeekBarActivity" />
+        <activity android:name=".activity.rangeSeekBar.SeekBarViewActivity" />
+        <activity android:name=".activity.rangeSeekBar.style_two.SeekBarDemo01Activity" />
         <activity android:name=".activity.diyKeyBorad.DiyKeyBoardActivity" />
         <activity android:name=".activity.jdStepView.JdStepViewActivity" />
         <activity android:name=".activity.horizontalExpandMenu.HorizontalExpandMenuActivity" />
@@ -76,6 +78,8 @@
         <activity android:name=".activity.androidExcelPanelView.ExcelPanelActivity" />
         <activity android:name=".activity.addDeleteView.AddDeleteViewActivity" />
         <activity android:name=".activity.spanStringView.SpanStringViewActivity" />
+        <activity android:name=".activity.switchButtonView.SwitchButtonViewActivity" />
+        <activity android:name=".activity.delicateView.DelicateViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

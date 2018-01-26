@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBar
+    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.style_one.RangeSeekBar
         android:id="@+id/seekbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_height="40dp"
         android:gravity="center" />
 
-    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBar
+    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.style_one.RangeSeekBar
         android:id="@+id/seekbar2"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -42,7 +42,7 @@
         app:rsb_thumbSecondaryColor="@color/colorAccent"
         app:rsb_thumbSize="20dp" />
 
-    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBar
+    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.style_one.RangeSeekBar
         android:id="@+id/seekbar3"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -62,7 +62,7 @@
         app:rsb_thumbResId="@drawable/custom_thumb"
         app:rsb_thumbSize="20dp" />
 
-    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBar
+    <com.example.android.leadermvprxdemo.activity.rangeSeekBar.style_one.RangeSeekBar
         android:id="@+id/seekbar4"
         android:layout_width="match_parent"
         android:layout_height="120dp"

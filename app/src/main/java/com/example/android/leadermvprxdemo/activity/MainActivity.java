@@ -19,6 +19,7 @@ import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewAc
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
+import com.example.android.leadermvprxdemo.activity.delicateView.DelicateViewActivity;
 import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
 import com.example.android.leadermvprxdemo.activity.flowLayout.FlowLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
@@ -36,7 +37,7 @@ import com.example.android.leadermvprxdemo.activity.numberAnimView.NumberAnimTex
 import com.example.android.leadermvprxdemo.activity.postmanViewLoading.PostManLoadingActivity;
 import com.example.android.leadermvprxdemo.activity.progressRunView.ProgressRunViewActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
-import com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBarActivity;
+import com.example.android.leadermvprxdemo.activity.rangeSeekBar.SeekBarViewActivity;
 import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
 import com.example.android.leadermvprxdemo.activity.relativeCircleLayout.CircleLayoutViewActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
@@ -45,6 +46,7 @@ import com.example.android.leadermvprxdemo.activity.slideRulerView.SlideRulerVie
 import com.example.android.leadermvprxdemo.activity.spanStringView.SpanStringViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipCardTanTan.SwipCardViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipMenuListView.ui.SwipMenuListViewActivity;
+import com.example.android.leadermvprxdemo.activity.switchButtonView.SwitchButtonViewActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
 import com.example.android.leadermvprxdemo.activity.waveLoadingView.WaveLoadingViewActivity;
@@ -125,7 +127,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "带有百分比的波浪视图");
         listString.add((index++) + "跑马灯的效果");
         listString.add((index++) + "音乐跳动动效自定义视图");
-        listString.add((index++) + "进度相关的视图");
+        listString.add((index++) + "SeekBar进度相关的视图");
         listString.add((index++) + "自定义键盘自定义视图，可以用一个popupWindow来实现，可以封装一下");
         listString.add((index++) + "仿京东物流配送流程图");
         listString.add((index++) + "纵向的可以收缩扩展的Menu");
@@ -149,6 +151,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "原生的仿Excel表格形式的自定义视图2");
         listString.add((index++) + "购物车添加减去自定义view");
         listString.add((index++) + "利用StringSpan实现多种字体效果");
+        listString.add((index++) + "switchButton自定义视图");
+        listString.add((index++) + "各种精致的小动画");
 
 
         initView();
@@ -292,7 +296,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 openActivity(MusicWaveActivity.class, null);
                 break;
             case 34:
-                openActivity(RangeSeekBarActivity.class, null);
+                openActivity(SeekBarViewActivity.class, null);
                 break;
             case 35:
                 openActivity(DiyKeyBoardActivity.class, null);
@@ -362,6 +366,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 57:
                 openActivity(SpanStringViewActivity.class, null);
+                break;
+            case 58:
+                openActivity(SwitchButtonViewActivity.class, null);
+                break;
+            case 59:
+                openActivity(DelicateViewActivity.class, null);
                 break;
         }
     }

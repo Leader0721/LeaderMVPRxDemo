@@ -1,4 +1,4 @@
-package com.example.android.leadermvprxdemo.activity.rangeSeekBar;
+package com.example.android.leadermvprxdemo.activity.rangeSeekBar.style_one;
 
 import android.os.Bundle;
 import android.widget.TextView;
