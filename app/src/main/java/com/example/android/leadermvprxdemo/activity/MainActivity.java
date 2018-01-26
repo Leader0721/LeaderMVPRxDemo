@@ -11,29 +11,43 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.android.leadermvprxdemo.R;
+import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_one.PicsLayoutView1Activity;
+import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.PicsLayoutView2Activity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
+import com.example.android.leadermvprxdemo.activity.flowLayout.FlowLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
 import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.marqueenView.MarqueeActivity;
+import com.example.android.leadermvprxdemo.activity.miClickView.MiClockViewActivity;
 import com.example.android.leadermvprxdemo.activity.multiLevel.multilevellist.test.MultiLevelActivity;
 import com.example.android.leadermvprxdemo.activity.musicWaveView.MusicWaveActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
+import com.example.android.leadermvprxdemo.activity.numberAnimView.NumberAnimTextViewActivity;
+import com.example.android.leadermvprxdemo.activity.postmanViewLoading.PostManLoadingActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
 import com.example.android.leadermvprxdemo.activity.rangeSeekBar.RangeSeekBarActivity;
 import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
+import com.example.android.leadermvprxdemo.activity.relativeCircleLayout.CircleLayoutViewActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
+import com.example.android.leadermvprxdemo.activity.slideRulerView.SlideRulerViewActivity;
+import com.example.android.leadermvprxdemo.activity.swipCardTanTan.SwipCardViewActivity;
+import com.example.android.leadermvprxdemo.activity.swipMenuListView.ui.SwipMenuListViewActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
+import com.example.android.leadermvprxdemo.activity.waveLoadingView.WaveLoadingViewActivity;
 import com.example.android.leadermvprxdemo.activity.wavePercentView.WavePercentActivity;
 import com.example.android.leadermvprxdemo.activity.wave_titanic.TitanicViewActivity;
+import com.example.android.leadermvprxdemo.activity.weatherView.WeatherViewActivity;
+import com.example.android.leadermvprxdemo.activity.wheelView_3d.WheelView3DActivity;
+import com.example.android.leadermvprxdemo.activity.xiaoMiStepView.XiaoMiStepViewActivity;
 import com.example.android.leadermvprxdemo.adapter.MainAdapter;
 import com.example.pub.common.BaseActivity;
 import com.example.pub.utils.app.Utils;
@@ -112,6 +126,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "纵向的可以收缩扩展的Menu");
         listString.add((index++) + "各式各样的雷达图");
         listString.add((index++) + "样式齐全的倒计时的图");
+        listString.add((index++) + "模仿探探的一款滑动移除图片的自定义view");
+        listString.add((index++) + "模仿postman的一个加载动画");
+        listString.add((index++) + "模仿小米闹钟的一个自定义view");
+        listString.add((index++) + "模仿小米天气的一个自定义view");
+        listString.add((index++) + "数字动画跳动变化");
+        listString.add((index++) + "高仿京东金融的数值滚动尺");
+        listString.add((index++) + "3d效果的一个滑动轮");
+        listString.add((index++) + "Android 通用圆角布局，快速实现圆角需求");
+        listString.add((index++) + "仿QQ向左滑动弹出菜单的布局");
+        listString.add((index++) + "波浪纹的下载自定义视图");
+        listString.add((index++) + "模仿小米手环App首页的展示计步数据的自定义View");
+        listString.add((index++) + "一种堆叠头像的点赞效果第一种");
+        listString.add((index++) + "一种堆叠头像的点赞效果第二种");
 
 
         initView();
@@ -271,6 +298,45 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 39:
                 openActivity(CountDownViewActivity.class, null);
+                break;
+            case 40:
+                openActivity(SwipCardViewActivity.class, null);
+                break;
+            case 41:
+                openActivity(PostManLoadingActivity.class, null);
+                break;
+            case 42:
+                openActivity(MiClockViewActivity.class, null);
+                break;
+            case 43:
+                openActivity(WeatherViewActivity.class, null);
+                break;
+            case 44:
+                openActivity(NumberAnimTextViewActivity.class, null);
+                break;
+            case 45:
+                openActivity(SlideRulerViewActivity.class, null);
+                break;
+            case 46:
+                openActivity(WheelView3DActivity.class, null);
+                break;
+            case 47:
+                openActivity(CircleLayoutViewActivity.class, null);
+                break;
+            case 48:
+                openActivity(SwipMenuListViewActivity.class, null);
+                break;
+            case 49:
+                openActivity(WaveLoadingViewActivity.class, null);
+                break;
+            case 50:
+                openActivity(XiaoMiStepViewActivity.class, null);
+                break;
+            case 51:
+                openActivity(PicsLayoutView1Activity.class, null);
+                break;
+            case 52:
+                openActivity(PicsLayoutView2Activity.class, null);
                 break;
         }
     }

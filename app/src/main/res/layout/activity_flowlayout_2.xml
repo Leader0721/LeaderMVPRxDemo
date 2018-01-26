@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.flowLayout.lib.FlowLayout
+        android:id="@+id/flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flChildSpacing="auto"
+        app:flRowSpacing="8dp"
+        app:flRtl="true" />
+
+    <com.example.android.leadermvprxdemo.activity.flowLayout.lib.FlowLayout
+        android:id="@+id/flow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:flChildSpacing="auto"
+        app:flChildSpacingForLastRow="align"
+        app:flRowSpacing="8dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="sun" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="mon" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="tue" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="wedddsdfd" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="thudsfa" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="fri" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_blue"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="sat" />
+
+    </com.example.android.leadermvprxdemo.activity.flowLayout.lib.FlowLayout>
+</LinearLayout>

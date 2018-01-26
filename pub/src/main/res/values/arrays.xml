@@ -32,4 +32,21 @@
         <item>卒</item>
     </string-array>
 
+    <string-array name="flowLayoutArray">
+        <item>lorem</item>
+        <item>ipsum</item>
+        <item>dolor</item>
+        <item>sit</item>
+        <item>amet</item>
+        <item>consectetur</item>
+        <item>adipiscing</item>
+        <item>elit</item>
+        <item>sed</item>
+        <item>do</item>
+        <item>eiusmod</item>
+        <item>tempor</item>
+        <item>incididunt</item>
+        <item>ut</item>
+        <item>labore</item>
+    </string-array>
 </resources>

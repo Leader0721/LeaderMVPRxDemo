@@ -16,7 +16,10 @@
         </activity>
         <activity android:name=".activity.DownTabActivity" />
         <activity android:name=".activity.DragBlankActivity" />
-        <activity android:name=".activity.FlowLayoutActivity" />
+        <activity android:name=".activity.flowLayout.FlowLayoutActivity" />
+        <activity android:name=".activity.flowLayout.FlowLayout_1_Activity" />
+        <activity android:name=".activity.flowLayout.FlowLayout_2_Activity" />
+        <activity android:name=".activity.flowLayout.FlowLayout_3_Activity" />
         <activity android:name=".activity.StepViewActivity" />
         <activity android:name=".activity.luban.LubanActivity" />
         <activity android:name=".activity.wave_titanic.TitanicViewActivity" />
@@ -52,6 +55,19 @@
         <activity android:name=".activity.countDownView.CountDownList2Activity" />
         <activity android:name=".activity.countDownView.CountDownShowActivity" />
         <activity android:name=".activity.countDownView.CountDownViewActivity" />
+        <activity android:name=".activity.swipCardTanTan.SwipCardViewActivity" />
+        <activity android:name=".activity.postmanViewLoading.PostManLoadingActivity" />
+        <activity android:name=".activity.miClickView.MiClockViewActivity" />
+        <activity android:name=".activity.weatherView.WeatherViewActivity" />
+        <activity android:name=".activity.numberAnimView.NumberAnimTextViewActivity" />
+        <activity android:name=".activity.slideRulerView.SlideRulerViewActivity" />
+        <activity android:name=".activity.wheelView_3d.WheelView3DActivity" />
+        <activity android:name=".activity.relativeCircleLayout.CircleLayoutViewActivity" />
+        <activity android:name=".activity.swipMenuListView.ui.SwipMenuListViewActivity" />
+        <activity android:name=".activity.waveLoadingView.WaveLoadingViewActivity" />
+        <activity android:name=".activity.xiaoMiStepView.XiaoMiStepViewActivity" />
+        <activity android:name=".activity.PicsLayoutView.style_one.PicsLayoutView1Activity" />
+        <activity android:name=".activity.PicsLayoutView.style_two.PicsLayoutView2Activity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

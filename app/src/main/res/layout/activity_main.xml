@@ -24,6 +24,6 @@
         android:id="@+id/lv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/red"
+        android:divider="@color/orange_red"
         android:dividerHeight="@dimen/v1" />
 </LinearLayout>

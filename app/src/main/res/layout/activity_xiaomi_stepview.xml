@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38A6F0"
+    android:orientation="vertical">
+
+    <com.example.android.leadermvprxdemo.activity.xiaoMiStepView.XiaoMiStepView
+        android:id="@+id/sv_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#38A6F0" />
+
+    <EditText
+        android:id="@+id/et_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="设置目标步数，默认为6000"
+        android:text="6000"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="20000"
+        android:visibility="gone" />
+</LinearLayout>

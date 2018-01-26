@@ -5,15 +5,22 @@
     android:gravity="center_vertical"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/v12"
-        android:paddingBottom="@dimen/v12"
-        android:paddingTop="@dimen/v12"
-        android:text="内容"
-        android:textColor="@color/tvc6"
-        android:textSize="@dimen/t16" />
+    <com.example.pub.view.MaterialLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/v12"
+            android:paddingBottom="@dimen/v12"
+            android:paddingTop="@dimen/v12"
+            android:text="内容"
+            android:textColor="@color/tvc6"
+            android:textSize="@dimen/t16" />
+
+
+    </com.example.pub.view.MaterialLayout>
 
 </LinearLayout>

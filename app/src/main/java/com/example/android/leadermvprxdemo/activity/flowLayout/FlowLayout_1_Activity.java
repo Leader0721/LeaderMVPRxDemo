@@ -1,4 +1,4 @@
-package com.example.android.leadermvprxdemo.activity;
+package com.example.android.leadermvprxdemo.activity.flowLayout;
 
 import android.os.Bundle;
 
@@ -26,7 +26,7 @@ import butterknife.ButterKnife;
  * @version: 1.0.0
  */
 
-public class FlowLayoutActivity extends BaseActivity {
+public class FlowLayout_1_Activity extends BaseActivity {
     @BindView(R.id.fl_content)
     FlowLayout flContent;
     private FlowAdapter flowAdapter;
@@ -34,7 +34,7 @@ public class FlowLayoutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flowlayout);
+        setContentView(R.layout.activity_flowlayout_1);
         ButterKnife.bind(this);
 
         initData();
