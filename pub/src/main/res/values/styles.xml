@@ -71,4 +71,18 @@
         <item name="sign_in_text_siz">12sp</item>
     </style>
 
+    <style name="OperateTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textColor">@color/tvc6</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
 </resources>

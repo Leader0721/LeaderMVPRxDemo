@@ -80,7 +80,8 @@
 
 
     <color name="addsubutils_text">#999</color>
-
+    <color name="cursor_handle_color">#0d7aff</color>
+    <color name="selected_blue">#afe1f4</color>
 
     <!-- Material Color Resources -->
     <color name="red_050">#fde0dc</color>

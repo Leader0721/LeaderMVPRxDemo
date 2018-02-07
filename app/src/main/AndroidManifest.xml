@@ -80,6 +80,13 @@
         <activity android:name=".activity.spanStringView.SpanStringViewActivity" />
         <activity android:name=".activity.switchButtonView.SwitchButtonViewActivity" />
         <activity android:name=".activity.delicateView.DelicateViewActivity" />
+        <activity android:name=".activity.radarCycleView.RadarCycleViewActivity" />
+        <activity android:name=".activity.record_mp3.RecordMp3Activity" />
+        <activity android:name=".activity.screenRecorder.ScreenRecorderActivity" />
+        <activity android:name=".activity.textSelectedableHelper.TextSelectedHelperActivity" />
+        <activity android:name=".activity.viewPagerCard.ViewPagerCardActivity" />
+        <activity android:name=".activity.dashBoardView.DashBoardViewActivity" />
+        <activity android:name=".activity.stateButtonView.StateButtonViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"

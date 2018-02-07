@@ -19,6 +19,7 @@ import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewAc
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
+import com.example.android.leadermvprxdemo.activity.dashBoardView.DashBoardViewActivity;
 import com.example.android.leadermvprxdemo.activity.delicateView.DelicateViewActivity;
 import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActivity;
 import com.example.android.leadermvprxdemo.activity.flowLayout.FlowLayoutActivity;
@@ -37,17 +38,23 @@ import com.example.android.leadermvprxdemo.activity.numberAnimView.NumberAnimTex
 import com.example.android.leadermvprxdemo.activity.postmanViewLoading.PostManLoadingActivity;
 import com.example.android.leadermvprxdemo.activity.progressRunView.ProgressRunViewActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
+import com.example.android.leadermvprxdemo.activity.radarCycleView.RadarCycleViewActivity;
 import com.example.android.leadermvprxdemo.activity.rangeSeekBar.SeekBarViewActivity;
+import com.example.android.leadermvprxdemo.activity.record_mp3.RecordMp3Activity;
 import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
 import com.example.android.leadermvprxdemo.activity.relativeCircleLayout.CircleLayoutViewActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
+import com.example.android.leadermvprxdemo.activity.screenRecorder.ScreenRecorderActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.slideRulerView.SlideRulerViewActivity;
 import com.example.android.leadermvprxdemo.activity.spanStringView.SpanStringViewActivity;
+import com.example.android.leadermvprxdemo.activity.stateButtonView.StateButtonViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipCardTanTan.SwipCardViewActivity;
 import com.example.android.leadermvprxdemo.activity.swipMenuListView.ui.SwipMenuListViewActivity;
 import com.example.android.leadermvprxdemo.activity.switchButtonView.SwitchButtonViewActivity;
+import com.example.android.leadermvprxdemo.activity.textSelectedableHelper.TextSelectedHelperActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
+import com.example.android.leadermvprxdemo.activity.viewPagerCard.ViewPagerCardActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
 import com.example.android.leadermvprxdemo.activity.waveLoadingView.WaveLoadingViewActivity;
 import com.example.android.leadermvprxdemo.activity.wavePercentView.WavePercentActivity;
@@ -153,6 +160,13 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "利用StringSpan实现多种字体效果");
         listString.add((index++) + "switchButton自定义视图");
         listString.add((index++) + "各种精致的小动画");
+        listString.add((index++) + "雷达扫描的一个自定义view");
+        listString.add((index++) + "录音机录成mp3格式的文件");
+        listString.add((index++) + "Android 5.0 引入 MediaProject 可以不用 root 就可以录屏");
+        listString.add((index++) + "textView选择之后的操作");
+        listString.add((index++) + "一个卡片滑动的效果");
+        listString.add((index++) + "汽车刻度盘的一个自定义视图");
+        listString.add((index++) + "各种状态的按钮，各种属性定制");
 
 
         initView();
@@ -372,6 +386,27 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 59:
                 openActivity(DelicateViewActivity.class, null);
+                break;
+            case 60:
+                openActivity(RadarCycleViewActivity.class, null);
+                break;
+            case 61:
+                openActivity(RecordMp3Activity.class, null);
+                break;
+            case 62:
+                openActivity(ScreenRecorderActivity.class, null);
+                break;
+            case 63:
+                openActivity(TextSelectedHelperActivity.class, null);
+                break;
+            case 64:
+                openActivity(ViewPagerCardActivity.class, null);
+                break;
+            case 65:
+                openActivity(DashBoardViewActivity.class, null);
+                break;
+            case 66:
+                openActivity(StateButtonViewActivity.class, null);
                 break;
         }
     }

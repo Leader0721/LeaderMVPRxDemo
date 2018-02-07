@@ -40,7 +40,6 @@
     <supports-screens android:requiresSmallestWidthDp="600" />
     <!-- 禁止屏幕休眠 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
