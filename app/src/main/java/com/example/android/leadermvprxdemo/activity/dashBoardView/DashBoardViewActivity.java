@@ -12,7 +12,7 @@ import com.example.pub.common.BaseActivity;
 
 /**
  * @Description:汽车刻度盘的一个自定义视图
- * @Prject: 
+ * @Prject:
  * @Package: com.example.android.leadermvprxdemo.activity.dashBoardView
  * @author: Leader
  * @date: 2018/2/1   11:29
@@ -26,8 +26,8 @@ public class DashBoardViewActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
     private DashBoardView dashView;
     private boolean isChangeColor = true;
-    private SeekBar sbChangeCurrentvalue,sbChangeMaxValue;
-    private TextView tv1,tv2;
+    private SeekBar sbChangeCurrentvalue, sbChangeMaxValue;
+    private TextView tv1, tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +41,14 @@ public class DashBoardViewActivity extends BaseActivity {
 
         dashView = (DashBoardView) this.findViewById(R.id.dashview);
         sbChangeMaxValue.setMax(300);
-        sbChangeCurrentvalue.setMax((int)(dashView.getmMax()));
+        sbChangeCurrentvalue.setMax((int) (dashView.getmMax()));
         this.findViewById(R.id.bt_change_color).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(isChangeColor){
+                if (isChangeColor) {
                     dashView.setDashColor(Color.parseColor("#39B54A"));
                     isChangeColor = false;
-                }else{
+                } else {
                     dashView.setDashColor(Color.parseColor("#DA6858"));
                     isChangeColor = true;
                 }
@@ -60,8 +60,8 @@ public class DashBoardViewActivity extends BaseActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 int currentValue = seekBar.getProgress();
                 dashView.setCurrentValue(currentValue);
-                tv1.setText("当前值:"+currentValue+"/"+seekBar.getMax());
-                Log.d(TAG,"    --------currentValue---------   "+currentValue);
+                tv1.setText("当前值:" + currentValue + "/" + seekBar.getMax());
+                Log.d(TAG, "    --------currentValue---------   " + currentValue);
             }
 
             @Override
@@ -78,9 +78,9 @@ public class DashBoardViewActivity extends BaseActivity {
         sbChangeMaxValue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                int value = seekBar.getProgress()+100;
+                int value = seekBar.getProgress() + 100;
                 dashView.setmMax(value);
-                tv2.setText("最大值:"+value+"/"+seekBar.getMax());
+                tv2.setText("最大值:" + value + "/" + seekBar.getMax());
             }
 
             @Override

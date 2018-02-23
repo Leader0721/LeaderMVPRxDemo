@@ -18,6 +18,7 @@ import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelP
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
+import com.example.android.leadermvprxdemo.activity.bottomBarLayoutView.BottomBarLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.dashBoardView.DashBoardViewActivity;
 import com.example.android.leadermvprxdemo.activity.delicateView.DelicateViewActivity;
@@ -167,6 +168,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "一个卡片滑动的效果");
         listString.add((index++) + "汽车刻度盘的一个自定义视图");
         listString.add((index++) + "各种状态的按钮，各种属性定制");
+        listString.add((index++) + "底部的菜单栏，多种功能");
 
 
         initView();
@@ -407,6 +409,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 66:
                 openActivity(StateButtonViewActivity.class, null);
+                break;
+            case 67:
+                openActivity(BottomBarLayoutActivity.class, null);
                 break;
         }
     }
