@@ -410,7 +410,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             case 66:
                 openActivity(StateButtonViewActivity.class, null);
                 break;
-            case 67:
+            case 67://///
                 openActivity(BottomBarLayoutActivity.class, null);
                 break;
         }
