@@ -27,6 +27,7 @@ import com.example.android.leadermvprxdemo.activity.flowLayout.FlowLayoutActivit
 import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
 import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
+import com.example.android.leadermvprxdemo.activity.likeView.LikeViewActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.marqueenView.MarqueeActivity;
@@ -169,6 +170,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "汽车刻度盘的一个自定义视图");
         listString.add((index++) + "各种状态的按钮，各种属性定制");
         listString.add((index++) + "底部的菜单栏，多种功能");
+        listString.add((index++) + "点赞的视图");
 
 
         initView();
@@ -410,8 +412,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             case 66:
                 openActivity(StateButtonViewActivity.class, null);
                 break;
-            case 67://///
+            case 67:
                 openActivity(BottomBarLayoutActivity.class, null);
+                break;
+            case 68:
+                openActivity(LikeViewActivity.class, null);
                 break;
         }
     }

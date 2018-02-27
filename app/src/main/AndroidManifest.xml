@@ -88,6 +88,7 @@
         <activity android:name=".activity.dashBoardView.DashBoardViewActivity" />
         <activity android:name=".activity.stateButtonView.StateButtonViewActivity" />
         <activity android:name=".activity.bottomBarLayoutView.BottomBarLayoutActivity" />
+        <activity android:name=".activity.likeView.LikeViewActivity" />
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"
