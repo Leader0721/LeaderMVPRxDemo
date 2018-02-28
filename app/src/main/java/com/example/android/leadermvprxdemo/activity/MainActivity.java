@@ -18,6 +18,7 @@ import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelP
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
+import com.example.android.leadermvprxdemo.activity.blueTooth.BlueToothActivity;
 import com.example.android.leadermvprxdemo.activity.bottomBarLayoutView.BottomBarLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.dashBoardView.DashBoardViewActivity;
@@ -26,6 +27,7 @@ import com.example.android.leadermvprxdemo.activity.diyKeyBorad.DiyKeyBoardActiv
 import com.example.android.leadermvprxdemo.activity.flowLayout.FlowLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.horizontalExpandMenu.HorizontalExpandMenuActivity;
 import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivity;
+import com.example.android.leadermvprxdemo.activity.launchView.LauncherViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.likeView.LikeViewActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
@@ -171,6 +173,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "各种状态的按钮，各种属性定制");
         listString.add((index++) + "底部的菜单栏，多种功能");
         listString.add((index++) + "点赞的视图");
+        listString.add((index++) + "启动页的动画效果");
+        listString.add((index++) + "蓝牙模块");
 
 
         initView();
@@ -417,6 +421,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 68:
                 openActivity(LikeViewActivity.class, null);
+                break;
+            case 69:
+                openActivity(LauncherViewActivity.class, null);
+                break;
+            case 70:
+                openActivity(BlueToothActivity.class, null);
                 break;
         }
     }

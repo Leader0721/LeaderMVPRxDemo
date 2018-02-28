@@ -43,6 +43,14 @@
     <color name="blue">#455ede</color>   <!-- 蓝色 -->
     <color name="black">#000000</color>  <!-- 黑色 -->
 
+
+    <!--launcherView need-->
+    <color name="load_red">#fa007a</color>
+    <color name="load_purple">#935fe7</color>
+    <color name="load_yellow">#f9b11f</color>
+    <color name="load_blue">#009cfa</color>Ω
+
+
     <color name="transparent">#00000000</color>
     <color name="half_transparent">#4f000000</color>
     <color name="half_transparent_white">#80ffffff</color>
