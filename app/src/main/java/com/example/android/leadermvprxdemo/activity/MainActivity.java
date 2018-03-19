@@ -95,6 +95,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private List<String> listString = new ArrayList<>();
     private int index = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
