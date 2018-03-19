@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.leadermvprxdemo">
+          package="com.example.android.leadermvprxdemo">
 
     <application
         android:allowBackup="true"
@@ -10,111 +10,143 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DownTabActivity" />
-        <activity android:name=".activity.DragBlankActivity" />
-        <activity android:name=".activity.flowLayout.FlowLayoutActivity" />
-        <activity android:name=".activity.flowLayout.FlowLayout_1_Activity" />
-        <activity android:name=".activity.flowLayout.FlowLayout_2_Activity" />
-        <activity android:name=".activity.flowLayout.FlowLayout_3_Activity" />
-        <activity android:name=".activity.StepViewActivity" />
-        <activity android:name=".activity.luban.LubanActivity" />
-        <activity android:name=".activity.wave_titanic.TitanicViewActivity" />
-        <activity android:name=".activity.multiLevel.multilevellist.test.MultiLevelActivity" />
-        <activity android:name=".activity.shineTextView.ShimmerActivity" />
-        <activity android:name=".activity.note_text.NormalActivity" />
-        <activity android:name=".activity.note_text.RichActivity" />
-        <activity android:name=".activity.bezierIndicator.BezierIndicatorActivity" />
-        <activity android:name=".activity.leiDa.LeiDaActivity" />
-        <activity android:name=".activity.leiDa.activity.CustomArcProgressBarActivity" />
-        <activity android:name=".activity.leiDa.activity.IndicatorActivity" />
-        <activity android:name=".activity.leiDa.activity.RadarActivity" />
-        <activity android:name=".activity.voiceLine.VoiceLineActivity" />
-        <activity android:name=".activity.qianDao.QianDaoActivity" />
-        <activity android:name=".activity.bezierView.BezierViewActivity" />
-        <activity android:name=".activity.bezierView.starview.StarViewActivity" />
-        <activity android:name=".activity.bezierView.TestActivity" />
-        <activity android:name=".activity.bezierView.shoppingcart.ShoppingCartActivity" />
-        <activity android:name=".activity.roundProgress.RoundProgressActivity" />
-        <activity android:name=".activity.tickView.TickViewActivity" />
-        <activity android:name=".activity.lockView.LockViewActivity" />
-        <activity android:name=".activity.wavePercentView.WavePercentActivity" />
-        <activity android:name=".activity.marqueenView.MarqueeActivity" />
-        <activity android:name=".activity.marqueenView.AboutActivity" />
-        <activity android:name=".activity.musicWaveView.MusicWaveActivity" />
-        <activity android:name=".activity.rangeSeekBar.style_one.RangeSeekBarActivity" />
-        <activity android:name=".activity.rangeSeekBar.SeekBarViewActivity" />
-        <activity android:name=".activity.rangeSeekBar.style_two.SeekBarDemo01Activity" />
-        <activity android:name=".activity.diyKeyBorad.DiyKeyBoardActivity" />
-        <activity android:name=".activity.jdStepView.JdStepViewActivity" />
-        <activity android:name=".activity.horizontalExpandMenu.HorizontalExpandMenuActivity" />
-        <activity android:name=".activity.redarView.RadarViewActivity" />
-        <activity android:name=".activity.redarView.RadarDemoActivity" />
-        <activity android:name=".activity.countDownView.CountDownList1Activity" />
-        <activity android:name=".activity.countDownView.CountDownList2Activity" />
-        <activity android:name=".activity.countDownView.CountDownShowActivity" />
-        <activity android:name=".activity.countDownView.CountDownViewActivity" />
-        <activity android:name=".activity.swipCardTanTan.SwipCardViewActivity" />
-        <activity android:name=".activity.postmanViewLoading.PostManLoadingActivity" />
-        <activity android:name=".activity.miClickView.MiClockViewActivity" />
-        <activity android:name=".activity.weatherView.WeatherViewActivity" />
-        <activity android:name=".activity.numberAnimView.NumberAnimTextViewActivity" />
-        <activity android:name=".activity.slideRulerView.SlideRulerViewActivity" />
-        <activity android:name=".activity.wheelView_3d.WheelView3DActivity" />
-        <activity android:name=".activity.relativeCircleLayout.CircleLayoutViewActivity" />
-        <activity android:name=".activity.swipMenuListView.ui.SwipMenuListViewActivity" />
-        <activity android:name=".activity.waveLoadingView.WaveLoadingViewActivity" />
-        <activity android:name=".activity.xiaoMiStepView.XiaoMiStepViewActivity" />
-        <activity android:name=".activity.PicsLayoutView.style_one.PicsLayoutView1Activity" />
-        <activity android:name=".activity.PicsLayoutView.style_two.PicsLayoutView2Activity" />
-        <activity android:name=".activity.androidExcelView.ExcelViewActivity" />
-        <activity android:name=".activity.androidExcelView.SimpleTableActivity" />
-        <activity android:name=".activity.androidExcelView.StyleTableActivity" />
-        <activity android:name=".activity.androidExcelView.FamilyTableActivity" />
-        <activity android:name=".activity.progressRunView.ProgressRunViewActivity" />
-        <activity android:name=".activity.androidExcelPanelView.ExcelPanelActivity" />
-        <activity android:name=".activity.addDeleteView.AddDeleteViewActivity" />
-        <activity android:name=".activity.spanStringView.SpanStringViewActivity" />
-        <activity android:name=".activity.switchButtonView.SwitchButtonViewActivity" />
-        <activity android:name=".activity.delicateView.DelicateViewActivity" />
-        <activity android:name=".activity.radarCycleView.RadarCycleViewActivity" />
-        <activity android:name=".activity.record_mp3.RecordMp3Activity" />
-        <activity android:name=".activity.screenRecorder.ScreenRecorderActivity" />
-        <activity android:name=".activity.textSelectedableHelper.TextSelectedHelperActivity" />
-        <activity android:name=".activity.viewPagerCard.ViewPagerCardActivity" />
-        <activity android:name=".activity.dashBoardView.DashBoardViewActivity" />
-        <activity android:name=".activity.stateButtonView.StateButtonViewActivity" />
-        <activity android:name=".activity.bottomBarLayoutView.BottomBarLayoutActivity" />
-        <activity android:name=".activity.likeView.LikeViewActivity" />
-        <activity android:name=".activity.launchView.LauncherViewActivity" />
-        <activity android:name=".activity.blueTooth.BlueToothActivity" />
+        <activity android:name=".activity.DownTabActivity"/>
+        <activity android:name=".activity.DragBlankActivity"/>
+        <activity android:name=".activity.flowLayout.FlowLayoutActivity"/>
+        <activity android:name=".activity.flowLayout.FlowLayout_1_Activity"/>
+        <activity android:name=".activity.flowLayout.FlowLayout_2_Activity"/>
+        <activity android:name=".activity.flowLayout.FlowLayout_3_Activity"/>
+        <activity android:name=".activity.StepViewActivity"/>
+        <activity android:name=".activity.luban.LubanActivity"/>
+        <activity android:name=".activity.wave_titanic.TitanicViewActivity"/>
+        <activity android:name=".activity.multiLevel.multilevellist.test.MultiLevelActivity"/>
+        <activity android:name=".activity.shineTextView.ShimmerActivity"/>
+        <activity android:name=".activity.note_text.NormalActivity"/>
+        <activity android:name=".activity.note_text.RichActivity"/>
+        <activity android:name=".activity.bezierIndicator.BezierIndicatorActivity"/>
+        <activity android:name=".activity.leiDa.LeiDaActivity"/>
+        <activity android:name=".activity.leiDa.activity.CustomArcProgressBarActivity"/>
+        <activity android:name=".activity.leiDa.activity.IndicatorActivity"/>
+        <activity android:name=".activity.leiDa.activity.RadarActivity"/>
+        <activity android:name=".activity.voiceLine.VoiceLineActivity"/>
+        <activity android:name=".activity.qianDao.QianDaoActivity"/>
+        <activity android:name=".activity.bezierView.BezierViewActivity"/>
+        <activity android:name=".activity.bezierView.starview.StarViewActivity"/>
+        <activity android:name=".activity.bezierView.TestActivity"/>
+        <activity android:name=".activity.bezierView.shoppingcart.ShoppingCartActivity"/>
+        <activity android:name=".activity.roundProgress.RoundProgressActivity"/>
+        <activity android:name=".activity.tickView.TickViewActivity"/>
+        <activity android:name=".activity.lockView.LockViewActivity"/>
+        <activity android:name=".activity.wavePercentView.WavePercentActivity"/>
+        <activity android:name=".activity.marqueenView.MarqueeActivity"/>
+        <activity android:name=".activity.marqueenView.AboutActivity"/>
+        <activity android:name=".activity.musicWaveView.MusicWaveActivity"/>
+        <activity android:name=".activity.rangeSeekBar.style_one.RangeSeekBarActivity"/>
+        <activity android:name=".activity.rangeSeekBar.SeekBarViewActivity"/>
+        <activity android:name=".activity.rangeSeekBar.style_two.SeekBarDemo01Activity"/>
+        <activity android:name=".activity.diyKeyBorad.DiyKeyBoardActivity"/>
+        <activity android:name=".activity.jdStepView.JdStepViewActivity"/>
+        <activity android:name=".activity.horizontalExpandMenu.HorizontalExpandMenuActivity"/>
+        <activity android:name=".activity.redarView.RadarViewActivity"/>
+        <activity android:name=".activity.redarView.RadarDemoActivity"/>
+        <activity android:name=".activity.countDownView.CountDownList1Activity"/>
+        <activity android:name=".activity.countDownView.CountDownList2Activity"/>
+        <activity android:name=".activity.countDownView.CountDownShowActivity"/>
+        <activity android:name=".activity.countDownView.CountDownViewActivity"/>
+        <activity android:name=".activity.swipCardTanTan.SwipCardViewActivity"/>
+        <activity android:name=".activity.postmanViewLoading.PostManLoadingActivity"/>
+        <activity android:name=".activity.miClickView.MiClockViewActivity"/>
+        <activity android:name=".activity.weatherView.WeatherViewActivity"/>
+        <activity android:name=".activity.numberAnimView.NumberAnimTextViewActivity"/>
+        <activity android:name=".activity.slideRulerView.SlideRulerViewActivity"/>
+        <activity android:name=".activity.wheelView_3d.WheelView3DActivity"/>
+        <activity android:name=".activity.relativeCircleLayout.CircleLayoutViewActivity"/>
+        <activity android:name=".activity.swipMenuListView.ui.SwipMenuListViewActivity"/>
+        <activity android:name=".activity.waveLoadingView.WaveLoadingViewActivity"/>
+        <activity android:name=".activity.xiaoMiStepView.XiaoMiStepViewActivity"/>
+        <activity android:name=".activity.PicsLayoutView.style_one.PicsLayoutView1Activity"/>
+        <activity android:name=".activity.PicsLayoutView.style_two.PicsLayoutView2Activity"/>
+        <activity android:name=".activity.androidExcelView.ExcelViewActivity"/>
+        <activity android:name=".activity.androidExcelView.SimpleTableActivity"/>
+        <activity android:name=".activity.androidExcelView.StyleTableActivity"/>
+        <activity android:name=".activity.androidExcelView.FamilyTableActivity"/>
+        <activity android:name=".activity.progressRunView.ProgressRunViewActivity"/>
+        <activity android:name=".activity.androidExcelPanelView.ExcelPanelActivity"/>
+        <activity android:name=".activity.addDeleteView.AddDeleteViewActivity"/>
+        <activity android:name=".activity.spanStringView.SpanStringViewActivity"/>
+        <activity android:name=".activity.switchButtonView.SwitchButtonViewActivity"/>
+        <activity android:name=".activity.delicateView.DelicateViewActivity"/>
+        <activity android:name=".activity.radarCycleView.RadarCycleViewActivity"/>
+        <activity android:name=".activity.record_mp3.RecordMp3Activity"/>
+        <activity android:name=".activity.screenRecorder.ScreenRecorderActivity"/>
+        <activity android:name=".activity.textSelectedableHelper.TextSelectedHelperActivity"/>
+        <activity android:name=".activity.viewPagerCard.ViewPagerCardActivity"/>
+        <activity android:name=".activity.dashBoardView.DashBoardViewActivity"/>
+        <activity android:name=".activity.stateButtonView.StateButtonViewActivity"/>
+        <activity android:name=".activity.bottomBarLayoutView.BottomBarLayoutActivity"/>
+        <activity android:name=".activity.likeView.LikeViewActivity"/>
+        <activity android:name=".activity.launchView.LauncherViewActivity"/>
+        <activity android:name=".activity.blueTooth.BlueToothActivity"/>
+        <activity android:name=".activity.cloudEditText.CloudEditTextActivity"/>
+        <activity android:name=".activity.toggleButton.ToggleButtonActivity"/>
+        <activity android:name=".activity.cardView.CardViewActivity"/>
+
+        <activity
+            android:name=".activity.topSearchView.demo.TopSearchViewActivity">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.ColoredActivity"
+            android:label="@string/title_activity_colored">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.DefaultActivity"
+            android:label="@string/title_activity_default">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.VoiceActivity"
+            android:label="@string/title_activity_voice">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.StickyActivity"
+            android:label="@string/title_activity_sticky">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.TabActivity"
+            android:label="@string/title_activity_tab">
+        </activity>
+        <activity
+            android:name=".activity.topSearchView.demo.InputTypeActivity"
+            android:label="@string/title_activity_input_type">
+        </activity>
+
 
         <!--蓝牙扫描和控制-->
         <activity
             android:name=".activity.blueTooth.DeviceScanActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.blueTooth.DeviceControlActivity" />
+        <activity android:name=".activity.blueTooth.DeviceControlActivity"/>
 
         <service
             android:name=".activity.blueTooth.BluetoothLeService"
-            android:enabled="true" />
+            android:enabled="true"/>
 
 
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
         <activity
             android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

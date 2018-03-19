@@ -1,7 +1,9 @@
 package com.example.android.leadermvprxdemo.activity;
 
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.graphics.Palette;
 import android.view.Gravity;
 import android.view.View;
@@ -20,6 +22,8 @@ import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndica
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.blueTooth.BlueToothActivity;
 import com.example.android.leadermvprxdemo.activity.bottomBarLayoutView.BottomBarLayoutActivity;
+import com.example.android.leadermvprxdemo.activity.cardView.CardViewActivity;
+import com.example.android.leadermvprxdemo.activity.cloudEditText.CloudEditTextActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.dashBoardView.DashBoardViewActivity;
 import com.example.android.leadermvprxdemo.activity.delicateView.DelicateViewActivity;
@@ -58,6 +62,8 @@ import com.example.android.leadermvprxdemo.activity.swipMenuListView.ui.SwipMenu
 import com.example.android.leadermvprxdemo.activity.switchButtonView.SwitchButtonViewActivity;
 import com.example.android.leadermvprxdemo.activity.textSelectedableHelper.TextSelectedHelperActivity;
 import com.example.android.leadermvprxdemo.activity.tickView.TickViewActivity;
+import com.example.android.leadermvprxdemo.activity.toggleButton.ToggleButtonActivity;
+import com.example.android.leadermvprxdemo.activity.topSearchView.demo.TopSearchViewActivity;
 import com.example.android.leadermvprxdemo.activity.viewPagerCard.ViewPagerCardActivity;
 import com.example.android.leadermvprxdemo.activity.voiceLine.VoiceLineActivity;
 import com.example.android.leadermvprxdemo.activity.waveLoadingView.WaveLoadingViewActivity;
@@ -176,6 +182,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "点赞的视图");
         listString.add((index++) + "启动页的动画效果");
         listString.add((index++) + "蓝牙模块");
+        listString.add((index++) + "可编辑的EditText");
+        listString.add((index++) + "按钮开关");
+        listString.add((index++) + "一个美观的cardView");
+        listString.add((index++) + "顶部搜索框");
 
 
         initView();
@@ -188,6 +198,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         lvContent.setOnItemClickListener(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
@@ -428,6 +439,18 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 70:
                 openActivity(BlueToothActivity.class, null);
+                break;
+            case 71:
+                openActivity(CloudEditTextActivity.class, null);
+                break;
+            case 72:
+                openActivity(ToggleButtonActivity.class, null);
+                break;
+            case 73:
+                openActivity(CardViewActivity.class, null);
+                break;
+            case 74:
+                openActivity(TopSearchViewActivity.class, null);
                 break;
         }
     }

@@ -640,4 +640,12 @@
     <!-- Use with white text -->
     <color name="grey_1000_w">#ffffff</color>
     <!-- Use with black text -->
+
+
+
+    <color name="search_layover_bg">#50000000</color>
+
+
+
+
 </resources>

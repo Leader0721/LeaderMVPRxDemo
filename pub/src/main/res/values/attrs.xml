@@ -2,224 +2,224 @@
 <resources>
 
     <declare-styleable name="XHeader">
-        <attr name="titleText" format="string" />
-        <attr name="isLeftBack" format="boolean" />
+        <attr name="titleText" format="string"/>
+        <attr name="isLeftBack" format="boolean"/>
     </declare-styleable>
     <!-- DropDownMenu start -->
     <declare-styleable name="DropDownMenu">
         <!--tab选中颜色-->
-        <attr name="ddtextSelectedColor" format="color" />
+        <attr name="ddtextSelectedColor" format="color"/>
         <!--tab未选中颜色-->
-        <attr name="ddtextUnselectedColor" format="color" />
+        <attr name="ddtextUnselectedColor" format="color"/>
         <!--tab 背景颜色-->
-        <attr name="ddmenuBackgroundColor" format="color" />
+        <attr name="ddmenuBackgroundColor" format="color"/>
         <!--遮罩颜色，一般是半透明-->
-        <attr name="ddmaskColor" format="color" />
-        <attr name="ddneedSetSlectedColor" format="boolean" />
+        <attr name="ddmaskColor" format="color"/>
+        <attr name="ddneedSetSlectedColor" format="boolean"/>
         <!--tab字体大小-->
-        <attr name="ddmenuTextSize" format="dimension" />
+        <attr name="ddmenuTextSize" format="dimension"/>
         <!--筛选菜单最大高度，默认为wrap-->
-        <attr name="ddmenuMaxHeight" format="dimension" />
+        <attr name="ddmenuMaxHeight" format="dimension"/>
         <!--tab选中状态图标-->
-        <attr name="ddmenuSelectedIcon" format="reference" />
+        <attr name="ddmenuSelectedIcon" format="reference"/>
         <!--tab未选中状态图标-->
-        <attr name="ddmenuUnselectedIcon" format="reference" />
+        <attr name="ddmenuUnselectedIcon" format="reference"/>
     </declare-styleable>
     <!-- DropDownMenu end -->
 
 
     <declare-styleable name="ShimmerView">
-        <attr name="reflectionColor" format="color" />
+        <attr name="reflectionColor" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="BezierBottomIndicator">
-        <attr name="leftRightGap" format="dimension" />
-        <attr name="childPadding" format="dimension" />
-        <attr name="bgCircularColor" format="color" />
-        <attr name="defCircularColor" format="color" />
+        <attr name="leftRightGap" format="dimension"/>
+        <attr name="childPadding" format="dimension"/>
+        <attr name="bgCircularColor" format="color"/>
+        <attr name="defCircularColor" format="color"/>
     </declare-styleable>
 
     <!-- 状态视图 -->
     <declare-styleable name="XStateView">
-        <attr name="empty_text" format="string" />
-        <attr name="iconRes" format="reference" />
+        <attr name="empty_text" format="string"/>
+        <attr name="iconRes" format="reference"/>
         <attr name="state">
-            <enum name="empty" value="1" />
-            <enum name="error" value="2" />
-            <enum name="load" value="3" />
+            <enum name="empty" value="1"/>
+            <enum name="error" value="2"/>
+            <enum name="load" value="3"/>
         </attr>
-        <attr name="size" format="dimension" />
-        <attr name="color" format="color" />
+        <attr name="size" format="dimension"/>
+        <attr name="color" format="color"/>
     </declare-styleable>
 
 
     <declare-styleable name="ArcView">
-        <attr name="arcColor" format="color" />
-        <attr name="bgColor" format="color" />
-        <attr name="arc_textColor" format="color" />
-        <attr name="arc_textSize" format="dimension" />
+        <attr name="arcColor" format="color"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="arc_textColor" format="color"/>
+        <attr name="arc_textSize" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="CustomDotIndicator">
-        <attr name="dotColor" format="color" />
-        <attr name="dotRadius" format="dimension" />
-        <attr name="dotFillOrStroke" format="integer" />
-        <attr name="dotStrokeWidth" format="dimension" />
+        <attr name="dotColor" format="color"/>
+        <attr name="dotRadius" format="dimension"/>
+        <attr name="dotFillOrStroke" format="integer"/>
+        <attr name="dotStrokeWidth" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="CustomRectangleIndicator">
-        <attr name="rectColor" format="color" />
-        <attr name="rectHeight" format="dimension" />
+        <attr name="rectColor" format="color"/>
+        <attr name="rectHeight" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="CustomTriangleIndicator">
-        <attr name="triangleColor" format="color" />
-        <attr name="triangleWidth" format="dimension" />
-        <attr name="triangleHeight" format="dimension" />
+        <attr name="triangleColor" format="color"/>
+        <attr name="triangleWidth" format="dimension"/>
+        <attr name="triangleHeight" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="CustomRadarChart">
-        <attr name="radarPieceNumber" format="integer" />
-        <attr name="radarLineWidth" format="dimension" />
-        <attr name="radarLineColor" format="color" />
-        <attr name="radarTextColor" format="color" />
-        <attr name="radarTextSize" format="integer" />
-        <attr name="radarRadius" format="integer" />
+        <attr name="radarPieceNumber" format="integer"/>
+        <attr name="radarLineWidth" format="dimension"/>
+        <attr name="radarLineColor" format="color"/>
+        <attr name="radarTextColor" format="color"/>
+        <attr name="radarTextSize" format="integer"/>
+        <attr name="radarRadius" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="voiceView">
         <!--中间线的颜色，就是波形的时候，大家可以看到，中间有一条直线，就是那个-->
-        <attr name="middleLine" format="color" />
+        <attr name="middleLine" format="color"/>
         <!--中间线的高度，因为宽度是充满的-->
-        <attr name="middleLineHeight" format="dimension" />
+        <attr name="middleLineHeight" format="dimension"/>
         <!--波动的线的颜色，如果是矩形样式的话，刚是矩形的颜色-->
-        <attr name="voiceLine" format="color" />
+        <attr name="voiceLine" format="color"/>
         <!--波动线的横向移动速度，线的速度的反比，即这个值越小，线横向移动越快，越大线移动越慢，默认90-->
-        <attr name="lineSpeed" format="integer" />
+        <attr name="lineSpeed" format="integer"/>
         <!--矩形的宽度-->
-        <attr name="rectWidth" format="dimension" />
+        <attr name="rectWidth" format="dimension"/>
         <!--矩形之间的间隔-->
-        <attr name="rectSpace" format="dimension" />
+        <attr name="rectSpace" format="dimension"/>
         <!--矩形的初始高度，就是没有声音的时候，矩形的高度-->
-        <attr name="rectInitHeight" format="dimension" />
+        <attr name="rectInitHeight" format="dimension"/>
         <!--所输入音量的最大值-->
-        <attr name="maxVolume" format="float" />
+        <attr name="maxVolume" format="float"/>
         <!--控件的样式，一共有两种，波形或者矩形-->
         <attr name="viewMode">
-            <enum name="line" value="0" />
-            <enum name="rect" value="1" />
+            <enum name="line" value="0"/>
+            <enum name="rect" value="1"/>
         </attr>
         <!--灵敏度，默认值是4-->
         <attr name="sensibility">
-            <enum name="one" value="1" />
-            <enum name="two" value="2" />
-            <enum name="three" value="3" />
-            <enum name="four" value="4" />
-            <enum name="five" value="5" />
+            <enum name="one" value="1"/>
+            <enum name="two" value="2"/>
+            <enum name="three" value="3"/>
+            <enum name="four" value="4"/>
+            <enum name="five" value="5"/>
         </attr>
         <!--精细度，绘制曲线的时候，每几个像素绘制一次，默认是1，一般，这个值越小，曲线越顺滑，
             但在一些旧手机上，会出现帧率过低的情况，可以把这个值调大一点，在图片的顺滑度与帧率之间做一个取舍-->
         <attr name="fineness">
-            <enum name="one" value="1" />
-            <enum name="two" value="2" />
-            <enum name="three" value="3" />
+            <enum name="one" value="1"/>
+            <enum name="two" value="2"/>
+            <enum name="three" value="3"/>
         </attr>
     </declare-styleable>
 
 
     <declare-styleable name="Signin">
-        <attr name="sign_in_bg_color" format="color" />
-        <attr name="sign_in_pb_color" format="color" />
-        <attr name="sign_in_check_color" format="color" />
-        <attr name="sign_in_text_color" format="color" />
-        <attr name="sign_in_text_siz" format="dimension" />
+        <attr name="sign_in_bg_color" format="color"/>
+        <attr name="sign_in_pb_color" format="color"/>
+        <attr name="sign_in_check_color" format="color"/>
+        <attr name="sign_in_text_color" format="color"/>
+        <attr name="sign_in_text_siz" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="RoundProgressView">
 
-        <attr name="border_width" format="integer" />
-        <attr name="border_color" format="color" />
-        <attr name="background_color" format="color" />
-        <attr name="milli_second" format="integer" />
+        <attr name="border_width" format="integer"/>
+        <attr name="border_color" format="color"/>
+        <attr name="background_color" format="color"/>
+        <attr name="milli_second" format="integer"/>
 
         <attr name="text" format="string"></attr>
         <attr name="text_color" format="color"></attr>
         <attr name="text_size" format="dimension"></attr>
 
-        <attr name="image_resource" format="reference" />
-        <attr name="image_scale" format="float" />
+        <attr name="image_resource" format="reference"/>
+        <attr name="image_scale" format="float"/>
 
         <attr name="mode">
-            <enum name="auto" value="1" />
-            <enum name="update" value="2" />
+            <enum name="auto" value="1"/>
+            <enum name="update" value="2"/>
         </attr>
     </declare-styleable>
 
 
     <declare-styleable name="TickView">
         <!--没有选中的基调颜色-->
-        <attr name="uncheck_base_color" format="color" />
+        <attr name="uncheck_base_color" format="color"/>
         <!--选中后的基调颜色-->
-        <attr name="check_base_color" format="color" />
+        <attr name="check_base_color" format="color"/>
         <!--选中后钩的颜色-->
-        <attr name="check_tick_color" format="color" />
+        <attr name="check_tick_color" format="color"/>
         <!--圆的半径-->
-        <attr name="radius" format="dimension" />
+        <attr name="radius" format="dimension"/>
         <!--动画执行的速度-->
         <attr name="rate">
-            <enum name="slow" value="0" />
-            <enum name="normal" value="1" />
-            <enum name="fast" value="2" />
+            <enum name="slow" value="0"/>
+            <enum name="normal" value="1"/>
+            <enum name="fast" value="2"/>
         </attr>
-        <attr name="clickable" format="boolean" />
+        <attr name="clickable" format="boolean"/>
     </declare-styleable>
 
 
     <declare-styleable name="WaveView">
         <!--波纹颜色-->
-        <attr name="wave_wavecolor" format="color" />
+        <attr name="wave_wavecolor" format="color"/>
         <!--波纹进度文字是否显示-->
-        <attr name="wave_progress_text_show" format="boolean" />
+        <attr name="wave_progress_text_show" format="boolean"/>
         <!--波纹进度文字颜色-->
-        <attr name="wave_progress_text_color" format="color" />
+        <attr name="wave_progress_text_color" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="AirPurgeLayoutView">
-        <attr name="granule_num" format="integer" />    <!--颗粒物数-->
-        <attr name="granule_radius" format="float" />   <!--颗粒物数-->
-        <attr name="granule_color" format="color" />    <!--颗粒颜色,最好不透明的-->
+        <attr name="granule_num" format="integer"/>    <!--颗粒物数-->
+        <attr name="granule_radius" format="float"/>   <!--颗粒物数-->
+        <attr name="granule_color" format="color"/>    <!--颗粒颜色,最好不透明的-->
 
-        <attr name="circle_proportion" format="float" />  <!--圆的直径大小占宽高中最小的那个的比例-->
-        <attr name="main_color" format="color" />            <!--实体圆环和扇叶圆环和字体的颜色-->
-        <attr name="solidring_width" format="float" />    <!--最外圈实线圆环的宽度，最好不要太大-->
-        <attr name="dashedring_width" format="float" />    <!--扇叶圆环的宽度，经测量是solidwidth四倍最好，可以适当调节-->
-        <attr name="toptitle" format="string" />
-        <attr name="centertitle" format="string" />
-        <attr name="bottomtitle" format="string" />
-        <attr name="toptitle_textsize" format="dimension" />
-        <attr name="centertitle_textsize" format="dimension" />
-        <attr name="bottomtitle_textsize" format="dimension" />
-        <attr name="speed_level" format="integer" />     <!--风速默认3000，可以修改-->
-        <attr name="eachpan_angle" format="float" />    <!--每片扇叶的角度 自己要计算好加间隙 一共360-->
-        <attr name="eachpan_anglegap" format="float" />    <!--相邻扇叶的间隙-->
+        <attr name="circle_proportion" format="float"/>  <!--圆的直径大小占宽高中最小的那个的比例-->
+        <attr name="main_color" format="color"/>            <!--实体圆环和扇叶圆环和字体的颜色-->
+        <attr name="solidring_width" format="float"/>    <!--最外圈实线圆环的宽度，最好不要太大-->
+        <attr name="dashedring_width" format="float"/>    <!--扇叶圆环的宽度，经测量是solidwidth四倍最好，可以适当调节-->
+        <attr name="toptitle" format="string"/>
+        <attr name="centertitle" format="string"/>
+        <attr name="bottomtitle" format="string"/>
+        <attr name="toptitle_textsize" format="dimension"/>
+        <attr name="centertitle_textsize" format="dimension"/>
+        <attr name="bottomtitle_textsize" format="dimension"/>
+        <attr name="speed_level" format="integer"/>     <!--风速默认3000，可以修改-->
+        <attr name="eachpan_angle" format="float"/>    <!--每片扇叶的角度 自己要计算好加间隙 一共360-->
+        <attr name="eachpan_anglegap" format="float"/>    <!--相邻扇叶的间隙-->
 
     </declare-styleable>
     <declare-styleable name="MarqueeViewStyle">
-        <attr name="mvInterval" format="integer|reference" /><!--两行文字翻页时间间隔-->
-        <attr name="mvAnimDuration" format="integer|reference" /><!--一行文字动画执行时间-->
-        <attr name="mvTextSize" format="dimension|reference" /><!--文字大小-->
-        <attr name="mvTextColor" format="color|reference" /><!--文字颜色-->
-        <attr name="mvSingleLine" format="boolean" /><!--单行设置-->
+        <attr name="mvInterval" format="integer|reference"/><!--两行文字翻页时间间隔-->
+        <attr name="mvAnimDuration" format="integer|reference"/><!--一行文字动画执行时间-->
+        <attr name="mvTextSize" format="dimension|reference"/><!--文字大小-->
+        <attr name="mvTextColor" format="color|reference"/><!--文字颜色-->
+        <attr name="mvSingleLine" format="boolean"/><!--单行设置-->
         <attr name="mvGravity"><!--文字位置:left、center、right-->
-            <enum name="left" value="0" />
-            <enum name="center" value="1" />
-            <enum name="right" value="2" />
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
         </attr>
         <attr name="mvDirection"><!--动画滚动方向:bottom_to_top、top_to_bottom、right_to_left、left_to_right-->
-            <enum name="bottom_to_top" value="0" />
-            <enum name="top_to_bottom" value="1" />
-            <enum name="right_to_left" value="2" />
-            <enum name="left_to_right" value="3" />
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="AddSubUtils">
@@ -228,97 +228,97 @@
         <!--输入框的位置-->
         <attr name="location" format="string"></attr>
         <!-- 左右2边+-按钮的宽度 -->
-        <attr name="ImageWidth" format="dimension" />
+        <attr name="ImageWidth" format="dimension"/>
         <!-- 中间EditText的宽度 -->
-        <attr name="contentWidth" format="dimension" />
+        <attr name="contentWidth" format="dimension"/>
         <!--中间TextView的大小-->
-        <attr name="contentTextSize" format="dimension" />
+        <attr name="contentTextSize" format="dimension"/>
         <!--中间字体的颜色-->
-        <attr name="contentTextColor" format="color" />
+        <attr name="contentTextColor" format="color"/>
         <!--整个控件的background-->
-        <attr name="all_background" format="color|reference" />
+        <attr name="all_background" format="color|reference"/>
         <!--左面控件的背景-->
-        <attr name="leftBackground" format="color|reference" />
+        <attr name="leftBackground" format="color|reference"/>
         <!--右面控件的背景-->
-        <attr name="rightBackground" format="color|reference" />
+        <attr name="rightBackground" format="color|reference"/>
         <!--中间控件的背景-->
-        <attr name="contentBackground" format="color|reference" />
+        <attr name="contentBackground" format="color|reference"/>
         <!--左面控件的资源-->
-        <attr name="leftResources" format="color|reference" />
+        <attr name="leftResources" format="color|reference"/>
         <!--右面控件的资源-->
-        <attr name="rightResources" format="color|reference" />
+        <attr name="rightResources" format="color|reference"/>
     </declare-styleable>
 
     <declare-styleable name="CropImageView">
-        <attr name="imgSrc" format="reference" />
+        <attr name="imgSrc" format="reference"/>
         <attr name="cropMode">
-            <enum name="ratio_fit_image" value="0" />
-            <enum name="ratio_4_3" value="1" />
-            <enum name="ratio_3_4" value="2" />
-            <enum name="ratio_1_1" value="3" />
-            <enum name="ratio_16_9" value="4" />
-            <enum name="ratio_9_16" value="5" />
-            <enum name="ratio_free" value="6" />
-            <enum name="ratio_custom" value="7" />
-            <enum name="circle" value="8" />
+            <enum name="ratio_fit_image" value="0"/>
+            <enum name="ratio_4_3" value="1"/>
+            <enum name="ratio_3_4" value="2"/>
+            <enum name="ratio_1_1" value="3"/>
+            <enum name="ratio_16_9" value="4"/>
+            <enum name="ratio_9_16" value="5"/>
+            <enum name="ratio_free" value="6"/>
+            <enum name="ratio_custom" value="7"/>
+            <enum name="circle" value="8"/>
         </attr>
-        <attr name="backgroundColor" format="color" />
-        <attr name="overlayColor" format="color" />
-        <attr name="frameColor" format="color" />
-        <attr name="handleColor" format="color" />
-        <attr name="guideColor" format="color" />
+        <attr name="backgroundColor" format="color"/>
+        <attr name="overlayColor" format="color"/>
+        <attr name="frameColor" format="color"/>
+        <attr name="handleColor" format="color"/>
+        <attr name="guideColor" format="color"/>
         <attr name="guideShowMode">
-            <enum name="show_always" value="1" />
-            <enum name="show_on_touch" value="2" />
-            <enum name="not_show" value="3" />
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
         </attr>
         <attr name="handleShowMode">
-            <enum name="show_always" value="1" />
-            <enum name="show_on_touch" value="2" />
-            <enum name="not_show" value="3" />
+            <enum name="show_always" value="1"/>
+            <enum name="show_on_touch" value="2"/>
+            <enum name="not_show" value="3"/>
         </attr>
-        <attr name="handleSize" format="dimension" />
-        <attr name="touchPadding" format="dimension" />
-        <attr name="minFrameSize" format="dimension" />
-        <attr name="frameStrokeWeight" format="dimension" />
-        <attr name="guideStrokeWeight" format="dimension" />
-        <attr name="cropEnabled" format="boolean" />
-        <attr name="initialFrameScale" format="float" />
+        <attr name="handleSize" format="dimension"/>
+        <attr name="touchPadding" format="dimension"/>
+        <attr name="minFrameSize" format="dimension"/>
+        <attr name="frameStrokeWeight" format="dimension"/>
+        <attr name="guideStrokeWeight" format="dimension"/>
+        <attr name="cropEnabled" format="boolean"/>
+        <attr name="initialFrameScale" format="float"/>
     </declare-styleable>
 
     <declare-styleable name="RangeSeekBar">
-        <attr name="rsb_max" format="float" /> <!--最大值-->
-        <attr name="rsb_min" format="float" /><!--最小值-->
-        <attr name="rsb_reserve" format="float" />    <!--两个按钮的最小间距-->
-        <attr name="rsb_cells" format="integer" /> <!--cells 等于0为普通模式，大于1时切换为刻度模式-->
+        <attr name="rsb_max" format="float"/> <!--最大值-->
+        <attr name="rsb_min" format="float"/><!--最小值-->
+        <attr name="rsb_reserve" format="float"/>    <!--两个按钮的最小间距-->
+        <attr name="rsb_cells" format="integer"/> <!--cells 等于0为普通模式，大于1时切换为刻度模式-->
         <attr name="rsb_progressHintMode" format="enum">    <!--进度提示模式 default：当拖动时显示 alwaysHide：一直隐藏 alwaysShow：一直显示-->
-            <enum name="defaultMode" value="0" />
-            <enum name="alwaysHide" value="1" />
-            <enum name="touchAlwaysShow" value="2" />
-            <enum name="alwaysShow" value="3" />
+            <enum name="defaultMode" value="0"/>
+            <enum name="alwaysHide" value="1"/>
+            <enum name="touchAlwaysShow" value="2"/>
+            <enum name="alwaysShow" value="3"/>
         </attr>
-        <attr name="rsb_lineColorSelected" format="color" />    <!--拖动后的Seekbar颜色-->
-        <attr name="rsb_lineColorEdge" format="color" />    <!--默认的Seekbar颜色-->
-        <attr name="rsb_thumbPrimaryColor" format="color" />   <!--进度为最小值或最大值时按钮的颜色，默认此属性不调用-->
-        <attr name="rsb_thumbSecondaryColor" format="color" />    <!--进度不为最小值或最大值时按钮的颜色，默认此属性不调用-->
-        <attr name="rsb_markTextArray" format="reference" />    <!--刻度文字，不设置的时候默认隐藏-->
-        <attr name="rsb_thumbResId" format="reference" />   <!--按钮的背景资源，不设置的时候默认为圆形按钮-->
+        <attr name="rsb_lineColorSelected" format="color"/>    <!--拖动后的Seekbar颜色-->
+        <attr name="rsb_lineColorEdge" format="color"/>    <!--默认的Seekbar颜色-->
+        <attr name="rsb_thumbPrimaryColor" format="color"/>   <!--进度为最小值或最大值时按钮的颜色，默认此属性不调用-->
+        <attr name="rsb_thumbSecondaryColor" format="color"/>    <!--进度不为最小值或最大值时按钮的颜色，默认此属性不调用-->
+        <attr name="rsb_markTextArray" format="reference"/>    <!--刻度文字，不设置的时候默认隐藏-->
+        <attr name="rsb_thumbResId" format="reference"/>   <!--按钮的背景资源，不设置的时候默认为圆形按钮-->
         <!-- must use 9 path ！！！-->
-        <attr name="rsb_progressHintResId" format="reference" />     <!--进度提示背景资源，必须使用 9 path文件-->
-        <attr name="rsb_textPadding" format="dimension" />     <!--刻度文字与进度条之间的距离-->
-        <attr name="rsb_textSize" format="dimension" />     <!--刻度文字和进度提示文字的大小-->
-        <attr name="rsb_hintBGHeight" format="dimension" />    <!--进度提示背景的高度，不设置时根据文字尺寸自适应-->
-        <attr name="rsb_hintBGWith" format="dimension" />    <!--进度提示背景的宽度，不设置时根据文字尺寸自适应-->
-        <attr name="rsb_hintBGPadding" format="dimension" /> <!--进度提示背景和进度条之间的距离-->
-        <attr name="rsb_seekBarHeight" format="dimension" /> <!--进度条的高度-->
-        <attr name="rsb_thumbSize" format="dimension" /><!--按钮的尺寸-->
+        <attr name="rsb_progressHintResId" format="reference"/>     <!--进度提示背景资源，必须使用 9 path文件-->
+        <attr name="rsb_textPadding" format="dimension"/>     <!--刻度文字与进度条之间的距离-->
+        <attr name="rsb_textSize" format="dimension"/>     <!--刻度文字和进度提示文字的大小-->
+        <attr name="rsb_hintBGHeight" format="dimension"/>    <!--进度提示背景的高度，不设置时根据文字尺寸自适应-->
+        <attr name="rsb_hintBGWith" format="dimension"/>    <!--进度提示背景的宽度，不设置时根据文字尺寸自适应-->
+        <attr name="rsb_hintBGPadding" format="dimension"/> <!--进度提示背景和进度条之间的距离-->
+        <attr name="rsb_seekBarHeight" format="dimension"/> <!--进度条的高度-->
+        <attr name="rsb_thumbSize" format="dimension"/><!--按钮的尺寸-->
         <attr name="rsb_cellMode" format="enum">   <!--刻度模式number 根据刻度的实际所占比例分配位置（markTextArray中必须都为数字）other 平分当前布局（markTextArray可以是任何字符）-->
-            <enum name="number" value="0" />
-            <enum name="other" value="1" />
+            <enum name="number" value="0"/>
+            <enum name="other" value="1"/>
         </attr>
         <attr name="rsb_seekBarMode" format="enum"><!--单向、双向模式 single 单向模式，只有一个按钮 range 双向模式，有两个按钮 -->
-            <enum name="single" value="1" />
-            <enum name="range" value="2" />
+            <enum name="single" value="1"/>
+            <enum name="range" value="2"/>
         </attr>
     </declare-styleable>
 
@@ -329,8 +329,8 @@
         <attr name="stroke_color" format="color"></attr><!--菜单栏边框颜色 color-->
         <attr name="corner_radius" format="dimension"></attr><!--菜单栏边框圆角半径 dimension-->
         <attr name="button_style"><!--按钮类型（居左或右） left | right-->
-            <enum name="right" value="0" />
-            <enum name="left" value="1" />
+            <enum name="right" value="0"/>
+            <enum name="left" value="1"/>
         </attr>
         <attr name="button_icon_size" format="dimension"></attr><!--按钮icon大小 dimension-->
         <attr name="button_icon_stroke_width" format="dimension"></attr><!--按钮icon粗细 dimension-->
@@ -344,129 +344,129 @@
     <!--values	值的文本数组-->
     <!--colors	多色区域时，每个区域的颜色数组（数组长度可以小于count）-->
     <declare-styleable name="RadarView">
-        <attr name="count" format="integer" /><!--几边形雷达-->
-        <attr name="layerCount" format="integer" /><!--几层蜘蛛网-->
-        <attr name="mDrawableSize" format="dimension|reference" /><!--图标的大小-->
-        <attr name="mDrawablePadding" format="dimension|reference" /><!--图标和文字间距-->
-        <attr name="descPadding" format="dimension|reference" /><!--标题描述与节点间距-->
-        <attr name="titleSize" format="dimension|reference" /><!--标题文字大小-->
-        <attr name="dataSize" format="dimension|reference" /><!--标题下面的数值的文字大小-->
-        <attr name="radarPercent" format="float" /><!--雷达图图形占整个空间的比例-->
-        <attr name="startColor" format="color|reference" /><!--开启渐变色时，圆心处的颜色-->
-        <attr name="endColor" format="color|reference" /><!--开启渐变色时，外圈处的颜色-->
-        <attr name="cobwebColor" format="color|reference" /><!--正几边形的网线的颜色-->
-        <attr name="lineColor" format="color|reference" /><!--圆心与各个顶点连线的颜色-->
-        <attr name="dataColor" format="color|reference" /><!--数值文本的颜色-->
-        <attr name="singleColor" format="color|reference" /><!--如果不是多色区域，是单一的颜色-->
-        <attr name="titleColor" format="color|reference" /><!--标题文本的颜色-->
-        <attr name="pointColor" format="color|reference" /><!--圆点颜色-->
-        <attr name="borderColor" format="color|reference" /><!--边界线颜色-->
-        <attr name="radiusColor" format="color|reference" /><!--半径线的颜色-->
-        <attr name="bWidth" format="dimension|reference" /><!--边界线的宽度-->
-        <attr name="pointRadius" format="dimension|reference" /><!--圆点半径大小-->
-        <attr name="enabledBorder" format="boolean" /><!--是否画边界线-->
-        <attr name="enabledAnimation" format="boolean" /><!--是否开启动画-->
-        <attr name="enabledShowPoint" format="boolean" /><!--是否显示圆点-->
-        <attr name="enabledPolygon" format="boolean" /><!--是否绘制网格-->
-        <attr name="enabledShade" format="boolean" /><!--是否绘制渐变环-->
-        <attr name="enabledRadius" format="boolean" /><!--是否绘制半径-->
-        <attr name="enabledText" format="boolean" /><!--是否绘制文本-->
-        <attr name="animDuration" format="integer" /><!--动画执行时间-->
+        <attr name="count" format="integer"/><!--几边形雷达-->
+        <attr name="layerCount" format="integer"/><!--几层蜘蛛网-->
+        <attr name="mDrawableSize" format="dimension|reference"/><!--图标的大小-->
+        <attr name="mDrawablePadding" format="dimension|reference"/><!--图标和文字间距-->
+        <attr name="descPadding" format="dimension|reference"/><!--标题描述与节点间距-->
+        <attr name="titleSize" format="dimension|reference"/><!--标题文字大小-->
+        <attr name="dataSize" format="dimension|reference"/><!--标题下面的数值的文字大小-->
+        <attr name="radarPercent" format="float"/><!--雷达图图形占整个空间的比例-->
+        <attr name="startColor" format="color|reference"/><!--开启渐变色时，圆心处的颜色-->
+        <attr name="endColor" format="color|reference"/><!--开启渐变色时，外圈处的颜色-->
+        <attr name="cobwebColor" format="color|reference"/><!--正几边形的网线的颜色-->
+        <attr name="lineColor" format="color|reference"/><!--圆心与各个顶点连线的颜色-->
+        <attr name="dataColor" format="color|reference"/><!--数值文本的颜色-->
+        <attr name="singleColor" format="color|reference"/><!--如果不是多色区域，是单一的颜色-->
+        <attr name="titleColor" format="color|reference"/><!--标题文本的颜色-->
+        <attr name="pointColor" format="color|reference"/><!--圆点颜色-->
+        <attr name="borderColor" format="color|reference"/><!--边界线颜色-->
+        <attr name="radiusColor" format="color|reference"/><!--半径线的颜色-->
+        <attr name="bWidth" format="dimension|reference"/><!--边界线的宽度-->
+        <attr name="pointRadius" format="dimension|reference"/><!--圆点半径大小-->
+        <attr name="enabledBorder" format="boolean"/><!--是否画边界线-->
+        <attr name="enabledAnimation" format="boolean"/><!--是否开启动画-->
+        <attr name="enabledShowPoint" format="boolean"/><!--是否显示圆点-->
+        <attr name="enabledPolygon" format="boolean"/><!--是否绘制网格-->
+        <attr name="enabledShade" format="boolean"/><!--是否绘制渐变环-->
+        <attr name="enabledRadius" format="boolean"/><!--是否绘制半径-->
+        <attr name="enabledText" format="boolean"/><!--是否绘制文本-->
+        <attr name="animDuration" format="integer"/><!--动画执行时间-->
     </declare-styleable>
 
 
     <declare-styleable name="CountdownView">
-        <attr name="isHideTimeBackground" format="boolean" />
-        <attr name="isShowTimeBgDivisionLine" format="boolean" />
-        <attr name="timeBgDivisionLineColor" format="color" />
-        <attr name="timeBgDivisionLineSize" format="dimension" />
-        <attr name="timeBgColor" format="color" />
-        <attr name="timeBgSize" format="dimension" />
-        <attr name="timeBgRadius" format="dimension" />
+        <attr name="isHideTimeBackground" format="boolean"/>
+        <attr name="isShowTimeBgDivisionLine" format="boolean"/>
+        <attr name="timeBgDivisionLineColor" format="color"/>
+        <attr name="timeBgDivisionLineSize" format="dimension"/>
+        <attr name="timeBgColor" format="color"/>
+        <attr name="timeBgSize" format="dimension"/>
+        <attr name="timeBgRadius" format="dimension"/>
 
-        <attr name="isTimeTextBold" format="boolean" />
-        <attr name="timeTextSize" format="dimension" />
-        <attr name="timeTextColor" format="color" />
-        <attr name="isShowDay" format="boolean" />
-        <attr name="isShowHour" format="boolean" />
-        <attr name="isShowMinute" format="boolean" />
-        <attr name="isShowSecond" format="boolean" />
-        <attr name="isShowMillisecond" format="boolean" />
-        <attr name="isConvertDaysToHours" format="boolean" />
+        <attr name="isTimeTextBold" format="boolean"/>
+        <attr name="timeTextSize" format="dimension"/>
+        <attr name="timeTextColor" format="color"/>
+        <attr name="isShowDay" format="boolean"/>
+        <attr name="isShowHour" format="boolean"/>
+        <attr name="isShowMinute" format="boolean"/>
+        <attr name="isShowSecond" format="boolean"/>
+        <attr name="isShowMillisecond" format="boolean"/>
+        <attr name="isConvertDaysToHours" format="boolean"/>
 
-        <attr name="isSuffixTextBold" format="boolean" />
-        <attr name="suffixTextSize" format="dimension" />
-        <attr name="suffixTextColor" format="color" />
-        <attr name="suffix" format="string" />
-        <attr name="suffixDay" format="string" />
-        <attr name="suffixHour" format="string" />
-        <attr name="suffixMinute" format="string" />
-        <attr name="suffixSecond" format="string" />
-        <attr name="suffixMillisecond" format="string" />
+        <attr name="isSuffixTextBold" format="boolean"/>
+        <attr name="suffixTextSize" format="dimension"/>
+        <attr name="suffixTextColor" format="color"/>
+        <attr name="suffix" format="string"/>
+        <attr name="suffixDay" format="string"/>
+        <attr name="suffixHour" format="string"/>
+        <attr name="suffixMinute" format="string"/>
+        <attr name="suffixSecond" format="string"/>
+        <attr name="suffixMillisecond" format="string"/>
         <attr name="suffixGravity">
-            <enum name="top" value="0" />
-            <enum name="center" value="1" />
-            <enum name="bottom" value="2" />
+            <enum name="top" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="bottom" value="2"/>
         </attr>
-        <attr name="suffixLRMargin" format="dimension" />
-        <attr name="suffixDayLeftMargin" format="dimension" />
-        <attr name="suffixDayRightMargin" format="dimension" />
-        <attr name="suffixHourLeftMargin" format="dimension" />
-        <attr name="suffixHourRightMargin" format="dimension" />
-        <attr name="suffixMinuteLeftMargin" format="dimension" />
-        <attr name="suffixMinuteRightMargin" format="dimension" />
-        <attr name="suffixSecondLeftMargin" format="dimension" />
-        <attr name="suffixSecondRightMargin" format="dimension" />
-        <attr name="suffixMillisecondLeftMargin" format="dimension" />
+        <attr name="suffixLRMargin" format="dimension"/>
+        <attr name="suffixDayLeftMargin" format="dimension"/>
+        <attr name="suffixDayRightMargin" format="dimension"/>
+        <attr name="suffixHourLeftMargin" format="dimension"/>
+        <attr name="suffixHourRightMargin" format="dimension"/>
+        <attr name="suffixMinuteLeftMargin" format="dimension"/>
+        <attr name="suffixMinuteRightMargin" format="dimension"/>
+        <attr name="suffixSecondLeftMargin" format="dimension"/>
+        <attr name="suffixSecondRightMargin" format="dimension"/>
+        <attr name="suffixMillisecondLeftMargin" format="dimension"/>
 
-        <attr name="isShowTimeBgBorder" format="boolean" />
-        <attr name="timeBgBorderColor" format="color" />
-        <attr name="timeBgBorderSize" format="dimension" />
-        <attr name="timeBgBorderRadius" format="dimension" />
+        <attr name="isShowTimeBgBorder" format="boolean"/>
+        <attr name="timeBgBorderColor" format="color"/>
+        <attr name="timeBgBorderSize" format="dimension"/>
+        <attr name="timeBgBorderRadius" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="RoundImageView">
-        <attr name="roundRedis" format="reference|dimension" />
+        <attr name="roundRedis" format="reference|dimension"/>
     </declare-styleable>
 
     <declare-styleable name="FlowLayout">
-        <attr name="flFlow" format="boolean" />
+        <attr name="flFlow" format="boolean"/>
         <attr name="flChildSpacing" format="enum|dimension">
-            <enum name="auto" value="-65536" />
+            <enum name="auto" value="-65536"/>
         </attr>
         <attr name="flChildSpacingForLastRow" format="enum|dimension">
-            <enum name="auto" value="-65536" />
-            <enum name="align" value="-65537" />
+            <enum name="auto" value="-65536"/>
+            <enum name="align" value="-65537"/>
         </attr>
         <attr name="flRowSpacing" format="enum|dimension">
-            <enum name="auto" value="-65536" />
+            <enum name="auto" value="-65536"/>
         </attr>
-        <attr name="flRtl" format="boolean" />
-        <attr name="flMaxRows" format="integer" />
+        <attr name="flRtl" format="boolean"/>
+        <attr name="flMaxRows" format="integer"/>
     </declare-styleable>
 
 
     <declare-styleable name="MiClockView">
-        <attr name="miClockBgColor" format="color" />
-        <attr name="miClockLightColor" format="color" />
-        <attr name="miClockDarkColor" format="color" />
-        <attr name="miClockTextSize" format="dimension" />
+        <attr name="miClockBgColor" format="color"/>
+        <attr name="miClockLightColor" format="color"/>
+        <attr name="miClockDarkColor" format="color"/>
+        <attr name="miClockTextSize" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="MaterialLayout">
-        <attr name="alpha_per" format="integer" />
-        <attr name="alpha_step" format="integer" />
-        <attr name="framerate" format="integer" />
-        <attr name="duration" format="integer" />
-        <attr name="mycolor" format="color" />
-        <attr name="scale" format="float" />
+        <attr name="alpha_per" format="integer"/>
+        <attr name="alpha_step" format="integer"/>
+        <attr name="framerate" format="integer"/>
+        <attr name="duration" format="integer"/>
+        <attr name="mycolor" format="color"/>
+        <attr name="scale" format="float"/>
     </declare-styleable>
 
     <declare-styleable name="slideruler">
         <!--最小值-->
-        <attr name="min_value" format="integer" />
+        <attr name="min_value" format="integer"/>
         <!--最大值-->
-        <attr name="max_value" format="integer" />
+        <attr name="max_value" format="integer"/>
         <!--当前值-->
         <attr name="current_value" format="integer"></attr>
         <!--最小单位值-->
@@ -493,223 +493,223 @@
 
     <declare-styleable name="WheelView">
         <!-- 中间分割线外的item数量,整个滑动数量就为 wheelItemCount * 2 + 1  -->
-        <attr name="wheelItemCount" format="integer" />
+        <attr name="wheelItemCount" format="integer"/>
         <!-- 滑轮item高度 -->
-        <attr name="wheelItemSize" format="dimension" />
+        <attr name="wheelItemSize" format="dimension"/>
         <!-- 滑轮字体大小 -->
-        <attr name="wheelTextSize" format="dimension" />
+        <attr name="wheelTextSize" format="dimension"/>
         <!-- 滑轮字体颜色 -->
-        <attr name="wheelTextColor" format="color" />
+        <attr name="wheelTextColor" format="color"/>
         <!-- 滑轮中心字体颜色 -->
-        <attr name="wheelTextColorCenter" format="color" />
+        <attr name="wheelTextColorCenter" format="color"/>
         <!-- 分割线颜色 -->
-        <attr name="wheelDividerColor" format="color" />
+        <attr name="wheelDividerColor" format="color"/>
         <!-- 布局方向 -->
         <attr name="wheelOrientation">
-            <enum name="vertical" value="1" />
-            <enum name="horizontal" value="2" />
+            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="2"/>
         </attr>
         <!-- 水平布局时不考虑只参数,  当垂直布局时的左右靠齐立体效果 -->
         <attr name="wheelGravity">
-            <enum name="left" value="1" />
-            <enum name="center" value="2" />
-            <enum name="right" value="3" />
+            <enum name="left" value="1"/>
+            <enum name="center" value="2"/>
+            <enum name="right" value="3"/>
         </attr>
 
         <!-- 两根分割线的距离 -->
-        <attr name="wheelDividerSize" format="dimension" />
+        <attr name="wheelDividerSize" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="RCRelativeLayout">
         <!--圆形-->
-        <attr name="round_as_circle" format="boolean" />
+        <attr name="round_as_circle" format="boolean"/>
         <!--全部圆角半径-->
-        <attr name="round_corner" format="integer|dimension" />
+        <attr name="round_corner" format="integer|dimension"/>
         <!--针对各个角的半径-->
-        <attr name="round_corner_top_left" format="integer|dimension" />
-        <attr name="round_corner_top_right" format="integer|dimension" />
-        <attr name="round_corner_bottom_left" format="integer|dimension" />
-        <attr name="round_corner_bottom_right" format="integer|dimension" />
+        <attr name="round_corner_top_left" format="integer|dimension"/>
+        <attr name="round_corner_top_right" format="integer|dimension"/>
+        <attr name="round_corner_bottom_left" format="integer|dimension"/>
+        <attr name="round_corner_bottom_right" format="integer|dimension"/>
 
         <!--描边颜色／半径-->
-        <attr name="RCStroke_color" format="color|reference" />
-        <attr name="RCStroke_width" format="integer|dimension" />
+        <attr name="RCStroke_color" format="color|reference"/>
+        <attr name="RCStroke_width" format="integer|dimension"/>
     </declare-styleable>
 
 
     <declare-styleable name="SwipeMenuLayout">
-        <attr name="isLeftMenu" format="boolean" /><!--菜单是否在内容左边（如果在左边，则右滑）-->
-        <attr name="enableParentLongClick" format="boolean" /><!--允许父类长按（此时内容就会被拦截down事件）-->
+        <attr name="isLeftMenu" format="boolean"/><!--菜单是否在内容左边（如果在左边，则右滑）-->
+        <attr name="enableParentLongClick" format="boolean"/><!--允许父类长按（此时内容就会被拦截down事件）-->
 
-        <attr name="expandRatio" format="float" /><!--菜单能够自动打开的阈值-->
-        <attr name="collapseRatio" format="float" /><!--菜单能够自动关闭的阈值-->
+        <attr name="expandRatio" format="float"/><!--菜单能够自动打开的阈值-->
+        <attr name="collapseRatio" format="float"/><!--菜单能够自动关闭的阈值-->
 
-        <attr name="collapseDuration" format="integer" /><!--菜单关闭动画时间-->
-        <attr name="expandDuration" format="integer" /><!--菜单展开动画时间-->
+        <attr name="collapseDuration" format="integer"/><!--菜单关闭动画时间-->
+        <attr name="expandDuration" format="integer"/><!--菜单展开动画时间-->
     </declare-styleable>
 
 
     <declare-styleable name="WaveLoadingView">
-        <attr name="wlv_borderWidth" format="dimension" /><!--Border width, default is 0-->
-        <attr name="wlv_borderColor" format="color" /><!--Border color-->
-        <attr name="wlv_progressValue" format="integer" /><!--Pprogress value, default is 50-->
+        <attr name="wlv_borderWidth" format="dimension"/><!--Border width, default is 0-->
+        <attr name="wlv_borderColor" format="color"/><!--Border color-->
+        <attr name="wlv_progressValue" format="integer"/><!--Pprogress value, default is 50-->
         <attr name="wlv_shapeType" format="enum"><!--Shape type, default is circle-->
-            <enum name="triangle" value="0" />
-            <enum name="circle" value="1" />
-            <enum name="square" value="2" />
-            <enum name="rectangle" value="3" />
+            <enum name="triangle" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="square" value="2"/>
+            <enum name="rectangle" value="3"/>
         </attr>
         <attr name="wlv_triangle_direction" format="enum"><!--Triangle direction, default is north-->
-            <enum name="north" value="0" />
-            <enum name="south" value="1" />
-            <enum name="east" value="2" />
-            <enum name="west" value="3" />
+            <enum name="north" value="0"/>
+            <enum name="south" value="1"/>
+            <enum name="east" value="2"/>
+            <enum name="west" value="3"/>
         </attr>
-        <attr name="wlv_round_rectangle" format="boolean" /><!--Is round rectangle, default is false-->
-        <attr name="wlv_round_rectangle_x_and_y" format="integer" /><!--Round Rectangle corners, default is 30-->
-        <attr name="wlv_waveColor" format="color" /><!--Wave color-->
-        <attr name="wlv_wave_background_Color" format="color" /><!--Wave background color-->
-        <attr name="wlv_waveAmplitude" format="float" /><!--Wave amplitude-->
-        <attr name="wlv_titleTop" format="string" /><!--Top title content, default is null-->
-        <attr name="wlv_titleCenter" format="string" /><!--Center title content, default is null-->
-        <attr name="wlv_titleBottom" format="string" /><!--Bottom title content, default is null-->
-        <attr name="wlv_titleTopSize" format="dimension" /><!--Top title size, default is 18-->
-        <attr name="wlv_titleCenterSize" format="dimension" /><!--Center title size, default is 22-->
-        <attr name="wlv_titleBottomSize" format="dimension" /><!--Bottom size, default is 18-->
-        <attr name="wlv_titleTopColor" format="color" /><!--Top title color-->
-        <attr name="wlv_titleCenterColor" format="color" /><!--Center title color-->
-        <attr name="wlv_titleBottomColor" format="color" /><!--Bottom title color-->
-        <attr name="wlv_titleTopStrokeColor" format="color" /><!--Top title stroke color-->
-        <attr name="wlv_titleTopStrokeWidth" format="dimension" /><!--Center title stroke color-->
-        <attr name="wlv_titleBottomStrokeColor" format="color" /><!--Bottom title stroke color-->
-        <attr name="wlv_titleBottomStrokeWidth" format="dimension" /><!--Top title stroke width-->
-        <attr name="wlv_titleCenterStrokeColor" format="color" /><!--Center title stroke width-->
-        <attr name="wlv_titleCenterStrokeWidth" format="dimension" /><!--Bottom title stroke width-->
+        <attr name="wlv_round_rectangle" format="boolean"/><!--Is round rectangle, default is false-->
+        <attr name="wlv_round_rectangle_x_and_y" format="integer"/><!--Round Rectangle corners, default is 30-->
+        <attr name="wlv_waveColor" format="color"/><!--Wave color-->
+        <attr name="wlv_wave_background_Color" format="color"/><!--Wave background color-->
+        <attr name="wlv_waveAmplitude" format="float"/><!--Wave amplitude-->
+        <attr name="wlv_titleTop" format="string"/><!--Top title content, default is null-->
+        <attr name="wlv_titleCenter" format="string"/><!--Center title content, default is null-->
+        <attr name="wlv_titleBottom" format="string"/><!--Bottom title content, default is null-->
+        <attr name="wlv_titleTopSize" format="dimension"/><!--Top title size, default is 18-->
+        <attr name="wlv_titleCenterSize" format="dimension"/><!--Center title size, default is 22-->
+        <attr name="wlv_titleBottomSize" format="dimension"/><!--Bottom size, default is 18-->
+        <attr name="wlv_titleTopColor" format="color"/><!--Top title color-->
+        <attr name="wlv_titleCenterColor" format="color"/><!--Center title color-->
+        <attr name="wlv_titleBottomColor" format="color"/><!--Bottom title color-->
+        <attr name="wlv_titleTopStrokeColor" format="color"/><!--Top title stroke color-->
+        <attr name="wlv_titleTopStrokeWidth" format="dimension"/><!--Center title stroke color-->
+        <attr name="wlv_titleBottomStrokeColor" format="color"/><!--Bottom title stroke color-->
+        <attr name="wlv_titleBottomStrokeWidth" format="dimension"/><!--Top title stroke width-->
+        <attr name="wlv_titleCenterStrokeColor" format="color"/><!--Center title stroke width-->
+        <attr name="wlv_titleCenterStrokeWidth" format="dimension"/><!--Bottom title stroke width-->
     </declare-styleable>
 
 
     <declare-styleable name="AbsRoundImageView">
-        <attr name="round_borderWidth" format="dimension|reference" />
-        <attr name="round_borderColor" format="color|reference" />
+        <attr name="round_borderWidth" format="dimension|reference"/>
+        <attr name="round_borderColor" format="color|reference"/>
     </declare-styleable>
 
     <declare-styleable name="RoundImageRedisView">
-        <attr name="leftTopRadius" format="dimension|reference" />
-        <attr name="rightTopRadius" format="dimension|reference" />
-        <attr name="rightBottomRadius" format="dimension|reference" />
-        <attr name="leftBottomRadius" format="dimension|reference" />
+        <attr name="leftTopRadius" format="dimension|reference"/>
+        <attr name="rightTopRadius" format="dimension|reference"/>
+        <attr name="rightBottomRadius" format="dimension|reference"/>
+        <attr name="leftBottomRadius" format="dimension|reference"/>
     </declare-styleable>
 
 
     <declare-styleable name="PileLayout">
-        <attr name="PileLayout_vertivalSpace" format="dimension" />
-        <attr name="PileLayout_pileWidth" format="dimension" />
+        <attr name="PileLayout_vertivalSpace" format="dimension"/>
+        <attr name="PileLayout_pileWidth" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="ExcelPanel">
-        <attr name="left_cell_width" format="dimension" />
-        <attr name="top_cell_height" format="dimension" />
-        <attr name="normal_cell_width" format="dimension" />
+        <attr name="left_cell_width" format="dimension"/>
+        <attr name="top_cell_height" format="dimension"/>
+        <attr name="normal_cell_width" format="dimension"/>
     </declare-styleable>
     <declare-styleable name="SwitchMultiButton">
-        <attr name="SwitchMultiButtonStrokeRadius" format="dimension" /><!--app:strokeRadius="5dp"-->
-        <attr name="SwitchMultiButtonStrokeWidth" format="dimension" /><!--app:strokeWidth="2dp"-->
-        <attr name="SwitchMultiButtonTextSize" format="dimension" /><!--app:textSize="16sp"-->
-        <attr name="SwitchMultiButtonSelectedTab" format="integer" /><!--app:selectedTab="1"-->
-        <attr name="SwitchMultiButtonSelectedColor" format="color|reference" /><!--app:selectedColor="@color/red"-->
-        <attr name="SwitchMultiButtonSwitchTabs" format="reference" /><!--app:switchTabs="@array/switch_tabs"-->
-        <attr name="SwitchMultiButtonTypeface" format="string" /><!--app:typeface="DeVinneTxtBT.ttf"-->
+        <attr name="SwitchMultiButtonStrokeRadius" format="dimension"/><!--app:strokeRadius="5dp"-->
+        <attr name="SwitchMultiButtonStrokeWidth" format="dimension"/><!--app:strokeWidth="2dp"-->
+        <attr name="SwitchMultiButtonTextSize" format="dimension"/><!--app:textSize="16sp"-->
+        <attr name="SwitchMultiButtonSelectedTab" format="integer"/><!--app:selectedTab="1"-->
+        <attr name="SwitchMultiButtonSelectedColor" format="color|reference"/><!--app:selectedColor="@color/red"-->
+        <attr name="SwitchMultiButtonSwitchTabs" format="reference"/><!--app:switchTabs="@array/switch_tabs"-->
+        <attr name="SwitchMultiButtonTypeface" format="string"/><!--app:typeface="DeVinneTxtBT.ttf"-->
     </declare-styleable>
 
 
     <declare-styleable name="BubbleSeekBar">
-        <attr name="bsb_min" format="float|reference" /> <!--min < max, default: 0.0f-->
-        <attr name="bsb_max" format="float|reference" /> <!--min < max, default: 100.0f-->
-        <attr name="bsb_progress" format="float|reference" /> <!--real time progress value, default: min-->
-        <attr name="bsb_is_float_type" format="boolean" /> <!--support for float type-->
-        <attr name="bsb_track_size" format="dimension|reference" /> <!--height of right-track(on the right of thumb), default: 2dp-->
+        <attr name="bsb_min" format="float|reference"/> <!--min < max, default: 0.0f-->
+        <attr name="bsb_max" format="float|reference"/> <!--min < max, default: 100.0f-->
+        <attr name="bsb_progress" format="float|reference"/> <!--real time progress value, default: min-->
+        <attr name="bsb_is_float_type" format="boolean"/> <!--support for float type-->
+        <attr name="bsb_track_size" format="dimension|reference"/> <!--height of right-track(on the right of thumb), default: 2dp-->
         <!--height of left-track(on the left of thumb), default: 2dp higher than right-track's height-->
-        <attr name="bsb_second_track_size" format="dimension|reference" />
-        <attr name="bsb_thumb_radius" format="dimension|reference" /> <!--radius of thumb, default: 2dp higher than left-track's height-->
+        <attr name="bsb_second_track_size" format="dimension|reference"/>
+        <attr name="bsb_thumb_radius" format="dimension|reference"/> <!--radius of thumb, default: 2dp higher than left-track's height-->
         <!--radius of thumb when be dragging, default: 2 times of left-track's height-->
-        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference" />
-        <attr name="bsb_track_color" format="color|reference" /> <!--color of right-track, default: R.color.colorPrimary-->
-        <attr name="bsb_second_track_color" format="color|reference" /> <!--color of left-track, default: R.color.colorAccent-->
-        <attr name="bsb_thumb_color" format="color|reference" /> <!--color of thumb, default: same as left-track's color-->
-        <attr name="bsb_section_count" format="integer|reference" /> <!--shares of whole progress(max - min), default: 10-->
-        <attr name="bsb_show_section_mark" format="boolean" /> <!--show demarcation points or not, default: false-->
-        <attr name="bsb_auto_adjust_section_mark" format="boolean" /> <!--auto scroll to the nearest section_mark or not, default: false-->
-        <attr name="bsb_show_section_text" format="boolean" /> <!--show section-text or not, default: false-->
-        <attr name="bsb_section_text_size" format="dimension|reference" /> <!--text size of section-text, default: 14sp-->
-        <attr name="bsb_section_text_color" format="color|reference" /> <!--text color of section-text, default: same as right-track's color-->
+        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference"/>
+        <attr name="bsb_track_color" format="color|reference"/> <!--color of right-track, default: R.color.colorPrimary-->
+        <attr name="bsb_second_track_color" format="color|reference"/> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_thumb_color" format="color|reference"/> <!--color of thumb, default: same as left-track's color-->
+        <attr name="bsb_section_count" format="integer|reference"/> <!--shares of whole progress(max - min), default: 10-->
+        <attr name="bsb_show_section_mark" format="boolean"/> <!--show demarcation points or not, default: false-->
+        <attr name="bsb_auto_adjust_section_mark" format="boolean"/> <!--auto scroll to the nearest section_mark or not, default: false-->
+        <attr name="bsb_show_section_text" format="boolean"/> <!--show section-text or not, default: false-->
+        <attr name="bsb_section_text_size" format="dimension|reference"/> <!--text size of section-text, default: 14sp-->
+        <attr name="bsb_section_text_color" format="color|reference"/> <!--text color of section-text, default: same as right-track's color-->
         <!--text position of section-text relative to track, sides, bottom_sides, below_section_mark, default: sides-->
         <attr name="bsb_section_text_position">
-            <enum name="sides" value="0" />
-            <enum name="bottom_sides" value="1" />
-            <enum name="below_section_mark" value="2" />
+            <enum name="sides" value="0"/>
+            <enum name="bottom_sides" value="1"/>
+            <enum name="below_section_mark" value="2"/>
         </attr>
-        <attr name="bsb_section_text_interval" format="integer" /> <!--the interval of two section-text, default: 1-->
-        <attr name="bsb_show_thumb_text" format="boolean" /> <!--show real time progress-text under thumb or not, default: false-->
-        <attr name="bsb_thumb_text_size" format="dimension|reference" /> <!--text size of progress-text, default: 14sp-->
-        <attr name="bsb_thumb_text_color" format="color|reference" /> <!--text color of progress-text, default: same as left-track's color-->
-        <attr name="bsb_show_progress_in_float" format="boolean" /> <!--show bubble-progress in float or not, default: false-->
-        <attr name="bsb_touch_to_seek" format="boolean" /> <!--touch anywhere on track to quickly seek, default: false-->
-        <attr name="bsb_seek_by_section" format="boolean" /> <!--seek by section, the progress may not be linear, default: false-->
-        <attr name="bsb_bubble_color" format="color|reference" /> <!--color of bubble, default: same as left-track's color-->
-        <attr name="bsb_bubble_text_size" format="dimension|reference" /> <!--text size of bubble-progress, default: 14sp-->
-        <attr name="bsb_bubble_text_color" format="color|reference" /> <!--text color of bubble-progress, default: #ffffffff-->
-        <attr name="bsb_anim_duration" format="integer" /> <!--duration of animation, default: 200ms-->
-        <attr name="bsb_always_show_bubble" format="boolean" /> <!--bubble shows all time, default: false-->
+        <attr name="bsb_section_text_interval" format="integer"/> <!--the interval of two section-text, default: 1-->
+        <attr name="bsb_show_thumb_text" format="boolean"/> <!--show real time progress-text under thumb or not, default: false-->
+        <attr name="bsb_thumb_text_size" format="dimension|reference"/> <!--text size of progress-text, default: 14sp-->
+        <attr name="bsb_thumb_text_color" format="color|reference"/> <!--text color of progress-text, default: same as left-track's color-->
+        <attr name="bsb_show_progress_in_float" format="boolean"/> <!--show bubble-progress in float or not, default: false-->
+        <attr name="bsb_touch_to_seek" format="boolean"/> <!--touch anywhere on track to quickly seek, default: false-->
+        <attr name="bsb_seek_by_section" format="boolean"/> <!--seek by section, the progress may not be linear, default: false-->
+        <attr name="bsb_bubble_color" format="color|reference"/> <!--color of bubble, default: same as left-track's color-->
+        <attr name="bsb_bubble_text_size" format="dimension|reference"/> <!--text size of bubble-progress, default: 14sp-->
+        <attr name="bsb_bubble_text_color" format="color|reference"/> <!--text color of bubble-progress, default: #ffffffff-->
+        <attr name="bsb_anim_duration" format="integer"/> <!--duration of animation, default: 200ms-->
+        <attr name="bsb_always_show_bubble" format="boolean"/> <!--bubble shows all time, default: false-->
     </declare-styleable>
 
 
     <declare-styleable name="refresh">
-        <attr name="refresh_line_color" format="color" />
-        <attr name="refresh_line_width" format="integer" />
+        <attr name="refresh_line_color" format="color"/>
+        <attr name="refresh_line_width" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="download">
-        <attr name="download_line_color" format="color" />
-        <attr name="download_bg_line_color" format="color" />
-        <attr name="download_text_color" format="color" />
-        <attr name="download_line_width" format="integer" />
-        <attr name="download_bg_line_width" format="integer" />
-        <attr name="download_text_size" format="integer" />
+        <attr name="download_line_color" format="color"/>
+        <attr name="download_bg_line_color" format="color"/>
+        <attr name="download_text_color" format="color"/>
+        <attr name="download_line_width" format="integer"/>
+        <attr name="download_bg_line_width" format="integer"/>
+        <attr name="download_text_size" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="play">
-        <attr name="play_line_color" format="color" />
-        <attr name="play_bg_line_color" format="color" />
-        <attr name="play_line_width" format="integer" />
-        <attr name="play_bg_line_width" format="integer" />
+        <attr name="play_line_color" format="color"/>
+        <attr name="play_bg_line_color" format="color"/>
+        <attr name="play_line_width" format="integer"/>
+        <attr name="play_bg_line_width" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="scroll">
-        <attr name="scroll_line_color" format="color" />
-        <attr name="scroll_line_width" format="integer" />
-        <attr name="scroll_bg_line_color" format="color" />
-        <attr name="scroll_bg_line_width" format="integer" />
-        <attr name="scroll_is_selected" format="boolean" />
-        <attr name="scroll_view_translation_x" format="integer" />
+        <attr name="scroll_line_color" format="color"/>
+        <attr name="scroll_line_width" format="integer"/>
+        <attr name="scroll_bg_line_color" format="color"/>
+        <attr name="scroll_bg_line_width" format="integer"/>
+        <attr name="scroll_is_selected" format="boolean"/>
+        <attr name="scroll_view_translation_x" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="search">
-        <attr name="search_line_color" format="color" />
-        <attr name="search_line_width" format="integer" />
-        <attr name="search_dot_size" format="integer" />
+        <attr name="search_line_color" format="color"/>
+        <attr name="search_line_width" format="integer"/>
+        <attr name="search_dot_size" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="volume">
-        <attr name="volume_line_color" format="color" />
-        <attr name="volume_line_width" format="integer" />
-        <attr name="volume_bg_line_color" format="color" />
-        <attr name="volume_bg_line_width" format="integer" />
+        <attr name="volume_line_color" format="color"/>
+        <attr name="volume_line_width" format="integer"/>
+        <attr name="volume_bg_line_color" format="color"/>
+        <attr name="volume_bg_line_width" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="MyDashBoardView">
-        <attr name="headText" format="string" />
-        <attr name="isShowCurrentValue" format="boolean" />
-        <attr name="dashColor" format="color" />
+        <attr name="headText" format="string"/>
+        <attr name="isShowCurrentValue" format="boolean"/>
+        <attr name="dashColor" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="StateButton">
@@ -742,4 +742,25 @@
         <attr name="animationDuration" format="integer|reference"/>
 
     </declare-styleable>
+
+
+    <declare-styleable name="SwitchView">
+        <attr name="switch_bg_color" format="color"/>
+        <attr name="switch_ball_color" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+
 </resources>

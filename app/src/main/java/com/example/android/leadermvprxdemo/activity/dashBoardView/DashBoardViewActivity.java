@@ -23,7 +23,7 @@ import com.example.pub.common.BaseActivity;
 
 public class DashBoardViewActivity extends BaseActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ToggleButtonActivity";
     private DashBoardView dashView;
     private boolean isChangeColor = true;
     private SeekBar sbChangeCurrentvalue, sbChangeMaxValue;
