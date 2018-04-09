@@ -751,16 +751,56 @@
 
 
     <declare-styleable name="MaterialSearchView">
-        <attr name="searchBackground" format="integer" />
-        <attr name="searchVoiceIcon" format="integer" />
-        <attr name="searchCloseIcon" format="integer" />
-        <attr name="searchBackIcon" format="integer" />
-        <attr name="searchSuggestionIcon" format="integer" />
-        <attr name="searchSuggestionBackground" format="integer" />
-        <attr name="android:hint" />
-        <attr name="android:textColor" />
-        <attr name="android:textColorHint" />
-        <attr name="android:inputType" />
+        <attr name="searchBackground" format="integer"/>
+        <attr name="searchVoiceIcon" format="integer"/>
+        <attr name="searchCloseIcon" format="integer"/>
+        <attr name="searchBackIcon" format="integer"/>
+        <attr name="searchSuggestionIcon" format="integer"/>
+        <attr name="searchSuggestionBackground" format="integer"/>
+        <attr name="android:hint"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textColorHint"/>
+        <attr name="android:inputType"/>
     </declare-styleable>
 
+    <declare-styleable name="Panel">
+        <!-- Defines panel animation duration in ms. -->
+        <attr name="aniDuration" format="integer"/>
+        <!-- Defines panel position on the screen. -->
+        <attr name="position">
+            <!-- Panel placed at top of the screen. -->
+            <enum name="top" value="0"/>
+            <!-- Panel placed at bottom of the screen. -->
+            <enum name="bottom" value="1"/>
+            <!-- Panel placed at left of the screen. -->
+            <enum name="left" value="2"/>
+            <!-- Panel placed at right of the screen. -->
+            <enum name="right" value="3"/>
+        </attr>
+        <!-- Defines if flying gesture forces linear interpolator in animation. -->
+        <attr name="linearFlying" format="boolean"/>
+        <!-- Defines opened handle (drawable/color). -->
+        <attr name="openedHandle" format="reference|color"/>
+        <!-- Defines closed handle (drawable/color). -->
+        <attr name="closedHandle" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SmoothButton">
+        <attr name="transitionDrawable" format="reference"/>
+        <attr name="transitionDrawableLength" format="integer"/>
+        <attr name="transitionTextColorUp" format="color"/>
+        <attr name="transitionTextColorDown" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="CircularMeter">
+        <attr name="tColor" format="color"/>
+        <attr name="tSize" format="dimension"/>
+        <attr name="typeface" format="string"/>
+        <attr name="metricSize" format="dimension"/>
+        <attr name="metricText" format="string"/>
+        <attr name="range" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="Wave">
+        <attr name="wave_color" format="color"/>
+        <attr name="wave_text" format="string"/>
+    </declare-styleable>
 </resources>

@@ -6,4 +6,8 @@
     <item name="tag_column" type="id" />
     <!-- ExcelPanel IDs-->
     <item name="lib_excel_panel_tag_key" type="id" />
+
+
+    <item type="id" name="panelHandle" />
+    <item type="id" name="panelContent" />
 </resources>

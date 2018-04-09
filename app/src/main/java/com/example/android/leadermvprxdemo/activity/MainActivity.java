@@ -18,11 +18,13 @@ import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.Pic
 import com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteViewActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelPanelActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
+import com.example.android.leadermvprxdemo.activity.baiduWaveView.BaiduWaveLoadingActivity;
 import com.example.android.leadermvprxdemo.activity.bezierIndicator.BezierIndicatorActivity;
 import com.example.android.leadermvprxdemo.activity.bezierView.BezierViewActivity;
 import com.example.android.leadermvprxdemo.activity.blueTooth.BlueToothActivity;
 import com.example.android.leadermvprxdemo.activity.bottomBarLayoutView.BottomBarLayoutActivity;
 import com.example.android.leadermvprxdemo.activity.cardView.CardViewActivity;
+import com.example.android.leadermvprxdemo.activity.circleCounter.CircularCounterActivity;
 import com.example.android.leadermvprxdemo.activity.cloudEditText.CloudEditTextActivity;
 import com.example.android.leadermvprxdemo.activity.countDownView.CountDownViewActivity;
 import com.example.android.leadermvprxdemo.activity.dashBoardView.DashBoardViewActivity;
@@ -43,6 +45,7 @@ import com.example.android.leadermvprxdemo.activity.musicWaveView.MusicWaveActiv
 import com.example.android.leadermvprxdemo.activity.note_text.NormalActivity;
 import com.example.android.leadermvprxdemo.activity.note_text.RichActivity;
 import com.example.android.leadermvprxdemo.activity.numberAnimView.NumberAnimTextViewActivity;
+import com.example.android.leadermvprxdemo.activity.panelView.PanelViewActivity;
 import com.example.android.leadermvprxdemo.activity.postmanViewLoading.PostManLoadingActivity;
 import com.example.android.leadermvprxdemo.activity.progressRunView.ProgressRunViewActivity;
 import com.example.android.leadermvprxdemo.activity.qianDao.QianDaoActivity;
@@ -186,6 +189,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "按钮开关");
         listString.add((index++) + "一个美观的cardView");
         listString.add((index++) + "顶部搜索框");
+        listString.add((index++) + "侧边栏的自定义view");
+        listString.add((index++) + "多层圆计数自定义视图");
+        listString.add((index++) + "百度动画的加载效果");
 
 
         initView();
@@ -451,6 +457,15 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 74:
                 openActivity(TopSearchViewActivity.class, null);
+                break;
+            case 75:
+                openActivity(PanelViewActivity.class, null);
+                break;
+            case 76:
+                openActivity(CircularCounterActivity.class, null);
+                break;
+            case 77:
+                openActivity(BaiduWaveLoadingActivity.class, null);
                 break;
         }
     }

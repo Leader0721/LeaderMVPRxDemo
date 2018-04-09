@@ -94,6 +94,9 @@
         <activity android:name=".activity.cloudEditText.CloudEditTextActivity"/>
         <activity android:name=".activity.toggleButton.ToggleButtonActivity"/>
         <activity android:name=".activity.cardView.CardViewActivity"/>
+        <activity android:name=".activity.panelView.PanelViewActivity"/>
+        <activity android:name=".activity.circleCounter.CircularCounterActivity"/>
+        <activity android:name=".activity.baiduWaveView.BaiduWaveLoadingActivity"/>
 
         <activity
             android:name=".activity.topSearchView.demo.TopSearchViewActivity">
