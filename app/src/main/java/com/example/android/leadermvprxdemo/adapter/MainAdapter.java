@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.android.leadermvprxdemo.R;
-import com.example.pub.common.BaseListAdapter;
+import com.example.pub.view.adapter.BaseListAdapter;
 
 import java.util.List;
 

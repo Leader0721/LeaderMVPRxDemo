@@ -97,6 +97,9 @@
         <activity android:name=".activity.panelView.PanelViewActivity"/>
         <activity android:name=".activity.circleCounter.CircularCounterActivity"/>
         <activity android:name=".activity.baiduWaveView.BaiduWaveLoadingActivity"/>
+        <activity android:name=".activity.SmsEditText.SmsEditTextActivity"/>
+        <activity android:name=".activity.countDownTextView.CountDownViewActivity"/>
+        <activity android:name=".activity.loadingImageView.ImageLoadingViewActivity"/>
 
         <activity
             android:name=".activity.topSearchView.demo.TopSearchViewActivity">

@@ -803,4 +803,13 @@
         <attr name="wave_color" format="color"/>
         <attr name="wave_text" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="CodeEditText">
+        <attr name="strokeLength" format="integer" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeHeight" format="dimension" />
+        <attr name="strokePadding" format="dimension" />
+        <attr name="strokeBackground" format="reference" />
+    </declare-styleable>
+
 </resources>

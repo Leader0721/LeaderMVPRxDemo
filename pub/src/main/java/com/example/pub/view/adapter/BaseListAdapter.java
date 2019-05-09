@@ -1,4 +1,4 @@
-package com.example.pub.common;
+package com.example.pub.view.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

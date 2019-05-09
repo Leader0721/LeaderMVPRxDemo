@@ -15,6 +15,7 @@ import android.widget.ListView;
 import com.example.android.leadermvprxdemo.R;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_one.PicsLayoutView1Activity;
 import com.example.android.leadermvprxdemo.activity.PicsLayoutView.style_two.PicsLayoutView2Activity;
+import com.example.android.leadermvprxdemo.activity.SmsEditText.SmsEditTextActivity;
 import com.example.android.leadermvprxdemo.activity.addDeleteView.AddDeleteViewActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelPanelView.ExcelPanelActivity;
 import com.example.android.leadermvprxdemo.activity.androidExcelView.ExcelViewActivity;
@@ -36,6 +37,8 @@ import com.example.android.leadermvprxdemo.activity.jdStepView.JdStepViewActivit
 import com.example.android.leadermvprxdemo.activity.launchView.LauncherViewActivity;
 import com.example.android.leadermvprxdemo.activity.leiDa.LeiDaActivity;
 import com.example.android.leadermvprxdemo.activity.likeView.LikeViewActivity;
+import com.example.android.leadermvprxdemo.activity.loadingImageView.ImageLoadingView;
+import com.example.android.leadermvprxdemo.activity.loadingImageView.ImageLoadingViewActivity;
 import com.example.android.leadermvprxdemo.activity.lockView.LockViewActivity;
 import com.example.android.leadermvprxdemo.activity.luban.LubanActivity;
 import com.example.android.leadermvprxdemo.activity.marqueenView.MarqueeActivity;
@@ -192,6 +195,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "侧边栏的自定义view");
         listString.add((index++) + "多层圆计数自定义视图");
         listString.add((index++) + "百度动画的加载效果");
+        listString.add((index++) + "短信验证码的填写格式");
+        listString.add((index++) + "APP启动界面的跳过图标");
+        listString.add((index++) + "APP启动111界面的跳过图标");
 
 
         initView();
@@ -466,6 +472,15 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 77:
                 openActivity(BaiduWaveLoadingActivity.class, null);
+                break;
+            case 78:
+                openActivity(SmsEditTextActivity.class, null);
+                break;
+            case 79:
+                openActivity(com.example.android.leadermvprxdemo.activity.countDownTextView.CountDownViewActivity.class, null);
+                break;
+            case 80:
+                openActivity(ImageLoadingViewActivity.class, null);
                 break;
         }
     }
