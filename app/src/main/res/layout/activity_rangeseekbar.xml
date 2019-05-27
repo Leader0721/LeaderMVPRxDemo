@@ -15,7 +15,7 @@
         app:rsb_lineColorSelected="@color/colorAccent"
         app:rsb_markTextArray="@array/markArray"
         app:rsb_seekBarMode="single"
-        app:rsb_thumbResId="@drawable/seekbar_thumb" />
+        app:rsb_thumbResId="@mipmap/seekbar_thumb" />
 
 
     <TextView

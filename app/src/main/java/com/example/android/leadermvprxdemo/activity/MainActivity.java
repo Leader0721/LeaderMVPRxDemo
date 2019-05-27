@@ -59,6 +59,7 @@ import com.example.android.leadermvprxdemo.activity.redarView.RadarViewActivity;
 import com.example.android.leadermvprxdemo.activity.relativeCircleLayout.CircleLayoutViewActivity;
 import com.example.android.leadermvprxdemo.activity.roundProgress.RoundProgressActivity;
 import com.example.android.leadermvprxdemo.activity.screenRecorder.ScreenRecorderActivity;
+import com.example.android.leadermvprxdemo.activity.seekBar.SeekBarActivity;
 import com.example.android.leadermvprxdemo.activity.shineTextView.ShimmerActivity;
 import com.example.android.leadermvprxdemo.activity.slideRulerView.SlideRulerViewActivity;
 import com.example.android.leadermvprxdemo.activity.spanStringView.SpanStringViewActivity;
@@ -198,6 +199,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         listString.add((index++) + "短信验证码的填写格式");
         listString.add((index++) + "APP启动界面的跳过图标");
         listString.add((index++) + "APP启动111界面的跳过图标");
+        listString.add((index++) + "可以拖动的seekbar");
 
 
         initView();
@@ -481,6 +483,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
             case 80:
                 openActivity(ImageLoadingViewActivity.class, null);
+                break;
+            case 81:
+                openActivity(SeekBarActivity.class, null);
                 break;
         }
     }

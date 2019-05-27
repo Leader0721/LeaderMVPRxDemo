@@ -100,6 +100,7 @@
         <activity android:name=".activity.SmsEditText.SmsEditTextActivity"/>
         <activity android:name=".activity.countDownTextView.CountDownViewActivity"/>
         <activity android:name=".activity.loadingImageView.ImageLoadingViewActivity"/>
+        <activity android:name=".activity.seekBar.SeekBarActivity"/>
 
         <activity
             android:name=".activity.topSearchView.demo.TopSearchViewActivity">
@@ -153,6 +154,7 @@
         <activity
             android:name="me.iwf.photopicker.PhotoPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
     </application>
 
 </manifest>
